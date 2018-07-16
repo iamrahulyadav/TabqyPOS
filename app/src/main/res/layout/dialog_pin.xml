@@ -24,14 +24,14 @@
                 android:layout_height="wrap_content"
                 android:src="@drawable/ic_arrow_left_white"/>
         </LinearLayout>
-        <com.example.ask.tabqypos.customtext.CustomTextView
+        <com.tabyq.pos.tabqypos.customtext.CustomTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Pin code is required"
             android:layout_marginLeft="15dp"
             android:layout_gravity="center_vertical"/>
     </LinearLayout>
-    <com.example.ask.tabqypos.customtext.CustomTextView
+    <com.tabyq.pos.tabqypos.customtext.CustomTextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
@@ -43,7 +43,7 @@
         android:orientation="horizontal"
         android:layout_marginTop="20dp">
 
-        <com.example.ask.tabqypos.customtext.CustomTextView
+        <com.tabyq.pos.tabqypos.customtext.CustomTextView
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -51,7 +51,7 @@
             android:gravity="center"
             android:text="@string/fragment_pin_1" />
 
-        <com.example.ask.tabqypos.customtext.CustomTextView
+        <com.tabyq.pos.tabqypos.customtext.CustomTextView
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_marginLeft="1dp"
@@ -61,7 +61,7 @@
             android:gravity="center"
             android:text="@string/fragment_pin_2" />
 
-        <com.example.ask.tabqypos.customtext.CustomTextView
+        <com.tabyq.pos.tabqypos.customtext.CustomTextView
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -76,7 +76,7 @@
         android:orientation="horizontal"
         android:layout_marginTop="20dp">
 
-        <com.example.ask.tabqypos.customtext.CustomTextView
+        <com.tabyq.pos.tabqypos.customtext.CustomTextView
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -84,7 +84,7 @@
             android:gravity="center"
             android:text="@string/fragment_pin_4" />
 
-        <com.example.ask.tabqypos.customtext.CustomTextView
+        <com.tabyq.pos.tabqypos.customtext.CustomTextView
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_marginLeft="1dp"
@@ -94,7 +94,7 @@
             android:gravity="center"
             android:text="@string/fragment_pin_5" />
 
-        <com.example.ask.tabqypos.customtext.CustomTextView
+        <com.tabyq.pos.tabqypos.customtext.CustomTextView
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -109,7 +109,7 @@
         android:orientation="horizontal"
         android:layout_marginTop="20dp">
 
-        <com.example.ask.tabqypos.customtext.CustomTextView
+        <com.tabyq.pos.tabqypos.customtext.CustomTextView
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -117,7 +117,7 @@
             android:gravity="center"
             android:text="@string/fragment_pin_7" />
 
-        <com.example.ask.tabqypos.customtext.CustomTextView
+        <com.tabyq.pos.tabqypos.customtext.CustomTextView
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_marginLeft="1dp"
@@ -127,7 +127,7 @@
             android:gravity="center"
             android:text="@string/fragment_pin_8" />
 
-        <com.example.ask.tabqypos.customtext.CustomTextView
+        <com.tabyq.pos.tabqypos.customtext.CustomTextView
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -143,7 +143,7 @@
         android:weightSum="3"
         android:layout_marginTop="20dp">
 
-        <com.example.ask.tabqypos.customtext.CustomTextView
+        <com.tabyq.pos.tabqypos.customtext.CustomTextView
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -151,7 +151,7 @@
             android:gravity="center"
             android:textColor="@color/colorBlack" />
 
-        <com.example.ask.tabqypos.customtext.CustomTextView
+        <com.tabyq.pos.tabqypos.customtext.CustomTextView
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_marginLeft="1dp"
@@ -161,7 +161,7 @@
             android:gravity="center"
             android:text= "@string/fragment_pin_0" />
 
-        <com.example.ask.tabqypos.customtext.CustomTextView
+        <com.tabyq.pos.tabqypos.customtext.CustomTextView
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"

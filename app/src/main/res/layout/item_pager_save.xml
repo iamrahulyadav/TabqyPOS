@@ -6,7 +6,7 @@
     android:orientation="vertical"
     android:background="@drawable/bg_light_grey">
 
-    <com.example.ask.tabqypos.customtext.CustomTextView
+    <com.tabyq.pos.tabqypos.customtext.CustomTextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textColor="@color/colorappPink"
@@ -16,7 +16,7 @@
         android:textSize="@dimen/extra_small_size"
         android:id="@+id/item_pager_save_txt_last"/>
 
-    <com.example.ask.tabqypos.customtext.CustomTextView
+    <com.tabyq.pos.tabqypos.customtext.CustomTextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textColor="@color/colorlightBlack"
@@ -38,7 +38,7 @@
             android:layout_height="wrap_content"
             android:src="@drawable/ic_arrow_left"
             android:padding="10dp"/>
-        <com.example.ask.tabqypos.customtext.CustomTextView
+        <com.tabyq.pos.tabqypos.customtext.CustomTextView
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:text="4.0 Turkish coffee"

@@ -12,7 +12,7 @@
         android:layout_height="100dp"
         android:id="@+id/item_fragment_online_top_image"/>
 
-    <com.example.ask.tabqypos.customtext.CustomTextViewBold
+    <com.tabyq.pos.tabqypos.customtext.CustomTextViewBold
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/item_fragment_online_top_text"

@@ -7,28 +7,28 @@
     android:gravity="center_vertical"
     android:weightSum="5">
 
-    <com.example.ask.tabqypos.customtext.CustomTextView
+    <com.tabyq.pos.tabqypos.customtext.CustomTextView
         android:layout_width="0dp"
         android:layout_weight="1"
         android:layout_height="wrap_content"
         android:text="Usman"
         android:textSize="12dp"
         android:textColor="#454545"/>
-    <com.example.ask.tabqypos.customtext.CustomTextView
+    <com.tabyq.pos.tabqypos.customtext.CustomTextView
         android:layout_width="0dp"
         android:layout_weight="1"
         android:layout_height="wrap_content"
         android:text="2"
         android:textSize="12dp"
         android:textColor="#454545"/>
-    <com.example.ask.tabqypos.customtext.CustomTextView
+    <com.tabyq.pos.tabqypos.customtext.CustomTextView
         android:layout_width="0dp"
         android:layout_weight="1"
         android:layout_height="wrap_content"
         android:text="240.00"
         android:textSize="12dp"
         android:textColor="#454545"/>
-    <com.example.ask.tabqypos.customtext.CustomTextView
+    <com.tabyq.pos.tabqypos.customtext.CustomTextView
         android:layout_width="0dp"
         android:layout_weight="1"
         android:layout_height="wrap_content"
@@ -41,7 +41,7 @@
         android:layout_weight="1"
         android:gravity="center">
 
-        <com.example.ask.tabqypos.customtext.CustomTextView
+        <com.tabyq.pos.tabqypos.customtext.CustomTextView
             android:layout_width="wrap_content"
             android:layout_height="40sp"
             android:text="Show Details"

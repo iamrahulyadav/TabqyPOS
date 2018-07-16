@@ -18,7 +18,7 @@
              android:layout_width="match_parent"
              android:layout_height="match_parent"
              android:orientation="vertical">
-             <com.example.ask.tabqypos.customtext.CustomTextView
+             <com.tabyq.pos.tabqypos.customtext.CustomTextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textSize="@dimen/small_size"
@@ -41,7 +41,7 @@
                      android:layout_width="wrap_content"
                      android:layout_height="wrap_content"
                      android:orientation="vertical">
-                     <com.example.ask.tabqypos.customtext.CustomTextView
+                     <com.tabyq.pos.tabqypos.customtext.CustomTextView
                          android:layout_width="wrap_content"
                          android:layout_height="wrap_content"
                          android:text="Name"
@@ -49,7 +49,7 @@
                          android:textSize="@dimen/extra_small_size"
                          android:textColor="@color/colorlightBlack"/>
 
-                     <com.example.ask.tabqypos.customtext.CustomEditText
+                     <com.tabyq.pos.tabqypos.customtext.CustomEditText
                          android:layout_width="match_parent"
                          android:layout_height="wrap_content"
                          android:hint="Name"
@@ -65,7 +65,7 @@
                      android:layout_width="wrap_content"
                      android:layout_height="wrap_content"
                      android:orientation="vertical">
-                     <com.example.ask.tabqypos.customtext.CustomTextView
+                     <com.tabyq.pos.tabqypos.customtext.CustomTextView
                          android:layout_width="wrap_content"
                          android:layout_height="wrap_content"
                          android:text="Phone Number"
@@ -77,7 +77,7 @@
                          android:layout_width="match_parent"
                          android:layout_height="wrap_content"
                          android:orientation="horizontal">
-                         <com.example.ask.tabqypos.customtext.CustomEditText
+                         <com.tabyq.pos.tabqypos.customtext.CustomEditText
                              android:layout_width="wrap_content"
                              android:layout_height="wrap_content"
                              android:hint="+91"
@@ -88,7 +88,7 @@
                              android:padding="5dp"
                              android:layout_margin="3dp"/>
 
-                         <com.example.ask.tabqypos.customtext.CustomEditText
+                         <com.tabyq.pos.tabqypos.customtext.CustomEditText
                              android:layout_width="match_parent"
                              android:layout_height="wrap_content"
                              android:hint="9958187463"
@@ -108,7 +108,7 @@
                      android:layout_height="wrap_content"
                      android:orientation="vertical">
 
-                     <com.example.ask.tabqypos.customtext.CustomTextView
+                     <com.tabyq.pos.tabqypos.customtext.CustomTextView
                          android:layout_width="wrap_content"
                          android:layout_height="wrap_content"
                          android:text="Alternate Number"
@@ -116,7 +116,7 @@
                          android:padding="3dp"
                          android:textColor="@color/colorlightBlack"/>
 
-                     <com.example.ask.tabqypos.customtext.CustomEditText
+                     <com.tabyq.pos.tabqypos.customtext.CustomEditText
                          android:layout_width="match_parent"
                          android:layout_height="wrap_content"
                          android:textSize="@dimen/extra_small_size"
@@ -131,7 +131,7 @@
                      android:layout_width="wrap_content"
                      android:layout_height="wrap_content"
                      android:orientation="vertical">
-                     <com.example.ask.tabqypos.customtext.CustomTextView
+                     <com.tabyq.pos.tabqypos.customtext.CustomTextView
                          android:layout_width="wrap_content"
                          android:layout_height="wrap_content"
                          android:text="Email"
@@ -139,7 +139,7 @@
                          android:padding="3dp"
                          android:textColor="@color/colorlightBlack"/>
 
-                     <com.example.ask.tabqypos.customtext.CustomEditText
+                     <com.tabyq.pos.tabqypos.customtext.CustomEditText
                          android:layout_width="match_parent"
                          android:layout_height="wrap_content"
                          android:hint="Email"
@@ -153,7 +153,7 @@
              </LinearLayout>
 
 
-             <com.example.ask.tabqypos.customtext.CustomTextView
+             <com.tabyq.pos.tabqypos.customtext.CustomTextView
                  android:layout_width="match_parent"
                  android:layout_height="wrap_content"
                  android:textSize="@dimen/small_size"
@@ -177,7 +177,7 @@
                      android:layout_width="wrap_content"
                      android:layout_height="wrap_content"
                      android:orientation="vertical">
-                     <com.example.ask.tabqypos.customtext.CustomTextView
+                     <com.tabyq.pos.tabqypos.customtext.CustomTextView
                          android:layout_width="wrap_content"
                          android:layout_height="wrap_content"
                          android:text="Delivery Area"
@@ -185,7 +185,7 @@
                          android:textSize="@dimen/extra_small_size"
                          android:textColor="@color/colorlightBlack"/>
 
-                     <com.example.ask.tabqypos.customtext.CustomEditText
+                     <com.tabyq.pos.tabqypos.customtext.CustomEditText
                          android:layout_width="match_parent"
                          android:layout_height="wrap_content"
                          android:hint="Type Area Name"
@@ -201,7 +201,7 @@
                      android:layout_width="wrap_content"
                      android:layout_height="wrap_content"
                      android:orientation="vertical">
-                     <com.example.ask.tabqypos.customtext.CustomTextView
+                     <com.tabyq.pos.tabqypos.customtext.CustomTextView
                          android:layout_width="wrap_content"
                          android:layout_height="wrap_content"
                          android:text="Location"
@@ -209,7 +209,7 @@
                          android:padding="3dp"
                          android:textColor="@color/colorlightBlack"/>
 
-                     <com.example.ask.tabqypos.customtext.CustomEditText
+                     <com.tabyq.pos.tabqypos.customtext.CustomEditText
                          android:layout_width="match_parent"
                          android:layout_height="wrap_content"
                          android:singleLine="true"
@@ -224,7 +224,7 @@
                      android:layout_width="wrap_content"
                      android:layout_height="wrap_content"
                      android:orientation="vertical">
-                     <com.example.ask.tabqypos.customtext.CustomTextView
+                     <com.tabyq.pos.tabqypos.customtext.CustomTextView
                          android:layout_width="wrap_content"
                          android:layout_height="wrap_content"
                          android:text="Building"
@@ -232,7 +232,7 @@
                          android:padding="3dp"
                          android:textColor="@color/colorlightBlack"/>
 
-                     <com.example.ask.tabqypos.customtext.CustomEditText
+                     <com.tabyq.pos.tabqypos.customtext.CustomEditText
                          android:layout_width="match_parent"
                          android:layout_height="wrap_content"
                          android:textSize="@dimen/extra_small_size"
@@ -248,7 +248,7 @@
                      android:layout_width="wrap_content"
                      android:layout_height="wrap_content"
                      android:orientation="vertical">
-                     <com.example.ask.tabqypos.customtext.CustomTextView
+                     <com.tabyq.pos.tabqypos.customtext.CustomTextView
                          android:layout_width="wrap_content"
                          android:layout_height="wrap_content"
                          android:text="Street"
@@ -256,7 +256,7 @@
                          android:padding="3dp"
                          android:textColor="@color/colorlightBlack"/>
 
-                     <com.example.ask.tabqypos.customtext.CustomEditText
+                     <com.tabyq.pos.tabqypos.customtext.CustomEditText
                          android:layout_width="match_parent"
                          android:layout_height="wrap_content"
                          android:singleLine="true"
@@ -279,7 +279,7 @@
                      android:layout_width="wrap_content"
                      android:layout_height="wrap_content"
                      android:orientation="vertical">
-                     <com.example.ask.tabqypos.customtext.CustomTextView
+                     <com.tabyq.pos.tabqypos.customtext.CustomTextView
                          android:layout_width="wrap_content"
                          android:layout_height="wrap_content"
                          android:text="Flat No"
@@ -287,7 +287,7 @@
                          android:textSize="@dimen/extra_small_size"
                          android:textColor="@color/colorlightBlack"/>
 
-                     <com.example.ask.tabqypos.customtext.CustomEditText
+                     <com.tabyq.pos.tabqypos.customtext.CustomEditText
                          android:layout_width="match_parent"
                          android:layout_height="wrap_content"
                          android:textSize="@dimen/extra_small_size"
@@ -302,7 +302,7 @@
                      android:layout_width="wrap_content"
                      android:layout_height="wrap_content"
                      android:orientation="vertical">
-                     <com.example.ask.tabqypos.customtext.CustomTextView
+                     <com.tabyq.pos.tabqypos.customtext.CustomTextView
                          android:layout_width="wrap_content"
                          android:layout_height="wrap_content"
                          android:text="Nearest land mark"
@@ -310,7 +310,7 @@
                          android:padding="3dp"
                          android:textColor="@color/colorlightBlack"/>
 
-                     <com.example.ask.tabqypos.customtext.CustomEditText
+                     <com.tabyq.pos.tabqypos.customtext.CustomEditText
                          android:layout_width="match_parent"
                          android:layout_height="wrap_content"
                          android:singleLine="true"
@@ -326,7 +326,7 @@
                      android:layout_height="wrap_content"
                      android:orientation="vertical">
 
-                     <com.example.ask.tabqypos.customtext.CustomTextView
+                     <com.tabyq.pos.tabqypos.customtext.CustomTextView
                          android:layout_width="wrap_content"
                          android:layout_height="wrap_content"
                          android:text="City"
@@ -334,7 +334,7 @@
                          android:padding="3dp"
                          android:textColor="@color/colorlightBlack"/>
 
-                     <com.example.ask.tabqypos.customtext.CustomEditText
+                     <com.tabyq.pos.tabqypos.customtext.CustomEditText
                          android:layout_width="match_parent"
                          android:layout_height="wrap_content"
                          android:textSize="@dimen/extra_small_size"
@@ -350,7 +350,7 @@
                      android:layout_width="wrap_content"
                      android:layout_height="wrap_content"
                      android:orientation="vertical">
-                     <com.example.ask.tabqypos.customtext.CustomTextView
+                     <com.tabyq.pos.tabqypos.customtext.CustomTextView
                          android:layout_width="wrap_content"
                          android:layout_height="wrap_content"
                          android:text="Country"
@@ -358,7 +358,7 @@
                          android:padding="3dp"
                          android:textColor="@color/colorlightBlack"/>
 
-                     <com.example.ask.tabqypos.customtext.CustomEditText
+                     <com.tabyq.pos.tabqypos.customtext.CustomEditText
                          android:layout_width="match_parent"
                          android:layout_height="wrap_content"
                          android:hint="Saudi Arabia"
@@ -370,7 +370,7 @@
 
              </LinearLayout>
 
-             <com.example.ask.tabqypos.customtext.CustomTextView
+             <com.tabyq.pos.tabqypos.customtext.CustomTextView
                  android:layout_width="match_parent"
                  android:layout_height="wrap_content"
                  android:textSize="@dimen/small_size"
@@ -396,7 +396,7 @@
                      android:layout_height="wrap_content"
                      android:orientation="vertical">
 
-                     <com.example.ask.tabqypos.customtext.CustomTextView    android:layout_width="wrap_content"
+                     <com.tabyq.pos.tabqypos.customtext.CustomTextView    android:layout_width="wrap_content"
                          android:layout_height="wrap_content"
                          android:text="Gender"
                          android:padding="3dp"
@@ -419,7 +419,7 @@
                      android:layout_height="wrap_content"
                      android:orientation="vertical">
 
-                     <com.example.ask.tabqypos.customtext.CustomTextView
+                     <com.tabyq.pos.tabqypos.customtext.CustomTextView
                          android:layout_width="wrap_content"
                          android:layout_height="wrap_content"
                          android:text="Birthday"
@@ -458,7 +458,7 @@
 
 
              </LinearLayout>
-             <com.example.ask.tabqypos.customtext.CustomTextView
+             <com.tabyq.pos.tabqypos.customtext.CustomTextView
                  android:layout_width="match_parent"
                  android:layout_height="wrap_content"
                  android:text="Photo"
@@ -469,12 +469,12 @@
                  android:layout_width="match_parent"
                  android:layout_height="wrap_content"
                  android:orientation="horizontal">
-                 <com.example.ask.tabqypos.customtext.CustomTextView
+                 <com.tabyq.pos.tabqypos.customtext.CustomTextView
                      android:layout_width="wrap_content"
                      android:layout_height="wrap_content"
                      android:text="Photo-7.jpg"
                      android:textColor="@color/colorlightBlack"/>
-                 <com.example.ask.tabqypos.customtext.CustomTextView
+                 <com.tabyq.pos.tabqypos.customtext.CustomTextView
                      android:layout_width="wrap_content"
                      android:layout_height="wrap_content"
                      android:textColor="@color/colorWhite"
@@ -490,7 +490,7 @@
                  android:layout_gravity="right"
                  android:layout_height="wrap_content"
                  android:orientation="horizontal">
-                 <com.example.ask.tabqypos.customtext.CustomTextView
+                 <com.tabyq.pos.tabqypos.customtext.CustomTextView
                      android:layout_width="70dp"
                      android:layout_height="wrap_content"
                      android:text="Cancel"
@@ -498,7 +498,7 @@
                      android:padding="8dp"
                      android:background="@drawable/back_buttongrey"
                      android:textColor="@color/colorlightBlack"/>
-                 <com.example.ask.tabqypos.customtext.CustomTextView
+                 <com.tabyq.pos.tabqypos.customtext.CustomTextView
                      android:layout_width="70dp"
                      android:layout_height="match_parent"
                      android:textColor="@color/colorWhite"

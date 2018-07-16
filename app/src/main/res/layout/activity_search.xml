@@ -14,7 +14,7 @@
         android:layout_marginTop="40dp"
         android:src="@drawable/logo" />
 
-    <com.example.ask.tabqypos.customtext.CustomTextView
+    <com.tabyq.pos.tabqypos.customtext.CustomTextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
@@ -36,7 +36,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:orientation="vertical">
-            <com.example.ask.tabqypos.customtext.CustomEditText
+            <com.tabyq.pos.tabqypos.customtext.CustomEditText
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:background="@drawable/edittext_bg"
@@ -53,7 +53,7 @@
 
         </LinearLayout>
 
-        <com.example.ask.tabqypos.customtext.CustomTextButtonTextView
+        <com.tabyq.pos.tabqypos.customtext.CustomTextButtonTextView
             android:layout_width="wrap_content"
             android:layout_marginRight="40dp"
             android:layout_height="50dp"

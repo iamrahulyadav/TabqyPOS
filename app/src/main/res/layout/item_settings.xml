@@ -14,7 +14,7 @@
             android:paddingLeft="@dimen/size_10"
             android:paddingRight="@dimen/size_10">
 
-            <com.example.ask.tabqypos.customtext.CustomTextView
+            <com.tabyq.pos.tabqypos.customtext.CustomTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Orders"
@@ -28,13 +28,13 @@
                 android:layout_alignParentLeft="true"
                 android:layout_centerInParent="true"
                 android:orientation="vertical">
-                <com.example.ask.tabqypos.customtext.CustomTextViewBold
+                <com.tabyq.pos.tabqypos.customtext.CustomTextViewBold
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="kitchen"
                     android:textColor="@color/colorBlack"
                     android:textSize="@dimen/size_12"/>
-                <com.example.ask.tabqypos.customtext.CustomTextView
+                <com.tabyq.pos.tabqypos.customtext.CustomTextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="kitchen display"

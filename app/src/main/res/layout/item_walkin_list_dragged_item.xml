@@ -24,13 +24,13 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <com.example.ask.tabqypos.customtext.CustomTextView
+            <com.tabyq.pos.tabqypos.customtext.CustomTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Coca Cola"
                 android:textColor="@color/colorlightBlack"
                 android:textSize="@dimen/size_12"/>
-            <com.example.ask.tabqypos.customtext.CustomTextView
+            <com.tabyq.pos.tabqypos.customtext.CustomTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="300ml"
@@ -39,7 +39,7 @@
                 android:layout_marginTop="1dp"/>
 
         </LinearLayout>
-        <com.example.ask.tabqypos.customtext.CustomTextView
+        <com.tabyq.pos.tabqypos.customtext.CustomTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -47,7 +47,7 @@
             android:textColor="@color/colorlightBlack"
             android:gravity="center"
             android:textSize="@dimen/size_12"/>
-        <com.example.ask.tabqypos.customtext.CustomTextView
+        <com.tabyq.pos.tabqypos.customtext.CustomTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -55,7 +55,7 @@
             android:textColor="@color/colorlightBlack"
             android:gravity="center"
             android:textSize="@dimen/size_12"/>
-        <com.example.ask.tabqypos.customtext.CustomTextView
+        <com.tabyq.pos.tabqypos.customtext.CustomTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center"

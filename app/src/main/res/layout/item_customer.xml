@@ -29,13 +29,13 @@
                 android:orientation="vertical"
                 android:layout_marginLeft="@dimen/size_10">
 
-                <com.example.ask.tabqypos.customtext.CustomTextView
+                <com.tabyq.pos.tabqypos.customtext.CustomTextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Nobita"
                     android:textSize="@dimen/size_12"
                     android:textColor="@color/colorBlack"/>
-                <com.example.ask.tabqypos.customtext.CustomTextView
+                <com.tabyq.pos.tabqypos.customtext.CustomTextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Picasso@gmail.com"
@@ -43,7 +43,7 @@
                     android:textColor="@color/colorBlack"
                     android:layout_marginTop="3dp"
                     android:layout_marginBottom="5dp"/>
-                <com.example.ask.tabqypos.customtext.CustomTextView
+                <com.tabyq.pos.tabqypos.customtext.CustomTextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="+91-7737284476"
@@ -58,7 +58,7 @@
             android:gravity="center_vertical"
             android:layout_alignParentRight="true">
 
-            <com.example.ask.tabqypos.customtext.CustomTextView
+            <com.tabyq.pos.tabqypos.customtext.CustomTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="View"
@@ -70,7 +70,7 @@
                 android:paddingLeft="25dp"
                 android:paddingRight="25dp"
                 android:layout_marginRight="@dimen/size_10"/>
-            <com.example.ask.tabqypos.customtext.CustomTextView
+            <com.tabyq.pos.tabqypos.customtext.CustomTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Edit"

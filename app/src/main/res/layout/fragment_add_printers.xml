@@ -16,7 +16,7 @@
         android:orientation="horizontal"
         android:paddingRight="20dp">
 
-        <com.example.ask.tabqypos.customtext.CustomTextView
+        <com.tabyq.pos.tabqypos.customtext.CustomTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Save"
@@ -58,7 +58,7 @@
                 android:padding="@dimen/size_10"
                 android:orientation="vertical">
 
-                <com.example.ask.tabqypos.customtext.CustomTextView
+                <com.tabyq.pos.tabqypos.customtext.CustomTextView
                     android:layout_width="match_parent"
                     android:layout_height="30dp"
                     android:text="Create printer"
@@ -72,7 +72,7 @@
                     android:layout_width="match_parent"
                     android:layout_height=".3dp"
                     android:background="#ECF0F1"/>
-                <com.example.ask.tabqypos.customtext.CustomTextView
+                <com.tabyq.pos.tabqypos.customtext.CustomTextView
                     android:layout_width="match_parent"
                     android:layout_height="30dp"
                     android:text="Printer settings"
@@ -85,7 +85,7 @@
                     android:layout_height=".3dp"
                     android:background="#ECF0F1"/>
 
-                <com.example.ask.tabqypos.customtext.CustomTextView
+                <com.tabyq.pos.tabqypos.customtext.CustomTextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Printer name"
@@ -101,7 +101,7 @@
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="@dimen/size_10">
 
-                    <com.example.ask.tabqypos.customtext.CustomTextView
+                    <com.tabyq.pos.tabqypos.customtext.CustomTextView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:text="Office Printer"
@@ -110,7 +110,7 @@
                         android:paddingLeft="@dimen/size_10"/>
 
                 </android.support.v7.widget.CardView>
-                <com.example.ask.tabqypos.customtext.CustomTextView
+                <com.tabyq.pos.tabqypos.customtext.CustomTextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Printer model"
@@ -126,7 +126,7 @@
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="@dimen/size_10">
 
-                    <com.example.ask.tabqypos.customtext.CustomTextView
+                    <com.tabyq.pos.tabqypos.customtext.CustomTextView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:text="Epson TM-T88V(Ethernet)"
@@ -136,7 +136,7 @@
 
                 </android.support.v7.widget.CardView>
 
-                <com.example.ask.tabqypos.customtext.CustomTextView
+                <com.tabyq.pos.tabqypos.customtext.CustomTextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Printer IP-address"
@@ -152,7 +152,7 @@
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="@dimen/size_10">
 
-                    <com.example.ask.tabqypos.customtext.CustomTextView
+                    <com.tabyq.pos.tabqypos.customtext.CustomTextView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:text="192.168.101.1"
@@ -170,7 +170,7 @@
                     android:paddingRight="10dp"
                     android:gravity="center_vertical">
 
-                    <com.example.ask.tabqypos.customtext.CustomTextView
+                    <com.tabyq.pos.tabqypos.customtext.CustomTextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Print receipts and bills"
@@ -187,7 +187,7 @@
                     android:paddingLeft="10dp"
                     android:paddingRight="10dp">
 
-                    <com.example.ask.tabqypos.customtext.CustomTextView
+                    <com.tabyq.pos.tabqypos.customtext.CustomTextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Print Orders"
@@ -208,7 +208,7 @@
                     android:paddingLeft="10dp"
                     android:paddingRight="10dp">
 
-                    <com.example.ask.tabqypos.customtext.CustomTextView
+                    <com.tabyq.pos.tabqypos.customtext.CustomTextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Autmatically print receipt"
@@ -218,7 +218,7 @@
 
                 </LinearLayout>
 
-                <com.example.ask.tabqypos.customtext.CustomTextView
+                <com.tabyq.pos.tabqypos.customtext.CustomTextView
                     android:layout_width="match_parent"
                     android:layout_height="45dp"
                     android:text="Print Groups"
@@ -237,7 +237,7 @@
                     android:paddingLeft="10dp"
                     android:paddingRight="10dp">
 
-                    <com.example.ask.tabqypos.customtext.CustomTextView
+                    <com.tabyq.pos.tabqypos.customtext.CustomTextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Print"
@@ -251,7 +251,7 @@
                     android:layout_height=".3dp"
                     android:background="#ECF0F1"/>
 
-                <com.example.ask.tabqypos.customtext.CustomTextView
+                <com.tabyq.pos.tabqypos.customtext.CustomTextView
                     android:layout_width="wrap_content"
                     android:layout_height="50dp"
                     android:text="Print"

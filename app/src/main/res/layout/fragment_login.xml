@@ -22,7 +22,7 @@
                 android:layout_marginTop="40dp"
                 android:src="@drawable/logo" />
 
-            <com.example.ask.tabqypos.customtext.CustomTextView
+            <com.tabyq.pos.tabqypos.customtext.CustomTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
@@ -40,7 +40,7 @@
                 android:layout_marginTop="10dp"
                 android:orientation="vertical">
 
-                <com.example.ask.tabqypos.customtext.CustomTextView
+                <com.tabyq.pos.tabqypos.customtext.CustomTextView
                     android:id="@+id/activity_login_edtEmail"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -53,7 +53,7 @@
                     android:singleLine="true"
                     />
 
-                <com.example.ask.tabqypos.customtext.CustomTextView
+                <com.tabyq.pos.tabqypos.customtext.CustomTextView
                     android:id="@+id/activity_login_edtPassword"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -65,7 +65,7 @@
                     android:padding="10dp"
                     android:singleLine="true" />
 
-                <com.example.ask.tabqypos.customtext.CustomTextButtonTextView
+                <com.tabyq.pos.tabqypos.customtext.CustomTextButtonTextView
                     android:id="@+id/login_button"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"

@@ -49,7 +49,7 @@
                                 android:layout_toRightOf="@+id/fragment_save_img_cusotm"
                                 android:layout_centerVertical="true">
 
-                                <com.example.ask.tabqypos.customtext.CustomTextView
+                                <com.tabyq.pos.tabqypos.customtext.CustomTextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:text="John"
@@ -58,7 +58,7 @@
                                     android:paddingLeft="3dp"
                                     android:id="@+id/fragment_save_name"/>
 
-                                <com.example.ask.tabqypos.customtext.CustomTextView
+                                <com.tabyq.pos.tabqypos.customtext.CustomTextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:paddingLeft="3dp"
@@ -75,7 +75,7 @@
                                 android:orientation="vertical"
                                 android:paddingRight="5dp"
                                 android:layout_alignParentRight="true">
-                                <com.example.ask.tabqypos.customtext.CustomTextView
+                                <com.tabyq.pos.tabqypos.customtext.CustomTextView
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:text="Phone Number : "
@@ -83,7 +83,7 @@
                                     android:textSize="@dimen/extra_small_size"
                                     android:textColor="@color/colorlightBlack"
                                     android:paddingLeft="3dp" />
-                                <com.example.ask.tabqypos.customtext.CustomTextView
+                                <com.tabyq.pos.tabqypos.customtext.CustomTextView
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:paddingLeft="3dp"
@@ -103,7 +103,7 @@
                             android:layout_height="1dp"
                             android:background="@color/colorLightGrey"/>
 
-                        <com.example.ask.tabqypos.customtext.CustomTextView
+                        <com.tabyq.pos.tabqypos.customtext.CustomTextView
                             android:layout_width="match_parent"
                             android:padding="5dp"
                             android:textColor="@color/colorBlack"
@@ -148,7 +148,7 @@
                                </android.support.v7.widget.CardView>
                            </LinearLayout>
 
-                            <com.example.ask.tabqypos.customtext.CustomTextView
+                            <com.tabyq.pos.tabqypos.customtext.CustomTextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:textColor="@color/colorBlack"
@@ -162,7 +162,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_margin="5dp">
-                            <com.example.ask.tabqypos.customtext.CustomTextView
+                            <com.tabyq.pos.tabqypos.customtext.CustomTextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:textColor="@color/colorappPink"
@@ -174,7 +174,7 @@
                                 android:drawableLeft="@drawable/ic_delete_button"
                                 android:drawableStart="@drawable/ic_delete_button" />
 
-                            <com.example.ask.tabqypos.customtext.CustomTextView
+                            <com.tabyq.pos.tabqypos.customtext.CustomTextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:textColor="@color/colorWhite"
@@ -192,7 +192,7 @@
                         </RelativeLayout>
 
 
-                        <com.example.ask.tabqypos.customtext.CustomTextView
+                        <com.tabyq.pos.tabqypos.customtext.CustomTextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:id="@+id/fragment_save_place_new_order"
@@ -221,7 +221,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:orientation="vertical">
-                        <com.example.ask.tabqypos.customtext.CustomTextView
+                        <com.tabyq.pos.tabqypos.customtext.CustomTextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Customer Insight"
@@ -249,7 +249,7 @@
                                 android:orientation="vertical"
                                 android:background="@drawable/bg_light_grey">
 
-                                <com.example.ask.tabqypos.customtext.CustomTextView                                    android:layout_width="match_parent"
+                                <com.tabyq.pos.tabqypos.customtext.CustomTextView                                    android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:textColor="@color/colorappPink"
                                     android:text="BIRTHDAY"
@@ -264,7 +264,7 @@
                                     android:layout_height="1dp"
                                     android:background="@color/colorGrey"/>
 
-                                <com.example.ask.tabqypos.customtext.CustomTextView
+                                <com.tabyq.pos.tabqypos.customtext.CustomTextView
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:padding="3dp"
@@ -283,7 +283,7 @@
                                 android:orientation="vertical"
                                 android:background="@drawable/bg_light_grey">
 
-                                <com.example.ask.tabqypos.customtext.CustomTextView
+                                <com.tabyq.pos.tabqypos.customtext.CustomTextView
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:textColor="@color/colorappPink"
@@ -300,7 +300,7 @@
                                     android:background="@color/colorGrey"/>
 
 
-                                <com.example.ask.tabqypos.customtext.CustomTextView
+                                <com.tabyq.pos.tabqypos.customtext.CustomTextView
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"
                                     android:padding="3dp"
@@ -319,7 +319,7 @@
                                 android:orientation="vertical"
                                 android:background="@drawable/bg_light_grey">
 
-                                <com.example.ask.tabqypos.customtext.CustomTextView
+                                <com.tabyq.pos.tabqypos.customtext.CustomTextView
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:textColor="@color/colorappPink"
@@ -335,7 +335,7 @@
                                     android:layout_height="1dp"
                                     android:background="@color/colorGrey"/>
 
-                                <com.example.ask.tabqypos.customtext.CustomTextView
+                                <com.tabyq.pos.tabqypos.customtext.CustomTextView
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"
                                     android:padding="3dp"
@@ -370,7 +370,7 @@
                                     android:singleLine="true"
                                     android:layout_weight="1"
                                     android:textSize="@dimen/extra_small_size"/>
-                                <com.example.ask.tabqypos.customtext.CustomTextButtonTextView
+                                <com.tabyq.pos.tabqypos.customtext.CustomTextButtonTextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:text="Add"
@@ -407,7 +407,7 @@
                     android:layout_height="match_parent"
                     android:orientation="vertical">
 
-                    <com.example.ask.tabqypos.customtext.CustomTextView
+                    <com.tabyq.pos.tabqypos.customtext.CustomTextView
 
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -423,7 +423,7 @@
                         android:orientation="horizontal">
 
 
-                        <com.example.ask.tabqypos.customtext.CustomTextView
+                        <com.tabyq.pos.tabqypos.customtext.CustomTextView
                             android:layout_width="0dp"
                             android:textSize="10sp"
                             android:layout_height="wrap_content"
@@ -434,7 +434,7 @@
                             android:id="@+id/item_save_past_order_no"
                             android:textColor="@color/colorappPink"/>
 
-                        <com.example.ask.tabqypos.customtext.CustomTextView
+                        <com.tabyq.pos.tabqypos.customtext.CustomTextView
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
@@ -445,7 +445,7 @@
                             android:id="@+id/item_save_past_order_date"
                             android:textColor="@color/colorappPink"/>
 
-                        <com.example.ask.tabqypos.customtext.CustomTextView
+                        <com.tabyq.pos.tabqypos.customtext.CustomTextView
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
@@ -456,7 +456,7 @@
                             android:id="@+id/item_save_past_order_walkin"
                             android:textColor="@color/colorappPink"/>
 
-                        <com.example.ask.tabqypos.customtext.CustomTextView
+                        <com.tabyq.pos.tabqypos.customtext.CustomTextView
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
@@ -467,7 +467,7 @@
                             android:id="@+id/item_save_past_order_time_taken"
                             android:textColor="@color/colorappPink"/>
 
-                        <com.example.ask.tabqypos.customtext.CustomTextView
+                        <com.tabyq.pos.tabqypos.customtext.CustomTextView
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
@@ -478,7 +478,7 @@
                             android:id="@+id/item_save_past_order_amt"
                             android:textColor="@color/colorappPink"/>
 
-                        <com.example.ask.tabqypos.customtext.CustomTextView
+                        <com.tabyq.pos.tabqypos.customtext.CustomTextView
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
@@ -489,7 +489,7 @@
                             android:id="@+id/item_save_past_order_status"
                             android:textColor="@color/colorappPink"/>
 
-                        <com.example.ask.tabqypos.customtext.CustomTextView
+                        <com.tabyq.pos.tabqypos.customtext.CustomTextView
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
@@ -500,7 +500,7 @@
                             android:id="@+id/item_save_past_order_driver"
                             android:textColor="@color/colorappPink"/>
 
-                        <com.example.ask.tabqypos.customtext.CustomTextView
+                        <com.tabyq.pos.tabqypos.customtext.CustomTextView
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
@@ -511,7 +511,7 @@
                             android:id="@+id/item_save_past_order_agent"
                             android:textColor="@color/colorappPink"/>
 
-                        <com.example.ask.tabqypos.customtext.CustomTextView
+                        <com.tabyq.pos.tabqypos.customtext.CustomTextView
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"

@@ -3,7 +3,7 @@
     android:orientation="horizontal" android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
-    <com.example.ask.tabqypos.customtext.CustomTextView
+    <com.tabyq.pos.tabqypos.customtext.CustomTextView
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_weight="1"
@@ -13,7 +13,7 @@
         android:textSize="10sp"
         android:id="@+id/item_save_past_order_no"
         android:textColor="@color/colorlightBlack"/>
-    <com.example.ask.tabqypos.customtext.CustomTextView
+    <com.tabyq.pos.tabqypos.customtext.CustomTextView
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_weight="1"
@@ -24,7 +24,7 @@
         android:id="@+id/item_save_past_order_date"
         android:textColor="@color/colorlightBlack"/>
 
-    <com.example.ask.tabqypos.customtext.CustomTextView
+    <com.tabyq.pos.tabqypos.customtext.CustomTextView
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_weight="1"
@@ -34,7 +34,7 @@
         android:gravity="center"
         android:id="@+id/item_save_past_order_walkin"
         android:textColor="@color/colorlightBlack"/>
-    <com.example.ask.tabqypos.customtext.CustomTextView
+    <com.tabyq.pos.tabqypos.customtext.CustomTextView
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_weight="1"
@@ -44,7 +44,7 @@
         android:padding="5dp"
         android:id="@+id/item_save_past_order_time_taken"
         android:textColor="@color/colorlightBlack"/>
-    <com.example.ask.tabqypos.customtext.CustomTextView
+    <com.tabyq.pos.tabqypos.customtext.CustomTextView
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_weight="1"
@@ -54,7 +54,7 @@
         android:padding="5dp"
         android:id="@+id/item_save_past_order_amt"
         android:textColor="@color/colorlightBlack"/>
-    <com.example.ask.tabqypos.customtext.CustomTextView
+    <com.tabyq.pos.tabqypos.customtext.CustomTextView
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_weight="1"
@@ -64,7 +64,7 @@
         android:textSize="10sp"
         android:id="@+id/item_save_past_order_status"
         android:textColor="@color/colorlightBlack"/>
-    <com.example.ask.tabqypos.customtext.CustomTextView
+    <com.tabyq.pos.tabqypos.customtext.CustomTextView
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_weight="1"
@@ -74,7 +74,7 @@
         android:padding="5dp"
         android:id="@+id/item_save_past_order_driver"
         android:textColor="@color/colorlightBlack"/>
-    <com.example.ask.tabqypos.customtext.CustomTextView
+    <com.tabyq.pos.tabqypos.customtext.CustomTextView
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_weight="1"
@@ -84,7 +84,7 @@
         android:padding="5dp"
         android:id="@+id/item_save_past_order_agent"
         android:textColor="@color/colorlightBlack"/>
-    <com.example.ask.tabqypos.customtext.CustomTextView
+    <com.tabyq.pos.tabqypos.customtext.CustomTextView
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_weight="1"

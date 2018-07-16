@@ -20,7 +20,7 @@
             android:layout_weight="1"
             android:orientation="vertical">
 
-            <com.example.ask.tabqypos.customtext.CustomTextView
+            <com.tabyq.pos.tabqypos.customtext.CustomTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Munir \n 05501254"
@@ -29,7 +29,7 @@
                 android:drawableLeft="@drawable/ic_user_circle"
                 android:drawablePadding="5dp"
                 android:gravity="center_vertical"/>
-            <com.example.ask.tabqypos.customtext.CustomTextView
+            <com.tabyq.pos.tabqypos.customtext.CustomTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Balance: 3.97"
@@ -37,19 +37,19 @@
                 android:textColor="@color/colorBlack"
                 android:layout_marginTop="5dp"
                 android:layout_marginBottom="5dp"/>
-            <com.example.ask.tabqypos.customtext.CustomTextViewBold
+            <com.tabyq.pos.tabqypos.customtext.CustomTextViewBold
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Delivery address"
                 android:textSize="12sp"
                 android:textColor="@color/colorBlack"/>
-            <com.example.ask.tabqypos.customtext.CustomTextView
+            <com.tabyq.pos.tabqypos.customtext.CustomTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="As Sulimaniya"
                 android:textSize="12sp"
                 android:textColor="@color/colorBlack"/>
-            <com.example.ask.tabqypos.customtext.CustomTextView
+            <com.tabyq.pos.tabqypos.customtext.CustomTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="03, As Sulimaniya."
@@ -63,7 +63,7 @@
             android:layout_weight="1"
             android:orientation="vertical">
 
-            <com.example.ask.tabqypos.customtext.CustomTextView
+            <com.tabyq.pos.tabqypos.customtext.CustomTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="27"
@@ -71,14 +71,14 @@
                 android:gravity="center_vertical"
                 android:drawableRight="@drawable/ic_down_arrow_1"
                 android:drawablePadding="@dimen/size_10"/>
-            <com.example.ask.tabqypos.customtext.CustomTextView
+            <com.tabyq.pos.tabqypos.customtext.CustomTextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Mango Juice x 1.0"
                 android:textSize="@dimen/size_10"
                 android:gravity="center_vertical"
                 android:layout_marginTop="5dp"/>
-            <com.example.ask.tabqypos.customtext.CustomTextView
+            <com.tabyq.pos.tabqypos.customtext.CustomTextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Mango Juice x 1.0"
@@ -86,7 +86,7 @@
                 android:gravity="center_vertical"
                 android:layout_marginTop="3dp"
                 android:layout_marginBottom="3dp"/>
-            <com.example.ask.tabqypos.customtext.CustomTextView
+            <com.tabyq.pos.tabqypos.customtext.CustomTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Details"
@@ -99,7 +99,7 @@
                 android:paddingBottom="5dp"
                 android:background="@drawable/shape_background_orange"/>
         </LinearLayout>
-        <com.example.ask.tabqypos.customtext.CustomTextView
+        <com.tabyq.pos.tabqypos.customtext.CustomTextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -107,7 +107,7 @@
             android:text="11:19 AM"
             android:textSize="@dimen/size_12" />
 
-        <com.example.ask.tabqypos.customtext.CustomTextViewBold
+        <com.tabyq.pos.tabqypos.customtext.CustomTextViewBold
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -115,9 +115,9 @@
             android:textColor="@color/colorBlack"
             android:textSize="@dimen/size_12">
 
-        </com.example.ask.tabqypos.customtext.CustomTextViewBold>
+        </com.tabyq.pos.tabqypos.customtext.CustomTextViewBold>
 
-        <com.example.ask.tabqypos.customtext.CustomTextView
+        <com.tabyq.pos.tabqypos.customtext.CustomTextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -126,21 +126,21 @@
             android:textSize="@dimen/size_12"
             android:visibility="gone" />
 
-        <com.example.ask.tabqypos.customtext.CustomTextView
+        <com.tabyq.pos.tabqypos.customtext.CustomTextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="75.00 SAR"
             android:textSize="@dimen/size_12">
 
-        </com.example.ask.tabqypos.customtext.CustomTextView>
+        </com.tabyq.pos.tabqypos.customtext.CustomTextView>
         <LinearLayout
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="match_parent"
             android:id="@+id/item_online_new_order_layout_deliver_to"
             android:gravity="center">
-            <com.example.ask.tabqypos.customtext.CustomTextView
+            <com.tabyq.pos.tabqypos.customtext.CustomTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="kitchen"
@@ -165,7 +165,7 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:gravity="center_horizontal">
-            <com.example.ask.tabqypos.customtext.CustomTextView
+            <com.tabyq.pos.tabqypos.customtext.CustomTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="InProgress"
@@ -178,7 +178,7 @@
                 android:paddingTop="8dp"
                 android:gravity="center"
                 android:layout_marginBottom="5dp"/>
-            <com.example.ask.tabqypos.customtext.CustomTextView
+            <com.tabyq.pos.tabqypos.customtext.CustomTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Mark as Delivered"

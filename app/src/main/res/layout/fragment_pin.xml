@@ -31,7 +31,7 @@
                 android:orientation="vertical">
 
 
-                <com.example.ask.tabqypos.customtext.CustomTextView
+                <com.tabyq.pos.tabqypos.customtext.CustomTextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
@@ -60,7 +60,7 @@
                             android:layout_weight="1"
                             android:orientation="horizontal">
 
-                            <com.example.ask.tabqypos.customtext.CustomTextView
+                            <com.tabyq.pos.tabqypos.customtext.CustomTextView
                                 android:layout_width="0dp"
                                 android:layout_height="match_parent"
                                 android:layout_weight="1"
@@ -68,7 +68,7 @@
                                 android:gravity="center"
                                 android:text="@string/fragment_pin_1" />
 
-                            <com.example.ask.tabqypos.customtext.CustomTextView
+                            <com.tabyq.pos.tabqypos.customtext.CustomTextView
                                 android:layout_width="0dp"
                                 android:layout_height="match_parent"
                                 android:layout_marginLeft="1dp"
@@ -78,7 +78,7 @@
                                 android:gravity="center"
                                 android:text="@string/fragment_pin_2" />
 
-                            <com.example.ask.tabqypos.customtext.CustomTextView
+                            <com.tabyq.pos.tabqypos.customtext.CustomTextView
                                 android:layout_width="0dp"
                                 android:layout_height="match_parent"
                                 android:layout_weight="1"
@@ -95,7 +95,7 @@
                             android:layout_weight="1"
                             android:orientation="horizontal">
 
-                            <com.example.ask.tabqypos.customtext.CustomTextView
+                            <com.tabyq.pos.tabqypos.customtext.CustomTextView
                                 android:layout_width="0dp"
                                 android:layout_height="match_parent"
                                 android:layout_weight="1"
@@ -103,7 +103,7 @@
                                 android:gravity="center"
                                 android:text="@string/fragment_pin_4" />
 
-                            <com.example.ask.tabqypos.customtext.CustomTextView
+                            <com.tabyq.pos.tabqypos.customtext.CustomTextView
                                 android:layout_width="0dp"
                                 android:layout_height="match_parent"
                                 android:layout_marginLeft="1dp"
@@ -113,7 +113,7 @@
                                 android:gravity="center"
                                 android:text="@string/fragment_pin_5" />
 
-                            <com.example.ask.tabqypos.customtext.CustomTextView
+                            <com.tabyq.pos.tabqypos.customtext.CustomTextView
                                 android:layout_width="0dp"
                                 android:layout_height="match_parent"
                                 android:layout_weight="1"
@@ -130,7 +130,7 @@
                             android:layout_weight="1"
                             android:orientation="horizontal">
 
-                            <com.example.ask.tabqypos.customtext.CustomTextView
+                            <com.tabyq.pos.tabqypos.customtext.CustomTextView
                                 android:layout_width="0dp"
                                 android:layout_height="match_parent"
                                 android:layout_weight="1"
@@ -138,7 +138,7 @@
                                 android:gravity="center"
                                 android:text="@string/fragment_pin_7" />
 
-                            <com.example.ask.tabqypos.customtext.CustomTextView
+                            <com.tabyq.pos.tabqypos.customtext.CustomTextView
                                 android:layout_width="0dp"
                                 android:layout_height="match_parent"
                                 android:layout_marginLeft="1dp"
@@ -148,7 +148,7 @@
                                 android:gravity="center"
                                 android:text="@string/fragment_pin_8" />
 
-                            <com.example.ask.tabqypos.customtext.CustomTextView
+                            <com.tabyq.pos.tabqypos.customtext.CustomTextView
                                 android:layout_width="0dp"
                                 android:layout_height="match_parent"
                                 android:layout_weight="1"
@@ -165,7 +165,7 @@
                             android:layout_weight="1"
                             android:orientation="horizontal">
 
-                            <com.example.ask.tabqypos.customtext.CustomTextView
+                            <com.tabyq.pos.tabqypos.customtext.CustomTextView
                                 android:layout_width="0dp"
                                 android:layout_height="match_parent"
                                 android:layout_weight="1"
@@ -173,7 +173,7 @@
                                 android:gravity="center"
                                 android:textColor="@color/colorBlack" />
 
-                            <com.example.ask.tabqypos.customtext.CustomTextView
+                            <com.tabyq.pos.tabqypos.customtext.CustomTextView
                                 android:layout_width="0dp"
                                 android:layout_height="match_parent"
                                 android:layout_marginLeft="1dp"
@@ -183,7 +183,7 @@
                                 android:gravity="center"
                                 android:text= "@string/fragment_pin_0" />
 
-                            <com.example.ask.tabqypos.customtext.CustomTextView
+                            <com.tabyq.pos.tabqypos.customtext.CustomTextView
                                 android:layout_width="0dp"
                                 android:layout_height="match_parent"
                                 android:layout_weight="1"

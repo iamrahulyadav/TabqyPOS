@@ -23,7 +23,7 @@
             android:gravity="center_vertical"
             android:paddingLeft="15dp">
 
-            <com.example.ask.tabqypos.customtext.CustomTextView
+            <com.tabyq.pos.tabqypos.customtext.CustomTextView
                 android:layout_width="500dp"
                 android:layout_height="45dp"
                 android:text="Customer Name"
@@ -33,7 +33,7 @@
                 android:background="@drawable/shape_border_grey"
                 android:paddingLeft="15dp"
                 android:layout_marginRight="10dp"/>
-            <com.example.ask.tabqypos.customtext.CustomTextView
+            <com.tabyq.pos.tabqypos.customtext.CustomTextView
                 android:layout_width="wrap_content"
                 android:layout_height="45dp"
                 android:text="Search"

@@ -52,7 +52,7 @@
                             android:orientation="vertical"
                             android:layout_toRightOf="@+id/imageView">
 
-                            <com.example.ask.tabqypos.customtext.CustomTextView
+                            <com.tabyq.pos.tabqypos.customtext.CustomTextView
                                 android:id="@+id/txt_name"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
@@ -61,7 +61,7 @@
                                 android:text="Stipe Miocic"
                                 android:textColor="@color/color_lightgreytext" />
 
-                            <com.example.ask.tabqypos.customtext.CustomTextView
+                            <com.tabyq.pos.tabqypos.customtext.CustomTextView
                                 android:id="@+id/txt_date"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
@@ -82,7 +82,7 @@
                             android:gravity="center_vertical"
                             android:visibility="gone">
 
-                            <com.example.ask.tabqypos.customtext.CustomTextView
+                            <com.tabyq.pos.tabqypos.customtext.CustomTextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:id="@+id/main_middle_btn_add_note"
@@ -95,7 +95,7 @@
                                 android:paddingBottom="@dimen/size_5"
                                 android:layout_marginRight="10dp"/>
 
-                            <com.example.ask.tabqypos.customtext.CustomTextView
+                            <com.tabyq.pos.tabqypos.customtext.CustomTextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:id="@+id/main_middle_btn_add_discount"
@@ -157,7 +157,7 @@
                 android:visibility="gone"
                 android:gravity="center">
 
-                <com.example.ask.tabqypos.customtext.CustomTextView
+                <com.tabyq.pos.tabqypos.customtext.CustomTextView
                     android:id="@+id/text_customer"
                     android:layout_width="0dp"
                     android:layout_weight="1"
@@ -170,7 +170,7 @@
                     android:paddingStart="5dp"
                     android:paddingEnd="3dp" />
 
-                <com.example.ask.tabqypos.customtext.CustomTextViewBold
+                <com.tabyq.pos.tabqypos.customtext.CustomTextViewBold
                     android:id="@+id/img_scan"
                     android:layout_width="0dp"
                     android:layout_weight=".7"
@@ -190,7 +190,7 @@
                     android:layout_height="@dimen/size_60"
                     android:background="@color/colorGrey"/>
 
-                <com.example.ask.tabqypos.customtext.CustomTextViewBold
+                <com.tabyq.pos.tabqypos.customtext.CustomTextViewBold
                     android:id="@+id/img_search"
                     android:layout_width="0dp"
                     android:layout_weight=".7"
@@ -211,7 +211,7 @@
                     android:layout_height="@dimen/size_60"
                     android:background="@color/colorGrey"/>
 
-                <com.example.ask.tabqypos.customtext.CustomTextViewBold
+                <com.tabyq.pos.tabqypos.customtext.CustomTextViewBold
                     android:id="@+id/img_adduser"
                     android:layout_width="0dp"
                     android:layout_weight=".7"

@@ -15,7 +15,7 @@
         android:layout_height="40dp"
         android:background="@color/background">
 
-        <com.example.ask.tabqypos.customtext.CustomTextViewBold
+        <com.tabyq.pos.tabqypos.customtext.CustomTextViewBold
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:text="Receipts"
@@ -45,7 +45,7 @@
                 android:paddingLeft="@dimen/size_10"
                 android:paddingRight="@dimen/size_10">
 
-                <com.example.ask.tabqypos.customtext.CustomTextViewBold
+                <com.tabyq.pos.tabqypos.customtext.CustomTextViewBold
                     android:layout_width="match_parent"
                     android:layout_height="40dp"
                     android:text="Receipts"
@@ -70,7 +70,7 @@
                 android:paddingRight="@dimen/size_10"
                 android:visibility="gone">
 
-                <com.example.ask.tabqypos.customtext.CustomTextViewBold
+                <com.tabyq.pos.tabqypos.customtext.CustomTextViewBold
                     android:layout_width="match_parent"
                     android:layout_height="40dp"
                     android:text="Receipts"
@@ -111,7 +111,7 @@
                 android:layout_marginRight="@dimen/size_10"
                 android:layout_marginLeft="@dimen/size_10">
 
-                <com.example.ask.tabqypos.customtext.CustomTextViewBold
+                <com.tabyq.pos.tabqypos.customtext.CustomTextViewBold
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:text="Thursday,28 December 2017"
@@ -120,7 +120,7 @@
                     android:gravity="center_vertical"
                     android:layout_alignParentLeft="true"/>
 
-                <com.example.ask.tabqypos.customtext.CustomTextViewBold
+                <com.tabyq.pos.tabqypos.customtext.CustomTextViewBold
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:text="2 receipts"
@@ -149,20 +149,20 @@
                     android:gravity="center_vertical"
                     android:layout_alignParentLeft="true">
 
-                    <com.example.ask.tabqypos.customtext.CustomTextViewBold
+                    <com.tabyq.pos.tabqypos.customtext.CustomTextViewBold
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="84.66"
                         android:textSize="@dimen/size_12"
                         android:textColor="@color/colorBlack"/>
-                    <com.example.ask.tabqypos.customtext.CustomTextView
+                    <com.tabyq.pos.tabqypos.customtext.CustomTextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="cash"
                         android:textSize="@dimen/size_10"/>
 
                 </LinearLayout>
-                <com.example.ask.tabqypos.customtext.CustomTextViewBold
+                <com.tabyq.pos.tabqypos.customtext.CustomTextViewBold
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="3:13 PM"
@@ -190,20 +190,20 @@
                     android:gravity="center_vertical"
                     android:layout_alignParentLeft="true">
 
-                    <com.example.ask.tabqypos.customtext.CustomTextViewBold
+                    <com.tabyq.pos.tabqypos.customtext.CustomTextViewBold
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="84.66"
                         android:textSize="@dimen/size_12"
                         android:textColor="@color/colorBlack"/>
-                    <com.example.ask.tabqypos.customtext.CustomTextView
+                    <com.tabyq.pos.tabqypos.customtext.CustomTextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="cash"
                         android:textSize="@dimen/size_10"/>
 
                 </LinearLayout>
-                <com.example.ask.tabqypos.customtext.CustomTextViewBold
+                <com.tabyq.pos.tabqypos.customtext.CustomTextViewBold
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="3:13 PM"
@@ -224,7 +224,7 @@
                 android:layout_marginRight="@dimen/size_10"
                 android:layout_marginLeft="@dimen/size_10">
 
-                <com.example.ask.tabqypos.customtext.CustomTextViewBold
+                <com.tabyq.pos.tabqypos.customtext.CustomTextViewBold
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:text="Thursday,28 December 2017"
@@ -233,7 +233,7 @@
                     android:gravity="center_vertical"
                     android:layout_alignParentLeft="true"/>
 
-                <com.example.ask.tabqypos.customtext.CustomTextViewBold
+                <com.tabyq.pos.tabqypos.customtext.CustomTextViewBold
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:text="2 receipts"
@@ -261,20 +261,20 @@
                     android:gravity="center_vertical"
                     android:layout_alignParentLeft="true">
 
-                    <com.example.ask.tabqypos.customtext.CustomTextViewBold
+                    <com.tabyq.pos.tabqypos.customtext.CustomTextViewBold
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="84.66"
                         android:textSize="@dimen/size_12"
                         android:textColor="@color/colorBlack"/>
-                    <com.example.ask.tabqypos.customtext.CustomTextView
+                    <com.tabyq.pos.tabqypos.customtext.CustomTextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="cash"
                         android:textSize="@dimen/size_10"/>
 
                 </LinearLayout>
-                <com.example.ask.tabqypos.customtext.CustomTextViewBold
+                <com.tabyq.pos.tabqypos.customtext.CustomTextViewBold
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="3:13 PM"
@@ -302,20 +302,20 @@
                     android:gravity="center_vertical"
                     android:layout_alignParentLeft="true">
 
-                    <com.example.ask.tabqypos.customtext.CustomTextViewBold
+                    <com.tabyq.pos.tabqypos.customtext.CustomTextViewBold
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="84.66"
                         android:textSize="@dimen/size_12"
                         android:textColor="@color/colorBlack"/>
-                    <com.example.ask.tabqypos.customtext.CustomTextView
+                    <com.tabyq.pos.tabqypos.customtext.CustomTextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="cash"
                         android:textSize="@dimen/size_10"/>
 
                 </LinearLayout>
-                <com.example.ask.tabqypos.customtext.CustomTextViewBold
+                <com.tabyq.pos.tabqypos.customtext.CustomTextViewBold
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="3:13 PM"
@@ -336,7 +336,7 @@
                 android:layout_marginRight="@dimen/size_10"
                 android:layout_marginLeft="@dimen/size_10">
 
-                <com.example.ask.tabqypos.customtext.CustomTextViewBold
+                <com.tabyq.pos.tabqypos.customtext.CustomTextViewBold
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:text="Thursday,21 December 2017"
@@ -345,7 +345,7 @@
                     android:gravity="center_vertical"
                     android:layout_alignParentLeft="true"/>
 
-                <com.example.ask.tabqypos.customtext.CustomTextViewBold
+                <com.tabyq.pos.tabqypos.customtext.CustomTextViewBold
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:text="2 receipts"
@@ -373,20 +373,20 @@
                     android:gravity="center_vertical"
                     android:layout_alignParentLeft="true">
 
-                    <com.example.ask.tabqypos.customtext.CustomTextViewBold
+                    <com.tabyq.pos.tabqypos.customtext.CustomTextViewBold
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="84.66"
                         android:textSize="@dimen/size_12"
                         android:textColor="@color/colorBlack"/>
-                    <com.example.ask.tabqypos.customtext.CustomTextView
+                    <com.tabyq.pos.tabqypos.customtext.CustomTextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="cash"
                         android:textSize="@dimen/size_10"/>
 
                 </LinearLayout>
-                <com.example.ask.tabqypos.customtext.CustomTextViewBold
+                <com.tabyq.pos.tabqypos.customtext.CustomTextViewBold
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="3:13 PM"
@@ -414,20 +414,20 @@
                     android:gravity="center_vertical"
                     android:layout_alignParentLeft="true">
 
-                    <com.example.ask.tabqypos.customtext.CustomTextViewBold
+                    <com.tabyq.pos.tabqypos.customtext.CustomTextViewBold
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="84.66"
                         android:textSize="@dimen/size_12"
                         android:textColor="@color/colorBlack"/>
-                    <com.example.ask.tabqypos.customtext.CustomTextView
+                    <com.tabyq.pos.tabqypos.customtext.CustomTextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="cash"
                         android:textSize="@dimen/size_10"/>
 
                 </LinearLayout>
-                <com.example.ask.tabqypos.customtext.CustomTextViewBold
+                <com.tabyq.pos.tabqypos.customtext.CustomTextViewBold
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="3:13 PM"
