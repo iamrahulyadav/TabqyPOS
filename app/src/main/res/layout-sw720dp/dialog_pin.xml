@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="20dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="80dp">
+
+        <LinearLayout
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:gravity="center"
+            android:background="@drawable/shape_background_pink_circle">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_arrow_left_white"/>
+        </LinearLayout>
+        <com.tabyq.pos.tabqypos.customtext.CustomTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pin code is required"
+            android:layout_marginLeft="15dp"
+            android:layout_gravity="center_vertical"/>
+    </LinearLayout>
+    <com.tabyq.pos.tabqypos.customtext.CustomTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="Enter the pin of manager or administrator"
+        android:textSize="@dimen/extra_small_size" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp">
+
+        <com.tabyq.pos.tabqypos.customtext.CustomTextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/colorWhite"
+            android:gravity="center"
+            android:text="@string/fragment_pin_1" />
+
+        <com.tabyq.pos.tabqypos.customtext.CustomTextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="1dp"
+            android:layout_marginRight="1dp"
+            android:layout_weight="1"
+            android:background="@color/colorWhite"
+            android:gravity="center"
+            android:text="@string/fragment_pin_2" />
+
+        <com.tabyq.pos.tabqypos.customtext.CustomTextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/colorWhite"
+            android:gravity="center"
+            android:text="@string/fragment_pin_3" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp">
+
+        <com.tabyq.pos.tabqypos.customtext.CustomTextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/colorWhite"
+            android:gravity="center"
+            android:text="@string/fragment_pin_4" />
+
+        <com.tabyq.pos.tabqypos.customtext.CustomTextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="1dp"
+            android:layout_marginRight="1dp"
+            android:layout_weight="1"
+            android:background="@color/colorWhite"
+            android:gravity="center"
+            android:text="@string/fragment_pin_5" />
+
+        <com.tabyq.pos.tabqypos.customtext.CustomTextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/colorWhite"
+            android:gravity="center"
+            android:text="@string/fragment_pin_6" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp">
+
+        <com.tabyq.pos.tabqypos.customtext.CustomTextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/colorWhite"
+            android:gravity="center"
+            android:text="@string/fragment_pin_7" />
+
+        <com.tabyq.pos.tabqypos.customtext.CustomTextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="1dp"
+            android:layout_marginRight="1dp"
+            android:layout_weight="1"
+            android:background="@color/colorWhite"
+            android:gravity="center"
+            android:text="@string/fragment_pin_8" />
+
+        <com.tabyq.pos.tabqypos.customtext.CustomTextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/colorWhite"
+            android:gravity="center"
+            android:text="@string/fragment_pin_9" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="3"
+        android:layout_marginTop="20dp">
+
+        <com.tabyq.pos.tabqypos.customtext.CustomTextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/colorWhite"
+            android:gravity="center"
+            android:textColor="@color/colorBlack" />
+
+        <com.tabyq.pos.tabqypos.customtext.CustomTextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="1dp"
+            android:layout_marginRight="1dp"
+            android:layout_weight="1"
+            android:background="@color/colorWhite"
+            android:gravity="center"
+            android:text= "@string/fragment_pin_0" />
+
+        <com.tabyq.pos.tabqypos.customtext.CustomTextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/colorWhite"
+            android:gravity="center"
+            android:text="@string/fragment_pin_clear" />
+    </LinearLayout>
+
+</LinearLayout>

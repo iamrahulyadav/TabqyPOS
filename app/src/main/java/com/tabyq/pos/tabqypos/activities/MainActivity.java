@@ -123,6 +123,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 dialog_add_note.dismiss();
             }
         });
+
         dialog_add_note.setCancelable(false);
         dialog_add_note.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
         dialog_add_note.getWindow().getAttributes().windowAnimations = R.style.DialogAnimation;

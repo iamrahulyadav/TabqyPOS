@@ -111,4 +111,15 @@
     <string name="fragment_table_table_order">Table Order</string>
     <string name="dialog_pay_by_cash">Pay By Cash</string>
 
+    <!--fragment receipt-->
+    <string name="fragment_receipts_txt_receipt">Receipts</string>
+
+    <!--fragment single receipt-->
+    <string name="fragment_single_receipts_txt_receipt">Refund</string>
+    <string name="fragment_single_receipts_txt_total">Total</string>
+
+    <!--fragment refund -->
+    <string name="fragment_refund_select_the_items_for_refund">Select the items for refund</string>
+    <string name="fragment_refund_total">Total</string>
+    <string name="fragment_refund_receipt">Refund receipt</string>
 </resources>
