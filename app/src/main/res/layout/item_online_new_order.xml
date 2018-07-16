@@ -91,6 +91,7 @@
                 android:layout_height="wrap_content"
                 android:text="Details"
                 android:textSize="@dimen/size_10"
+                android:id="@+id/item_online_new_order_sdetails"
                 android:textColor="@color/colorWhite"
                 android:gravity="center"
                 android:paddingRight="10dp"

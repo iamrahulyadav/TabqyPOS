@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:background="@drawable/shape_border_grey_pop_up">
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:background="@drawable/shape_background_pop_up_white"
+                android:layout_marginStart="10dp">
+
+                <com.tabyq.pos.tabqypos.customtext.CustomTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/dialog_online_details_customer_name"
+                    android:padding="5dp"
+                    android:textSize="@dimen/size_12"/>
+
+                <com.tabyq.pos.tabqypos.customtext.CustomTextViewBold
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Munir"
+                    android:textSize="@dimen/size_12"
+                    android:paddingLeft="5dp"
+                    android:textColor="@color/colorlightBlack"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:layout_height="wrap_content">
+                        <com.tabyq.pos.tabqypos.customtext.CustomTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/dialog_online_details_customer_phone"
+                            android:padding="5dp"
+                            android:textSize="@dimen/size_12"/>
+
+                        <com.tabyq.pos.tabqypos.customtext.CustomTextViewBold
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="122454"
+                            android:textSize="@dimen/size_12"
+                            android:paddingLeft="5dp"
+                            android:textColor="@color/colorlightBlack"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content">
+                        <com.tabyq.pos.tabqypos.customtext.CustomTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/dialog_online_details_customer_phone"
+                            android:padding="5dp"
+                            android:textSize="@dimen/size_12"/>
+
+                        <com.tabyq.pos.tabqypos.customtext.CustomTextViewBold
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0544145"
+                            android:textSize="@dimen/size_12"
+                            android:paddingLeft="5dp"
+                            android:textColor="@color/colorlightBlack"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:layout_height="match_parent">
+                        <com.tabyq.pos.tabqypos.customtext.CustomTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/dialog_online_details_customer_area"
+                            android:padding="5dp"
+                            android:textSize="@dimen/size_12"/>
+
+                        <com.tabyq.pos.tabqypos.customtext.CustomTextViewBold
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="As Sulimania"
+                            android:paddingLeft="5dp"
+                            android:textSize="@dimen/size_12"
+                            android:textColor="@color/colorlightBlack"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content">
+                        <com.tabyq.pos.tabqypos.customtext.CustomTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/dialog_online_details_customer_loc"
+                            android:padding="5dp"
+                            android:textSize="@dimen/size_12"/>
+
+                        <com.tabyq.pos.tabqypos.customtext.CustomTextViewBold
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Prince Suliman road"
+                            android:paddingLeft="5dp"
+                            android:textSize="@dimen/size_12"
+                            android:textColor="@color/colorlightBlack"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <com.tabyq.pos.tabqypos.customtext.CustomTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/dialog_online_details_customer_del_add"
+                        android:padding="5dp"
+                        android:textSize="@dimen/size_12"/>
+                    <LinearLayout
+                        android:background="@color/background"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp">
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <com.tabyq.pos.tabqypos.customtext.CustomTextButtonTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorWhite"
+                    android:text="@string/dialog_online_details_close"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:layout_margin="3dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="3dp"
+                    android:paddingBottom="3dp"
+                    android:drawablePadding="5dp"
+                    android:id="@+id/dialog_online_cross"
+                    android:background="@drawable/btn_backgroundpink"
+                    android:drawableLeft="@drawable/ic_cross_white"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_margin="10dp"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/shape_background_pop_up_white">
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+</LinearLayout>

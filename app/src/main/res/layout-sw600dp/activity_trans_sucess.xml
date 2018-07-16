@@ -32,7 +32,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:textColor="@color/colorBlack"
-                android:text="Transaction Successful"
+                android:text="@string/activity_trans_transaction_successful"
                 android:paddingLeft="15dp"
                 android:gravity="center_vertical"/>
 
@@ -61,8 +61,57 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
+            android:orientation="vertical"
             android:layout_marginTop="20dp">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:padding="10dp"
+                android:src="@drawable/ic_success"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center">
+                <com.tabyq.pos.tabqypos.customtext.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Total : 91.889"
+                    android:padding="10dp"
+                    android:textColor="@color/colorBlack"/>
+                <com.tabyq.pos.tabqypos.customtext.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Cash : 91.889"
+                    android:padding="10dp"
+                    android:textColor="@color/colorBlack"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <com.tabyq.pos.tabqypos.customtext.CustomEditText
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:paddingLeft="3dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/size_10"
+                    android:drawablePadding="5dp"
+                    android:drawableLeft="@drawable/ic_mail"
+                    android:hint="@string/activity_trans_enter_email"/>
+                <com.tabyq.pos.tabqypos.customtext.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="@string/actvity_trans_send_receipt"
+                    android:textSize="@dimen/size_12"
+                    android:padding="5dp"
+                    android:gravity="center"
+                    android:textColor="@color/colorWhite"
+                    android:background="@drawable/btn_backgroundpink"/>
+            </LinearLayout>
 
         </LinearLayout>
 
@@ -70,11 +119,10 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:gravity="bottom|center_horizontal">
-
             <com.tabyq.pos.tabqypos.customtext.CustomTextView
                 android:layout_width="wrap_content"
                 android:layout_height="45dp"
-                android:text="New Sale"
+                android:text="@string/actvity_trans_new_sale"
                 android:textSize="14sp"
                 android:textColor="@color/colorWhite"
                 android:layout_gravity="bottom"
@@ -84,6 +132,8 @@
                 android:paddingRight="40dp"/>
 
         </LinearLayout>
-        </LinearLayout>
+    </LinearLayout>
+
+
 
 </LinearLayout>

@@ -10,7 +10,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:layout_marginLeft="@dimen/nav1_width">
+        android:layout_marginLeft="@dimen/nav1_width"
+        android:layout_marginStart="@dimen/nav1_width">
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -18,131 +19,142 @@
             android:orientation="horizontal">
 
             <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/card_viewtop"
+                android:orientation="horizontal"
+                android:layout_marginRight="@dimen/main_frame_right_width"
+                android:layout_toLeftOf="@id/frame_main_right"
+                android:layout_marginEnd="@dimen/main_frame_right_width"
+                android:layout_toStartOf="@id/frame_main_right">
+
+                <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/card_viewtop"
-                    android:orientation="horizontal"
-                    android:layout_marginRight="@dimen/main_frame_right_width"
-                    android:layout_toLeftOf="@id/frame_main_right">
+                    android:layout_height="@dimen/nav_header_height"
+                    android:background="@color/colorWhite"
+                    android:gravity="bottom"
+                    android:orientation="vertical"
+                    android:theme="@style/ThemeOverlay.AppCompat.Dark">
 
-                    <RelativeLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="@dimen/nav_header_height"
-                        android:background="@color/colorWhite"
-                        android:gravity="bottom"
+                    <ImageView
+                        android:id="@+id/imageView"
+                        android:layout_width="@dimen/size_60"
+                        android:layout_height="@dimen/size_60"
+                        android:contentDescription="@string/nav_header_desc"
+                        android:paddingTop="@dimen/nav_header_vertical_spacing"
+                        app:srcCompat="@drawable/profile_new"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="5dp" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
                         android:orientation="vertical"
-                        android:theme="@style/ThemeOverlay.AppCompat.Dark">
+                        android:layout_toRightOf="@+id/imageView"
+                        android:layout_toEndOf="@+id/imageView">
 
-                        <ImageView
-                            android:id="@+id/imageView"
-                            android:layout_width="@dimen/size_60"
-                            android:layout_height="@dimen/size_60"
-                            android:contentDescription="@string/nav_header_desc"
-                            android:paddingTop="@dimen/nav_header_vertical_spacing"
-                            app:srcCompat="@drawable/profile_new"
-                            android:layout_marginTop="10dp"
-                            android:layout_marginLeft="10dp"
-                            android:layout_marginBottom="10dp"
-                            android:layout_marginRight="5dp"/>
-
-                        <LinearLayout
-                            android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
-                            android:gravity="center_vertical"
-                            android:orientation="vertical"
-                            android:layout_toRightOf="@+id/imageView">
-
-                            <com.tabyq.pos.tabqypos.customtext.CustomTextView
-                                android:id="@+id/txt_name"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_toRightOf="@+id/imageView"
-                                android:paddingTop="@dimen/nav_header_vertical_spacing"
-                                android:text="Stipe Miocic"
-                                android:textColor="@color/color_lightgreytext" />
-
-                            <com.tabyq.pos.tabqypos.customtext.CustomTextView
-                                android:id="@+id/txt_date"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_below="@+id/txt_name"
-                                android:layout_toRightOf="@+id/imageView"
-                                android:text="POS"
-                                android:textColor="@color/color_lightgreytext" />
-
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
-                            android:id="@+id/main_top_middle"
-                            android:orientation="horizontal"
-                            android:layout_toLeftOf="@+id/img_notification"
-                            android:layout_marginRight="10dp"
-                            android:gravity="center_vertical"
-                            android:visibility="gone">
-
-                            <com.tabyq.pos.tabqypos.customtext.CustomTextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:id="@+id/main_middle_btn_add_note"
-                                android:text="Add Note"
-                                android:textSize="16dp"
-                                android:background="@drawable/btn_backgroundpink"
-                                android:paddingLeft="@dimen/size_10"
-                                android:paddingRight="@dimen/size_10"
-                                android:paddingTop="@dimen/size_5"
-                                android:paddingBottom="@dimen/size_5"
-                                android:layout_marginRight="10dp"/>
-
-                            <com.tabyq.pos.tabqypos.customtext.CustomTextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:id="@+id/main_middle_btn_add_discount"
-                                android:text="Add Discount"
-                                android:textSize="16dp"
-                                android:background="@drawable/btnbackground_green"
-                                android:paddingLeft="@dimen/size_10"
-                                android:paddingRight="@dimen/size_10"
-                                android:paddingTop="@dimen/size_5"
-                                android:paddingBottom="@dimen/size_5"
-                                android:layout_marginRight="10dp"/>
-
-                        </LinearLayout>
-                        <ImageView
-                            android:id="@+id/img_notification"
+                        <com.tabyq.pos.tabqypos.customtext.CustomTextView
+                            android:id="@+id/txt_name"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_centerHorizontal="true"
-                            android:contentDescription="@string/nav_header_desc"
                             android:paddingTop="@dimen/nav_header_vertical_spacing"
-                            android:src="@drawable/ic_notification"
-                            android:layout_toLeftOf="@+id/img_logout"
-                            android:layout_marginRight="10dp"
-                            android:layout_centerInParent="true"/>
+                            android:text="Stipe Miocic"
+                            android:textColor="@color/color_lightgreytext" />
 
-                        <ImageView
-                            android:id="@+id/img_logout"
+                        <com.tabyq.pos.tabqypos.customtext.CustomTextView
+                            android:id="@+id/txt_date"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_alignParentRight="true"
-                            android:layout_centerHorizontal="true"
-                            android:contentDescription="@string/nav_header_desc"
-                            android:paddingTop="@dimen/nav_header_vertical_spacing"
-                            android:src="@drawable/ic_logout"
-                            android:layout_centerInParent="true"
+                            android:layout_below="@+id/txt_name"
+                            android:layout_toRightOf="@+id/imageView"
+                            android:text="POS"
+                            android:textColor="@color/color_lightgreytext" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:id="@+id/main_top_middle"
+                        android:orientation="horizontal"
+                        android:layout_toLeftOf="@+id/img_notification"
+                        android:layout_marginRight="10dp"
+                        android:gravity="center_vertical"
+                        android:visibility="gone">
+
+                        <com.tabyq.pos.tabqypos.customtext.CustomTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/main_middle_btn_add_note"
+                            android:text="@string/status_bar_add_note"
+                            android:textSize="16dp"
+                            android:textColor="@color/colorWhite"
+                            android:background="@drawable/btn_backgroundpink"
+                            android:paddingLeft="@dimen/size_10"
+                            android:paddingRight="@dimen/size_10"
+                            android:paddingTop="@dimen/size_5"
+                            android:paddingBottom="@dimen/size_5"
                             android:layout_marginRight="10dp"/>
 
-                    </RelativeLayout>
+                        <com.tabyq.pos.tabqypos.customtext.CustomTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/main_middle_btn_add_discount"
+                            android:text="@string/status_bar_add_discount"
+                            android:textSize="16dp"
+                            android:textColor="@color/colorWhite"
+                            android:background="@drawable/btnbackground_green"
+                            android:paddingLeft="@dimen/size_10"
+                            android:paddingRight="@dimen/size_10"
+                            android:paddingTop="@dimen/size_5"
+                            android:paddingBottom="@dimen/size_5"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginEnd="10dp" />
 
-                </LinearLayout>
+                    </LinearLayout>
+                    <ImageView
+                        android:id="@+id/img_notification"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:contentDescription="@string/nav_header_desc"
+                        android:paddingTop="@dimen/nav_header_vertical_spacing"
+                        android:src="@drawable/ic_notification"
+                        android:layout_toLeftOf="@+id/img_logout"
+                        android:layout_marginRight="10dp"
+                        android:layout_centerInParent="true"
+                        android:layout_toStartOf="@+id/img_logout"
+                        android:layout_marginEnd="10dp" />
+
+                    <ImageView
+                        android:id="@+id/img_logout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerHorizontal="true"
+                        android:contentDescription="@string/nav_header_desc"
+                        android:paddingTop="@dimen/nav_header_vertical_spacing"
+                        android:src="@drawable/ic_logout"
+                        android:layout_centerInParent="true"
+                        android:layout_marginRight="10dp"/>
+
+                </RelativeLayout>
+
+            </LinearLayout>
             <LinearLayout
                 android:layout_width="@dimen/main_frame_right_width"
                 android:layout_height="@dimen/nav_header_height"
                 android:id="@+id/main_card_view_right"
                 android:layout_alignParentRight="true"
                 android:background="@color/colorWhite"
-                android:visibility="visible"/>
+                android:visibility="visible"
+                android:orientation="horizontal"
+                android:layout_alignParentEnd="true" />
 
 
             <LinearLayout
@@ -251,77 +263,77 @@
                 android:visibility="visible"/>
 
         </RelativeLayout>
-<!--
-                <LinearLayout
-                    android:id="@+id/fragment_charge_top_right"
-                    android:layout_width="0dp"
-                    android:layout_weight="3.5"
-                    android:layout_height="wrap_content"
-                    android:gravity="center_vertical"
-                    android:orientation="horizontal"
-                    android:paddingBottom="10dp"
-                    android:paddingLeft="10dp"
-                    android:background="@color/colorWhite"
-                    android:paddingRight="10dp"
-                    android:paddingTop="10dp">
-                    <ImageView
-                        android:id="@+id/include_charge_cust_profile"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:contentDescription="@string/nav_header_desc"
-                        android:paddingTop="@dimen/nav_header_vertical_spacing"
-                        android:paddingBottom="@dimen/nav_header_vertical_spacing"
-                        app:srcCompat="@drawable/profile_new" />
-
-                    <LinearLayout
-                        android:layout_margin="2dp"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical">
-                        <com.example.ask.tabqypos.customtext.CustomTextView
-                            android:layout_width="wrap_content"
+        <!--
+                        <LinearLayout
+                            android:id="@+id/fragment_charge_top_right"
+                            android:layout_width="0dp"
+                            android:layout_weight="3.5"
                             android:layout_height="wrap_content"
-                            android:text="Marwin Simms"
-                            android:padding="3dp"
-                            android:textSize="@dimen/size_9"
-                            android:textColor="@color/colorBlack"/>
-                        <com.example.ask.tabqypos.customtext.CustomTextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="0454214552"
-                            android:textSize="@dimen/size_9"
-                            android:padding="3dp"
-                            android:textColor="@color/colorlightBlack"/>
-                        <com.example.ask.tabqypos.customtext.CustomTextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Balance : 03:16"
-                            android:padding="3dp"
-                            android:textSize="@dimen/size_9"
-                            android:textColor="@color/colorappPink"/>
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:paddingBottom="10dp"
+                            android:paddingLeft="10dp"
+                            android:background="@color/colorWhite"
+                            android:paddingRight="10dp"
+                            android:paddingTop="10dp">
+                            <ImageView
+                                android:id="@+id/include_charge_cust_profile"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:contentDescription="@string/nav_header_desc"
+                                android:paddingTop="@dimen/nav_header_vertical_spacing"
+                                android:paddingBottom="@dimen/nav_header_vertical_spacing"
+                                app:srcCompat="@drawable/profile_new" />
 
-                    </LinearLayout>
+                            <LinearLayout
+                                android:layout_margin="2dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+                                <com.example.ask.tabqypos.customtext.CustomTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Marwin Simms"
+                                    android:padding="3dp"
+                                    android:textSize="@dimen/size_9"
+                                    android:textColor="@color/colorBlack"/>
+                                <com.example.ask.tabqypos.customtext.CustomTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="0454214552"
+                                    android:textSize="@dimen/size_9"
+                                    android:padding="3dp"
+                                    android:textColor="@color/colorlightBlack"/>
+                                <com.example.ask.tabqypos.customtext.CustomTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Balance : 03:16"
+                                    android:padding="3dp"
+                                    android:textSize="@dimen/size_9"
+                                    android:textColor="@color/colorappPink"/>
 
-                    <RelativeLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="right|bottom">
-                        <com.example.ask.tabqypos.customtext.CustomTextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:drawableTop="@drawable/ic_take_way"
-                            android:textColor="@color/colorappPink"
-                            android:padding="2dp"
-                            android:textSize="@dimen/size_9"
-                            android:layout_alignParentRight="true"
-                            android:gravity="right|center_vertical"
-                            android:layout_marginLeft="3dp"
-                            android:text="@string/fragment_charge_txt_take_way"/>
+                            </LinearLayout>
 
-                    </RelativeLayout>
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="right|bottom">
+                                <com.example.ask.tabqypos.customtext.CustomTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:drawableTop="@drawable/ic_take_way"
+                                    android:textColor="@color/colorappPink"
+                                    android:padding="2dp"
+                                    android:textSize="@dimen/size_9"
+                                    android:layout_alignParentRight="true"
+                                    android:gravity="right|center_vertical"
+                                    android:layout_marginLeft="3dp"
+                                    android:text="@string/fragment_charge_txt_take_way"/>
 
-                </LinearLayout>
--->
+                            </RelativeLayout>
+
+                        </LinearLayout>
+        -->
 
     </RelativeLayout>
     <LinearLayout
@@ -407,7 +419,7 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/img_walkin"
                     android:layout_centerHorizontal="true"
-                    android:text="WalkIn"
+                    android:text="@string/activity_main_walkin"
                     android:textColor="@color/colorWhite"
                     android:textSize="@dimen/navmenu_text_size" />
 
@@ -433,7 +445,7 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/crm"
                     android:layout_centerHorizontal="true"
-                    android:text="CRM"
+                    android:text="@string/activity_main_crm"
                     android:textColor="@color/colorWhite"
                     android:textSize="@dimen/navmenu_text_size" />
             </RelativeLayout>
@@ -458,7 +470,7 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/img_table"
                     android:layout_centerHorizontal="true"
-                    android:text="Table"
+                    android:text="@string/activity_main_table"
                     android:textColor="@color/colorWhite"
                     android:textSize="@dimen/navmenu_text_size" />
             </RelativeLayout>
@@ -483,7 +495,7 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/img_online"
                     android:layout_centerHorizontal="true"
-                    android:text="Online"
+                    android:text="@string/activity_main_online"
                     android:textColor="@color/colorWhite"
                     android:textSize="@dimen/navmenu_text_size" />
             </RelativeLayout>
@@ -508,7 +520,7 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/img_charity"
                     android:layout_centerHorizontal="true"
-                    android:text="Charity"
+                    android:text="@string/activity_main_charity"
                     android:textColor="@color/colorWhite"
                     android:textSize="@dimen/navmenu_text_size" />
             </RelativeLayout>
@@ -518,7 +530,6 @@
                 android:id="@+id/order_status"
                 android:layout_width="@dimen/nav1_width"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/charity"
                 android:layout_marginTop="@dimen/margin_top_sidemenu_next">
 
                 <ImageView
@@ -533,7 +544,7 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/img_order_status"
                     android:layout_centerHorizontal="true"
-                    android:text="Order\nStatus"
+                    android:text="@string/activity_main_order_nstatus"
                     android:textColor="@color/colorWhite"
                     android:textSize="@dimen/navmenu_text_size" />
             </RelativeLayout>
