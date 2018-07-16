@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/item_fragment_online_top_layout"
+    android:layout_marginRight="10dp"
+    android:padding="10dp">
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:id="@+id/item_fragment_online_top_image"/>
+
+    <com.example.ask.tabqypos.customtext.CustomTextViewBold
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/item_fragment_online_top_text"
+        android:text="Tabqy"
+        android:textColor="@color/colorBlack"
+        android:textSize="@dimen/size_10"
+        android:gravity="center"
+        android:layout_marginTop="10dp"/>
+
+</LinearLayout>

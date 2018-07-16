@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.example.ask.tabqypos.customtext.CustomTextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="#16"
+        android:gravity="center"
+        android:padding="5dp"
+        android:textSize="10sp"
+        android:id="@+id/item_save_past_order_no"
+        android:textColor="@color/colorlightBlack"/>
+    <com.example.ask.tabqypos.customtext.CustomTextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:textSize="10sp"
+        android:text="27 Jun, 2018 03:16PM"
+        android:padding="5dp"
+        android:gravity="center"
+        android:id="@+id/item_save_past_order_date"
+        android:textColor="@color/colorlightBlack"/>
+
+    <com.example.ask.tabqypos.customtext.CustomTextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Walk-in"
+        android:textSize="10sp"
+        android:padding="5dp"
+        android:gravity="center"
+        android:id="@+id/item_save_past_order_walkin"
+        android:textColor="@color/colorlightBlack"/>
+    <com.example.ask.tabqypos.customtext.CustomTextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:textSize="10sp"
+        android:gravity="center"
+        android:text="1 hr and 11 mins"
+        android:padding="5dp"
+        android:id="@+id/item_save_past_order_time_taken"
+        android:textColor="@color/colorlightBlack"/>
+    <com.example.ask.tabqypos.customtext.CustomTextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="SAR 100.00"
+        android:textSize="10sp"
+        android:gravity="center"
+        android:padding="5dp"
+        android:id="@+id/item_save_past_order_amt"
+        android:textColor="@color/colorlightBlack"/>
+    <com.example.ask.tabqypos.customtext.CustomTextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Delivered"
+        android:padding="5dp"
+        android:gravity="center"
+        android:textSize="10sp"
+        android:id="@+id/item_save_past_order_status"
+        android:textColor="@color/colorlightBlack"/>
+    <com.example.ask.tabqypos.customtext.CustomTextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Usman"
+        android:gravity="center"
+        android:textSize="10sp"
+        android:padding="5dp"
+        android:id="@+id/item_save_past_order_driver"
+        android:textColor="@color/colorlightBlack"/>
+    <com.example.ask.tabqypos.customtext.CustomTextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Rehan"
+        android:gravity="center"
+        android:textSize="10sp"
+        android:padding="5dp"
+        android:id="@+id/item_save_past_order_agent"
+        android:textColor="@color/colorlightBlack"/>
+    <com.example.ask.tabqypos.customtext.CustomTextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Show Details"
+        android:textSize="10sp"
+        android:gravity="center"
+        android:padding="5dp"
+        android:background="@drawable/btn_backgroundpink"
+        android:id="@+id/item_save_past_order_show"
+        android:textColor="@color/colorWhite"/>
+
+</LinearLayout>

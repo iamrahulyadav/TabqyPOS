@@ -1,0 +1,520 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.AddUserFragment">
+
+   <android.support.v4.widget.NestedScrollView
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_marginTop="@dimen/nav_header_height">
+      <android.support.v7.widget.CardView
+          android:layout_margin="5dp"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content">
+         <LinearLayout
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:orientation="vertical">
+             <com.example.ask.tabqypos.customtext.CustomTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/small_size"
+                android:textColor="@color/colorBlack"
+                android:padding="10dp"
+                android:text="General Information- New Customer"/>
+             <View
+                 android:layout_width="match_parent"
+                 android:layout_height="1dp"
+                 android:background="@color/colorLightGrey"/>
+
+             <LinearLayout
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:orientation="horizontal"
+                 android:layout_margin="5dp">
+                 <LinearLayout
+                     android:layout_marginLeft="5dp"
+                     android:layout_weight="1"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:orientation="vertical">
+                     <com.example.ask.tabqypos.customtext.CustomTextView
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:text="Name"
+                         android:padding="3dp"
+                         android:textSize="@dimen/extra_small_size"
+                         android:textColor="@color/colorlightBlack"/>
+
+                     <com.example.ask.tabqypos.customtext.CustomEditText
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:hint="Name"
+                         android:textSize="@dimen/extra_small_size"
+                         android:padding="5dp"
+                         android:layout_margin="3dp"/>
+                 </LinearLayout>
+
+
+                 <LinearLayout
+                     android:layout_marginLeft="5dp"
+                     android:layout_weight="1"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:orientation="vertical">
+                     <com.example.ask.tabqypos.customtext.CustomTextView
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:text="Phone Number"
+                         android:textSize="@dimen/extra_small_size"
+                         android:padding="3dp"
+                         android:textColor="@color/colorlightBlack"/>
+
+                     <LinearLayout
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:orientation="horizontal">
+                         <com.example.ask.tabqypos.customtext.CustomEditText
+                             android:layout_width="wrap_content"
+                             android:layout_height="wrap_content"
+                             android:hint="+91"
+                             android:maxLength="3"
+                             android:singleLine="true"
+                             android:inputType="number"
+                             android:textSize="@dimen/extra_small_size"
+                             android:padding="5dp"
+                             android:layout_margin="3dp"/>
+
+                         <com.example.ask.tabqypos.customtext.CustomEditText
+                             android:layout_width="match_parent"
+                             android:layout_height="wrap_content"
+                             android:hint="9958187463"
+                             android:singleLine="true"
+                             android:inputType="number"
+                             android:textSize="@dimen/extra_small_size"
+                             android:padding="5dp"
+                             android:layout_margin="3dp"/>
+
+                     </LinearLayout>
+                 </LinearLayout>
+
+                 <LinearLayout
+                     android:layout_marginLeft="5dp"
+                     android:layout_weight="1"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:orientation="vertical">
+
+                     <com.example.ask.tabqypos.customtext.CustomTextView
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:text="Alternate Number"
+                         android:textSize="@dimen/extra_small_size"
+                         android:padding="3dp"
+                         android:textColor="@color/colorlightBlack"/>
+
+                     <com.example.ask.tabqypos.customtext.CustomEditText
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:textSize="@dimen/extra_small_size"
+                         android:padding="5dp"
+                         android:layout_margin="3dp"/>
+                 </LinearLayout>
+
+
+                 <LinearLayout
+                     android:layout_marginLeft="5dp"
+                     android:layout_weight="1"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:orientation="vertical">
+                     <com.example.ask.tabqypos.customtext.CustomTextView
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:text="Email"
+                         android:textSize="@dimen/extra_small_size"
+                         android:padding="3dp"
+                         android:textColor="@color/colorlightBlack"/>
+
+                     <com.example.ask.tabqypos.customtext.CustomEditText
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:hint="Email"
+                         android:singleLine="true"
+                         android:inputType="textEmailAddress"
+                         android:textSize="@dimen/extra_small_size"
+                         android:padding="5dp"
+                         android:layout_margin="3dp"/>
+                 </LinearLayout>
+
+             </LinearLayout>
+
+
+             <com.example.ask.tabqypos.customtext.CustomTextView
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:textSize="@dimen/small_size"
+                 android:textColor="@color/colorBlack"
+                 android:padding="10dp"
+                 android:textStyle="bold"
+                 android:text="Address"/>
+             <View
+                 android:layout_width="match_parent"
+                 android:layout_height="1dp"
+                 android:background="@color/colorLightGrey"/>
+
+             <LinearLayout
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:orientation="horizontal"
+                 android:layout_margin="5dp">
+                 <LinearLayout
+                     android:layout_marginLeft="5dp"
+                     android:layout_weight="1"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:orientation="vertical">
+                     <com.example.ask.tabqypos.customtext.CustomTextView
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:text="Delivery Area"
+                         android:padding="3dp"
+                         android:textSize="@dimen/extra_small_size"
+                         android:textColor="@color/colorlightBlack"/>
+
+                     <com.example.ask.tabqypos.customtext.CustomEditText
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:hint="Type Area Name"
+                         android:textSize="@dimen/extra_small_size"
+                         android:padding="5dp"
+                         android:layout_margin="3dp"/>
+                 </LinearLayout>
+
+
+                 <LinearLayout
+                     android:layout_marginLeft="5dp"
+                     android:layout_weight="1"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:orientation="vertical">
+                     <com.example.ask.tabqypos.customtext.CustomTextView
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:text="Location"
+                         android:textSize="@dimen/extra_small_size"
+                         android:padding="3dp"
+                         android:textColor="@color/colorlightBlack"/>
+
+                     <com.example.ask.tabqypos.customtext.CustomEditText
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:singleLine="true"
+                         android:textSize="@dimen/extra_small_size"
+                         android:padding="5dp"
+                         android:layout_margin="3dp"/>
+                 </LinearLayout>
+
+                 <LinearLayout
+                     android:layout_marginLeft="5dp"
+                     android:layout_weight="1"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:orientation="vertical">
+                     <com.example.ask.tabqypos.customtext.CustomTextView
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:text="Building"
+                         android:textSize="@dimen/extra_small_size"
+                         android:padding="3dp"
+                         android:textColor="@color/colorlightBlack"/>
+
+                     <com.example.ask.tabqypos.customtext.CustomEditText
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:textSize="@dimen/extra_small_size"
+                         android:padding="5dp"
+                         android:layout_margin="3dp"/>
+
+                 </LinearLayout>
+
+
+                 <LinearLayout
+                     android:layout_marginLeft="5dp"
+                     android:layout_weight="1"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:orientation="vertical">
+                     <com.example.ask.tabqypos.customtext.CustomTextView
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:text="Street"
+                         android:textSize="@dimen/extra_small_size"
+                         android:padding="3dp"
+                         android:textColor="@color/colorlightBlack"/>
+
+                     <com.example.ask.tabqypos.customtext.CustomEditText
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:singleLine="true"
+                         android:inputType="textEmailAddress"
+                         android:textSize="@dimen/extra_small_size"
+                         android:padding="5dp"
+                         android:layout_margin="3dp"/>
+                 </LinearLayout>
+
+             </LinearLayout>
+
+             <LinearLayout
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:orientation="horizontal"
+                 android:layout_margin="5dp">
+                 <LinearLayout
+                     android:layout_marginLeft="5dp"
+                     android:layout_weight="1"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:orientation="vertical">
+                     <com.example.ask.tabqypos.customtext.CustomTextView
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:text="Flat No"
+                         android:padding="3dp"
+                         android:textSize="@dimen/extra_small_size"
+                         android:textColor="@color/colorlightBlack"/>
+
+                     <com.example.ask.tabqypos.customtext.CustomEditText
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:textSize="@dimen/extra_small_size"
+                         android:padding="5dp"
+                         android:layout_margin="3dp"/>
+                 </LinearLayout>
+
+
+                 <LinearLayout
+                     android:layout_marginLeft="5dp"
+                     android:layout_weight="1"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:orientation="vertical">
+                     <com.example.ask.tabqypos.customtext.CustomTextView
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:text="Nearest land mark"
+                         android:textSize="@dimen/extra_small_size"
+                         android:padding="3dp"
+                         android:textColor="@color/colorlightBlack"/>
+
+                     <com.example.ask.tabqypos.customtext.CustomEditText
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:singleLine="true"
+                         android:textSize="@dimen/extra_small_size"
+                         android:padding="5dp"
+                         android:layout_margin="3dp"/>
+                 </LinearLayout>
+
+                 <LinearLayout
+                     android:layout_marginLeft="5dp"
+                     android:layout_weight="1"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:orientation="vertical">
+
+                     <com.example.ask.tabqypos.customtext.CustomTextView
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:text="City"
+                         android:textSize="@dimen/extra_small_size"
+                         android:padding="3dp"
+                         android:textColor="@color/colorlightBlack"/>
+
+                     <com.example.ask.tabqypos.customtext.CustomEditText
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:textSize="@dimen/extra_small_size"
+                         android:padding="5dp"
+                         android:layout_margin="3dp"/>
+
+                 </LinearLayout>
+
+
+                 <LinearLayout
+                     android:layout_marginLeft="5dp"
+                     android:layout_weight="1"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:orientation="vertical">
+                     <com.example.ask.tabqypos.customtext.CustomTextView
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:text="Country"
+                         android:textSize="@dimen/extra_small_size"
+                         android:padding="3dp"
+                         android:textColor="@color/colorlightBlack"/>
+
+                     <com.example.ask.tabqypos.customtext.CustomEditText
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:hint="Saudi Arabia"
+                         android:singleLine="true"
+                         android:textSize="@dimen/extra_small_size"
+                         android:padding="5dp"
+                         android:layout_margin="3dp"/>
+                 </LinearLayout>
+
+             </LinearLayout>
+
+             <com.example.ask.tabqypos.customtext.CustomTextView
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:textSize="@dimen/small_size"
+                 android:textColor="@color/colorBlack"
+                 android:padding="10dp"
+                 android:textStyle="bold"
+                 android:text="Additional Information"/>
+             <View
+                 android:layout_width="match_parent"
+                 android:layout_height="1dp"
+                 android:background="@color/colorLightGrey"/>
+
+
+             <LinearLayout
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:orientation="horizontal"
+                 android:layout_margin="5dp">
+                 <LinearLayout
+                     android:layout_marginLeft="5dp"
+                     android:layout_weight="1"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:orientation="vertical">
+
+                     <com.example.ask.tabqypos.customtext.CustomTextView    android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:text="Gender"
+                         android:padding="3dp"
+                         android:textSize="@dimen/extra_small_size"
+                         android:textColor="@color/colorlightBlack"/>
+
+                     <Spinner
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:textSize="@dimen/extra_small_size"
+                         android:padding="5dp"
+                         android:layout_margin="3dp"/>
+                 </LinearLayout>
+
+
+                 <LinearLayout
+                     android:layout_marginLeft="5dp"
+                     android:layout_weight="1"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:orientation="vertical">
+
+                     <com.example.ask.tabqypos.customtext.CustomTextView
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:text="Birthday"
+                         android:textSize="@dimen/extra_small_size"
+                         android:padding="3dp"
+                         android:textColor="@color/colorlightBlack"/>
+
+                     <LinearLayout
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:orientation="horizontal">
+                         <Spinner
+                             android:layout_width="wrap_content"
+                             android:layout_height="wrap_content"
+                             android:textSize="@dimen/extra_small_size"
+                             android:padding="5dp"
+                             android:layout_margin="3dp"/>
+                         <Spinner
+                             android:layout_width="wrap_content"
+                             android:layout_height="wrap_content"
+                             android:textSize="@dimen/extra_small_size"
+                             android:padding="5dp"
+                             android:layout_margin="3dp"/>
+                         <Spinner
+                             android:layout_width="wrap_content"
+                             android:layout_height="wrap_content"
+                             android:textSize="@dimen/extra_small_size"
+                             android:padding="5dp"
+                             android:layout_margin="3dp"/>
+
+                     </LinearLayout>
+                 </LinearLayout>
+
+
+
+
+
+             </LinearLayout>
+             <com.example.ask.tabqypos.customtext.CustomTextView
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:text="Photo"
+                 android:padding="5dp"
+                 android:textColor="@color/colorBlack"/>
+             <LinearLayout
+                 android:padding="8dp"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:orientation="horizontal">
+                 <com.example.ask.tabqypos.customtext.CustomTextView
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:text="Photo-7.jpg"
+                     android:textColor="@color/colorlightBlack"/>
+                 <com.example.ask.tabqypos.customtext.CustomTextView
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:textColor="@color/colorWhite"
+                     android:text="Choose photo"
+                     android:padding="5dp"
+                     android:layout_marginLeft="8dp"
+                     android:background="@drawable/btn_backgroundpink"/>
+
+             </LinearLayout>
+             <LinearLayout
+                 android:padding="8dp"
+                 android:layout_width="wrap_content"
+                 android:layout_gravity="right"
+                 android:layout_height="wrap_content"
+                 android:orientation="horizontal">
+                 <com.example.ask.tabqypos.customtext.CustomTextView
+                     android:layout_width="70dp"
+                     android:layout_height="wrap_content"
+                     android:text="Cancel"
+                     android:gravity="center"
+                     android:padding="8dp"
+                     android:background="@drawable/back_buttongrey"
+                     android:textColor="@color/colorlightBlack"/>
+                 <com.example.ask.tabqypos.customtext.CustomTextView
+                     android:layout_width="70dp"
+                     android:layout_height="match_parent"
+                     android:textColor="@color/colorWhite"
+                     android:text="Save"
+                     android:gravity="center"
+                     android:padding="5dp"
+                     android:layout_marginLeft="8dp"
+                     android:background="@drawable/btn_backgroundpink"/>
+
+             </LinearLayout>
+
+
+         </LinearLayout>
+
+      </android.support.v7.widget.CardView>
+
+   </android.support.v4.widget.NestedScrollView>
+
+</RelativeLayout>

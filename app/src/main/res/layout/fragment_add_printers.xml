@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.nav2.CloseRegister" >
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/nav_header_height"
+        android:id="@+id/fragment_add_printers_btn_save"
+        android:layout_alignParentRight="true"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingRight="20dp">
+
+        <com.example.ask.tabqypos.customtext.CustomTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Save"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/size_14"
+            android:layout_marginRight="5dp"/>
+        <LinearLayout
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:gravity="center"
+            android:background="@drawable/shape_background_pink_circle"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_tick"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/nav_header_height">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/background"
+            android:padding="@dimen/size_10">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/shape_background_white"
+                android:padding="@dimen/size_10"
+                android:orientation="vertical">
+
+                <com.example.ask.tabqypos.customtext.CustomTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:text="Create printer"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/size_12"
+                    android:drawableLeft="@drawable/ic_arrow_left_small"
+                    android:drawablePadding="@dimen/size_10"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height=".3dp"
+                    android:background="#ECF0F1"/>
+                <com.example.ask.tabqypos.customtext.CustomTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:text="Printer settings"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/size_12"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height=".3dp"
+                    android:background="#ECF0F1"/>
+
+                <com.example.ask.tabqypos.customtext.CustomTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Printer name"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/size_10"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:layout_marginTop="@dimen/size_10"/>
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="@dimen/size_10">
+
+                    <com.example.ask.tabqypos.customtext.CustomTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="Office Printer"
+                        android:textSize="@dimen/size_10"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/size_10"/>
+
+                </android.support.v7.widget.CardView>
+                <com.example.ask.tabqypos.customtext.CustomTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Printer model"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/size_10"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:layout_marginTop="@dimen/size_10"/>
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="@dimen/size_10">
+
+                    <com.example.ask.tabqypos.customtext.CustomTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="Epson TM-T88V(Ethernet)"
+                        android:textSize="@dimen/size_10"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/size_10"/>
+
+                </android.support.v7.widget.CardView>
+
+                <com.example.ask.tabqypos.customtext.CustomTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Printer IP-address"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/size_10"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:layout_marginTop="@dimen/size_10"/>
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="@dimen/size_10">
+
+                    <com.example.ask.tabqypos.customtext.CustomTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="192.168.101.1"
+                        android:textSize="@dimen/size_10"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/size_10"/>
+
+                </android.support.v7.widget.CardView>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:orientation="horizontal"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:gravity="center_vertical">
+
+                    <com.example.ask.tabqypos.customtext.CustomTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Print receipts and bills"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/size_10"
+                        android:gravity="center_vertical"/>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp">
+
+                    <com.example.ask.tabqypos.customtext.CustomTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Print Orders"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/size_10"
+                        android:gravity="center_vertical"/>
+
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height=".3dp"
+                    android:background="#ECF0F1"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp">
+
+                    <com.example.ask.tabqypos.customtext.CustomTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Autmatically print receipt"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/size_10"
+                        android:gravity="center_vertical"/>
+
+                </LinearLayout>
+
+                <com.example.ask.tabqypos.customtext.CustomTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:text="Print Groups"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/size_12"
+                    android:gravity="center_vertical"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height=".3dp"
+                    android:background="#ECF0F1"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp">
+
+                    <com.example.ask.tabqypos.customtext.CustomTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Print"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/size_10"
+                        android:gravity="center_vertical"/>
+
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height=".3dp"
+                    android:background="#ECF0F1"/>
+
+                <com.example.ask.tabqypos.customtext.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:text="Print"
+                    android:textSize="@dimen/size_12"
+                    android:textColor="@color/colorWhite"
+                    android:gravity="center"
+                    android:background="@drawable/btn_backgroundpink"
+                    android:paddingRight="65dp"
+                    android:paddingLeft="65dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_gravity="center_horizontal"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+</RelativeLayout>

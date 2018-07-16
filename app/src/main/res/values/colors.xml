@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#2B2E3D</color>
+    <color name="colorPrimaryDark">#2B2E3D</color>
+    <color name="colorDark">#212431</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="colorOrange">#FF7B10</color>
+    <color name="colorDarkOrange">#ce620c</color>
+    <color name="colorBlack">#000</color>
+    <color name="colorWhite">#fff</color>
+    <color name="colorGrey">#FFC4C2C2</color>
+    <color name="colorappPink">#93014C</color>
+    <color name="colorLightGrey">#FFECE9E9</color>
+    <color name="button_orange">#FF7C00</color>
+    <color name="orange">#FF9400</color>
+    <color name="nav_itemnotselectedtextcolor">#C9CDD3</color>
+    <color name="nav_itemselectedtextcolor">#6DAF60</color>
+    <color name="color_lightgreytext">#8b8b8c</color>
+    <color name="dashboardtextcolor">#9C0760</color>
+    <color name="colorDarkGrey">#FF6B6B6E</color>
+    <color name="colorlightBlack">#2d2c2c</color>
+
+    <color name="bg_light_green">#AD9F00</color>
+    <color name="bg_dark_green">#00A451</color>
+
+    <color name="background">#F2F3F8</color>
+    <color name="background_2">#F8F8F8</color>
+    <color name="background_3">#FBFBFB</color>
+    <color name="background_4">#F2F3F8</color>
+
+
+</resources>
