@@ -16,11 +16,11 @@ public class ResponseFeedbackActivity extends AppCompatActivity {
         setContentView(R.layout.activity_response_feedback);
 
         init();
+
     }
 
     private void init(){
         converRecyclerView = findViewById(R.id.activity_response_conversation_recycler);
-
     }
 
     public void feedback_response_back(View view) {
