@@ -165,6 +165,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
+            android:id="@+id/dialog_pin_clear"
             android:background="@color/colorWhite"
             android:gravity="center"
             android:text="@string/fragment_pin_clear" />

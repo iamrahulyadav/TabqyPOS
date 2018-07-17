@@ -19,12 +19,12 @@
             android:layout_height="wrap_content"
             android:padding="@dimen/size_5"
             android:orientation="vertical">
-            
+
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:paddingLeft="@dimen/size_5">
-                
+
                 <com.tabyq.pos.tabqypos.customtext.CustomTextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -58,8 +58,9 @@
                     android:layout_marginLeft="5dp">
 
                     <ImageView
-                        android:layout_width="100dp"
-                        android:layout_height="100dp"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:src="@drawable/all"
                         android:id="@+id/item_fragment_online_top_image"/>
                     <com.tabyq.pos.tabqypos.customtext.CustomTextViewBold
                         android:layout_width="match_parent"
@@ -509,7 +510,7 @@
                 android:layout_marginBottom="5dp"
                 android:orientation="horizontal"
                 android:paddingLeft="@dimen/size_10">
-                
+
                 <com.tabyq.pos.tabqypos.customtext.CustomTextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -568,7 +569,7 @@
                     android:textSize="12dp"
                     android:textColor="#454545"/>
 
-        </LinearLayout>
+            </LinearLayout>
             <View
                 android:layout_width="match_parent"
                 android:layout_height=".3dp"
@@ -581,7 +582,7 @@
                 android:paddingTop="15dp"
                 android:paddingBottom="15dp"/>
 
-    </LinearLayout>
+        </LinearLayout>
 
     </LinearLayout>
 

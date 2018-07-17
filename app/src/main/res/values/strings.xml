@@ -139,9 +139,22 @@
 
     <!--dialog online details -->
     <string name="dialog_online_details_customer_name">Customer Name</string>
-    <string name="dialog_online_details_customer_phone">Phone Number</string>
-    <string name="dialog_online_details_customer_area">Delivery Area</string>
+    <string name="dialog_online_details_customer_phone">Phone Number:</string>
+    <string name="dialog_online_details_customer_area">Delivery Area:</string>
     <string name="dialog_online_details_customer_loc">Location/Branch</string>
-    <string name="dialog_online_details_customer_del_add">Delivery Address</string>
+    <string name="dialog_online_details_customer_del_add">Delivery Address:</string>
     <string name="dialog_online_details_close">Close</string>
+
+    <!--activity  feedback-->
+    <string name="activity_feedback_title">Feedbacks</string>
+
+    <!--item feedback-->
+    <string name="item_feedback_view_comment">View Comment</string>
+
+    <!--activity feedback response-->
+    <string name="activity_feedback_res_title">Response to feedback </string>
+    <string name="activity_feedback_res_rating">Rating </string>
+    <string name="activity_response_feed_send">Send</string>
+    <string name="activity_response_feed_type_a_message">Type a message</string>
+
 </resources>
