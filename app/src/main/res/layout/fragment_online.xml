@@ -424,7 +424,7 @@
                     android:textColor="@color/colorBlack"
                     android:text="@string/amount"
                     android:gravity="center_vertical"
-                    android:drawableLeft="@drawable/ic_order_status_1"
+                    android:drawableLeft="@drawable/ic_star"
                     android:drawablePadding="@dimen/size_5"/>
                 <com.tabyq.pos.tabqypos.customtext.CustomTextView
                     android:layout_width="0dp"
@@ -436,7 +436,8 @@
                     android:textColor="@color/colorBlack"
                     android:gravity="center_vertical"
                     android:drawableLeft="@drawable/ic_order_status_1"
-                    android:drawablePadding="@dimen/size_5"/>
+                    android:drawablePadding="@dimen/size_5"
+                    android:drawableStart="@drawable/ic_order_status_1" />
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="match_parent"

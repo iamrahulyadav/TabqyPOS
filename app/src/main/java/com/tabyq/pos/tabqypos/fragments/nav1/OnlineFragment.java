@@ -256,7 +256,6 @@ AdapterOnlineNewOrders.AdapterOnlineNewOrderInterface{
 //                textView.setCompoundDrawablesWithIntrinsicBounds(R.drawable.icon, 0, 0, 0);
             }
         }
-
     }
 
     private void click_on_status(int id){
