@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="200dp"
+    android:background="@color/colorWhite">
+
+    <com.tabyq.pos.tabqypos.customtext.CustomTextView
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:id="@+id/popup_walkin_categories_all"
+        android:text="All categories"
+        android:textColor="@color/colorappPink"
+        android:gravity="center_vertical"
+        android:background="@color/background"
+        android:paddingLeft="15dp"/>
+    <com.tabyq.pos.tabqypos.customtext.CustomTextView
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:id="@+id/popup_walkin_categories_cold_beverages"
+        android:text="Cold Beverages"
+        android:textColor="@color/colorBlack"
+        android:gravity="center_vertical"
+        android:paddingLeft="15dp"/>
+    <com.tabyq.pos.tabqypos.customtext.CustomTextView
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:id="@+id/popup_walkin_categories_pizza"
+        android:text="Pizza"
+        android:textColor="@color/colorBlack"
+        android:gravity="center_vertical"
+        android:paddingLeft="15dp"/>
+    <com.tabyq.pos.tabqypos.customtext.CustomTextView
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:id="@+id/popup_walkin_categories_dessert"
+        android:text="Dessert"
+        android:textColor="@color/colorBlack"
+        android:gravity="center_vertical"
+        android:paddingLeft="15dp"/>
+    <com.tabyq.pos.tabqypos.customtext.CustomTextView
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:id="@+id/popup_walkin_categories_sarvory"
+        android:text="Sarvory"
+        android:textColor="@color/colorBlack"
+        android:gravity="center_vertical"
+        android:paddingLeft="15dp"/>
+
+</LinearLayout>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activities.SearchActivity">
+
+    <ImageView
+        android:layout_width="260dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="40dp"
+        android:src="@drawable/logo" />
+
+    <com.tabyq.pos.tabqypos.customtext.CustomTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="POS"
+        android:textColor="@color/colorOrange"
+        android:textSize="@dimen/extra_large"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginTop="15dp">
+        <LinearLayout
+            android:layout_marginLeft="40dp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+            <com.tabyq.pos.tabqypos.customtext.CustomEditText
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/edittext_bg"
+                android:hint="@string/activity_search_edt_search"
+                android:gravity="left|center_vertical"
+                android:drawablePadding="3dp"
+                android:textSize="@dimen/small_size"
+                android:padding="10dp"
+                android:id="@+id/activity_search_edt"/>
+            <android.support.v7.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/activity_search_recycler"/>
+
+        </LinearLayout>
+
+        <com.tabyq.pos.tabqypos.customtext.CustomTextButtonTextView
+            android:layout_width="wrap_content"
+            android:layout_marginRight="40dp"
+            android:layout_height="50dp"
+            android:layout_weight=".1"
+            android:textColor="@color/colorWhite"
+            android:background="@color/colorappPink"
+            android:text="@string/activity_search_txt_search"
+            android:gravity="center"
+            android:textSize="@dimen/large_size"
+            android:padding="10dp"
+            android:id="@+id/activity_search_btnsearch"
+            android:layout_marginEnd="20dp" />
+
+    </LinearLayout>
+
+
+
+
+
+</LinearLayout>

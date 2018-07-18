@@ -15,14 +15,21 @@ import com.tabyq.pos.tabqypos.R;
 public class AdapterOnlineNewOrders extends RecyclerView.Adapter<AdapterOnlineNewOrders.MyViewHolder> {
 
     private String status_rv_new_orders;
-    public AdapterOnlineNewOrders(String status_rv_neworder){
+    private AdapterOnlineNewOrderInterface adapterOnlineNewOrderInterface;
+
+    public AdapterOnlineNewOrders(String status_rv_neworder,AdapterOnlineNewOrderInterface adapterOnlineNewOrderInterface){
         this.status_rv_new_orders = status_rv_neworder;
+        this.adapterOnlineNewOrderInterface = adapterOnlineNewOrderInterface;
+    }
+
+    public interface AdapterOnlineNewOrderInterface{
+        void showdeatils(int pos);
     }
 
     public class MyViewHolder extends RecyclerView.ViewHolder{
 
-        public TextView tv_order_taken_at, tv_driver;
-        public LinearLayout layout_delivery_to, layout_status;
+        public TextView tv_order_taken_at, tv_driver, tv_new_order_details;
+        LinearLayout layout_delivery_to, layout_status;
         public MyViewHolder(View view) {
             super(view);
 
@@ -30,6 +37,14 @@ public class AdapterOnlineNewOrders extends RecyclerView.Adapter<AdapterOnlineNe
             tv_driver = view.findViewById(R.id.item_online_new_order_driver);
             layout_delivery_to = view.findViewById(R.id.item_online_new_order_layout_deliver_to);
             layout_status = view.findViewById(R.id.item_online_new_order_layout_status);
+            tv_new_order_details = view.findViewById(R.id.item_online_new_order_sdetails);
+
+            tv_new_order_details.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    adapterOnlineNewOrderInterface.showdeatils(getAdapterPosition());
+                }
+            });
 
         }
     }

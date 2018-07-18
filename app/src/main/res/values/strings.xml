@@ -111,4 +111,50 @@
     <string name="fragment_table_table_order">Table Order</string>
     <string name="dialog_pay_by_cash">Pay By Cash</string>
 
+    <!--fragment receipt-->
+    <string name="fragment_receipts_txt_receipt">Receipts</string>
+
+    <!--fragment single receipt-->
+    <string name="fragment_single_receipts_txt_receipt">Refund</string>
+    <string name="fragment_single_receipts_txt_total">Total</string>
+
+    <!--fragment refund -->
+    <string name="fragment_refund_select_the_items_for_refund">Select the items for refund</string>
+    <string name="fragment_refund_total">Total</string>
+    <string name="fragment_refund_receipt">Refund receipt</string>
+
+    <!--activity transaction-->
+    <string name="activity_trans_enter_email">Enter email</string>
+    <string name="actvity_trans_send_receipt">Send Receipt</string>
+    <string name="actvity_trans_new_sale">New Sale</string>
+    <string name="activity_trans_transaction_successful">Transaction Successful</string>
+
+    <!--activity main -->
+    <string name="activity_main_walkin">WalkIn</string>
+    <string name="activity_main_crm">CRM</string>
+    <string name="activity_main_table">Table</string>
+    <string name="activity_main_online">Online</string>
+    <string name="activity_main_charity">Charity</string>
+    <string name="activity_main_order_nstatus">Order Status</string>
+
+    <!--dialog online details -->
+    <string name="dialog_online_details_customer_name">Customer Name</string>
+    <string name="dialog_online_details_customer_phone">Phone Number:</string>
+    <string name="dialog_online_details_customer_area">Delivery Area:</string>
+    <string name="dialog_online_details_customer_loc">Location/Branch</string>
+    <string name="dialog_online_details_customer_del_add">Delivery Address:</string>
+    <string name="dialog_online_details_close">Close</string>
+
+    <!--activity  feedback-->
+    <string name="activity_feedback_title">Feedbacks</string>
+
+    <!--item feedback-->
+    <string name="item_feedback_view_comment">View Comment</string>
+
+    <!--activity feedback response-->
+    <string name="activity_feedback_res_title">Response to feedback </string>
+    <string name="activity_feedback_res_rating">Rating </string>
+    <string name="activity_response_feed_send">Send</string>
+    <string name="activity_response_feed_type_a_message">Type a message</string>
+
 </resources>

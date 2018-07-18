@@ -1,6 +1,9 @@
 package com.tabyq.pos.tabqypos.fragments.nav1;
 
 
+import android.app.Dialog;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -26,7 +29,8 @@ import java.util.ArrayList;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class OnlineFragment extends Fragment implements View.OnClickListener, AdapterOnlineTop.Interface_AdapterOnlineTop {
+public class OnlineFragment extends Fragment implements View.OnClickListener, AdapterOnlineTop.Interface_AdapterOnlineTop,
+AdapterOnlineNewOrders.AdapterOnlineNewOrderInterface{
 
 
     public OnlineFragment() {
@@ -70,6 +74,7 @@ public class OnlineFragment extends Fragment implements View.OnClickListener, Ad
 
     private AdapterOnlineTop adapterOnlineTop;
     private ArrayList<String> arr_top_names = new ArrayList<>();
+    private ArrayList<Integer> arr_top_img = new ArrayList<>();
     private ArrayList<String> arr_top_click_status = new ArrayList<>();
     private LinearLayout layout_top_left;
 
@@ -111,7 +116,7 @@ public class OnlineFragment extends Fragment implements View.OnClickListener, Ad
 
         rv_new_order.setLayoutManager(manager);
 
-        adapterOnlineNewOrders = new AdapterOnlineNewOrders(status_rv_new_orders);
+        adapterOnlineNewOrders = new AdapterOnlineNewOrders(status_rv_new_orders, this);
         rv_new_order.setAdapter(adapterOnlineNewOrders);
 
         rv_delivery = getView().findViewById(R.id.fragment_online_delivery_recycler);
@@ -129,7 +134,6 @@ public class OnlineFragment extends Fragment implements View.OnClickListener, Ad
         rv_delivery.setAdapter(adapterOnlineDelivery);
 
 
-
         arr_top_names.clear();
         arr_top_names.add("Tabqy");
         arr_top_names.add("Talabat");
@@ -137,6 +141,15 @@ public class OnlineFragment extends Fragment implements View.OnClickListener, Ad
         arr_top_names.add("Zomato");
         arr_top_names.add("Foodpanda");
         arr_top_names.add("Hellofood");
+
+        arr_top_img.clear();
+        arr_top_img.add(R.drawable.tabqy);
+        arr_top_img.add(R.drawable.talabat);
+        arr_top_img.add(R.drawable.hunger);
+        arr_top_img.add(R.drawable.x);
+        arr_top_img.add(R.drawable.panda);
+        arr_top_img.add(R.drawable.hellofood);
+
 
         arr_top_click_status.clear();
         arr_top_click_status.add("0");
@@ -153,7 +166,7 @@ public class OnlineFragment extends Fragment implements View.OnClickListener, Ad
 
         rv_top.setLayoutManager(manager2);
 
-        adapterOnlineTop = new AdapterOnlineTop(getContext(), arr_top_names, arr_top_click_status, this);
+        adapterOnlineTop = new AdapterOnlineTop(getContext(), arr_top_names, arr_top_click_status, arr_top_img,this);
         rv_top.setAdapter(adapterOnlineTop);
 
     }
@@ -182,11 +195,11 @@ public class OnlineFragment extends Fragment implements View.OnClickListener, Ad
 
                 tv_order_taken_at.setVisibility(View.VISIBLE);
                 tv_driver.setVisibility(View.GONE);
-                tv_deliver_to.setText("Deliver to");
+                tv_deliver_to.setText(getResources().getString(R.string.deliver_to));
 //                textView.setCompoundDrawablesWithIntrinsicBounds(R.drawable.icon, 0, 0, 0);
                 switchCompat.setVisibility(View.VISIBLE);
 //                adapterOnlineNewOrders.notifyDataSetChanged();
-                adapterOnlineNewOrders = new AdapterOnlineNewOrders(status_rv_new_orders);
+                adapterOnlineNewOrders = new AdapterOnlineNewOrders(status_rv_new_orders, this);
                 rv_new_order.setAdapter(adapterOnlineNewOrders);
             } else if(id == R.id.fragment_online_online_status_two){
                 status_rv_new_orders = "new_orders";
@@ -198,12 +211,12 @@ public class OnlineFragment extends Fragment implements View.OnClickListener, Ad
 
                 tv_order_taken_at.setVisibility(View.VISIBLE);
                 tv_driver.setVisibility(View.GONE);
-                tv_deliver_to.setText("Deliver to");
+                tv_deliver_to.setText(getResources().getString(R.string.deliver_to));
 
                 //                tv_deliver_to.setCompoundDrawablesWithIntrinsicBounds(R.drawable.a, 0, 0, 0);
                 switchCompat.setVisibility(View.VISIBLE);
 //                adapterOnlineNewOrders.notifyDataSetChanged();
-                adapterOnlineNewOrders = new AdapterOnlineNewOrders(status_rv_new_orders);
+                adapterOnlineNewOrders = new AdapterOnlineNewOrders(status_rv_new_orders, this);
                 rv_new_order.setAdapter(adapterOnlineNewOrders);
             } else if(id == R.id.fragment_online_online_status_three){
                 status_rv_new_orders = "delivery_in_progress";
@@ -219,7 +232,7 @@ public class OnlineFragment extends Fragment implements View.OnClickListener, Ad
 //                tv_deliver_to.setCompoundDrawablesWithIntrinsicBounds(R.drawable.a, 0, 0, 0);
                 switchCompat.setVisibility(View.GONE);
 //                adapterOnlineNewOrders.notifyDataSetChanged();
-                adapterOnlineNewOrders = new AdapterOnlineNewOrders(status_rv_new_orders);
+                adapterOnlineNewOrders = new AdapterOnlineNewOrders(status_rv_new_orders,this);
                 rv_new_order.setAdapter(adapterOnlineNewOrders);
             } else if(id == R.id.fragment_online_online_status_four){
                 status_rv_new_orders = "new_orders";
@@ -231,11 +244,11 @@ public class OnlineFragment extends Fragment implements View.OnClickListener, Ad
 
                 tv_order_taken_at.setVisibility(View.VISIBLE);
                 tv_driver.setVisibility(View.GONE);
-                tv_deliver_to.setText("Deliver to");
+                tv_deliver_to.setText(getResources().getString(R.string.deliver_to));
                 //                tv_deliver_to.setCompoundDrawablesWithIntrinsicBounds(R.drawable.a, 0, 0, 0);
                 switchCompat.setVisibility(View.VISIBLE);
 //                adapterOnlineNewOrders.notifyDataSetChanged();
-                adapterOnlineNewOrders = new AdapterOnlineNewOrders(status_rv_new_orders);
+                adapterOnlineNewOrders = new AdapterOnlineNewOrders(status_rv_new_orders, this);
                 rv_new_order.setAdapter(adapterOnlineNewOrders);
             } else{
 //                layout_select_driver.setVisibility(View.GONE);
@@ -264,8 +277,31 @@ public class OnlineFragment extends Fragment implements View.OnClickListener, Ad
         }
         arr_top_click_status.set(position, "1");
         layout_top_left.setBackgroundDrawable(null);
-
-
         adapterOnlineTop.notifyDataSetChanged();
+    }
+
+    @Override
+    public void showdeatils(int pos) {
+        showDetailDailog();
+    }
+
+    private Dialog dialog_details;
+    private void showDetailDailog(){
+        dialog_details = new Dialog(getContext());
+        dialog_details.setContentView(R.layout.dialog_online_details);
+
+        dialog_details.findViewById(R.id.dialog_online_cross).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog_details.dismiss();
+            }
+        });
+
+
+        dialog_details.setCancelable(false);
+        dialog_details.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+        dialog_details.getWindow().getAttributes().windowAnimations = R.style.DialogAnimation;
+        dialog_details.show();
+
     }
 }

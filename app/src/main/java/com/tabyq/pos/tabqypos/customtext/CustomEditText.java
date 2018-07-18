@@ -42,7 +42,6 @@ public class CustomEditText extends android.support.v7.widget.AppCompatEditText 
         Typeface tf = Typeface.createFromAsset(getContext().getAssets(), "fonts/Montserrat-Light.ttf");
         setTypeface(tf ,1);
         setTextColor(getContext().getResources().getColor(R.color.colorBlack));
-        setTextSize(getContext().getResources().getDimension(R.dimen.extra_small_size));
         setBackground(getContext().getDrawable(R.drawable.edittext_bg));
 
     }

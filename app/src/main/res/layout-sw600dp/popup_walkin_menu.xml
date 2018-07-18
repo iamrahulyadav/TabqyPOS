@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="80.30dp"
+    android:background="@color/colorWhite">
+
+    <com.tabyq.pos.tabqypos.customtext.CustomTextView
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:id="@+id/popup_walkin_menu_print_bill"
+        android:text="Print Bill"
+        android:textSize="@dimen/size_10"
+        android:textColor="@color/colorBlack"
+        android:paddingLeft="@dimen/size_5"
+        android:gravity="center_vertical"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height=".30dp"
+        android:background="#ECF0F1"/>
+    <com.tabyq.pos.tabqypos.customtext.CustomTextView
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:id="@+id/popup_walkin_menu_edit_order"
+        android:text="Edit Order"
+        android:textSize="@dimen/size_10"
+        android:textColor="@color/colorBlack"
+        android:paddingLeft="@dimen/size_5"
+        android:gravity="center_vertical"/>
+</LinearLayout>

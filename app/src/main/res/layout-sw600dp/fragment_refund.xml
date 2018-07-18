@@ -1,0 +1,261 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background"
+    android:layout_marginTop="@dimen/nav_header_height"
+    tools:context="com.tabyq.pos.tabqypos.fragments.Sub.RefundFragment">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/background">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="10dp"
+            android:layout_gravity="center_vertical"
+            android:background="@color/background">
+
+            <ImageView
+                android:id="@+id/fragment_single_receipt_back"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_left_arrow_rec"/>
+            <com.tabyq.pos.tabqypos.customtext.CustomTextViewBold
+                android:layout_toRightOf="@+id/fragment_single_receipt_back"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="@string/fragment_receipts_txt_receipt"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/small_size"
+                android:gravity="center_vertical"
+                android:id="@+id/fragment_single_receipt"
+                android:paddingLeft="10dp"
+                android:paddingStart="10dp" />
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="10dp">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/shape_background_white">
+
+                <com.tabyq.pos.tabqypos.customtext.CustomTextViewBold
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/fragment_refund_select_the_items_for_refund"
+                    android:padding="15dp"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/size_12"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height=".5dp"
+                    android:background="@color/background"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <com.tabyq.pos.tabqypos.customtext.CustomTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Bagel-Double Cheese X 1"
+                        android:padding="15dp"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/size_12"/>
+                    <com.tabyq.pos.tabqypos.customtext.CustomTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="20.00"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentEnd="true"
+                        android:padding="15dp"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/size_12"/>
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height=".5dp"
+                    android:background="@color/background"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <com.tabyq.pos.tabqypos.customtext.CustomTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Dunkalatte mocha X 1"
+                        android:padding="15dp"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/size_12"/>
+                    <com.tabyq.pos.tabqypos.customtext.CustomTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="30.00"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentEnd="true"
+                        android:padding="15dp"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/size_12"/>
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height=".5dp"
+                    android:background="@color/background"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <com.tabyq.pos.tabqypos.customtext.CustomTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Blueberry X 1"
+                        android:padding="15dp"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/size_12"/>
+                    <com.tabyq.pos.tabqypos.customtext.CustomTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="25.00"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentEnd="true"
+                        android:padding="15dp"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/size_12"/>
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height=".5dp"
+                    android:background="@color/background"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <com.tabyq.pos.tabqypos.customtext.CustomTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Hot chocolate X 1"
+                        android:padding="15dp"                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/size_12"/>
+                    <com.tabyq.pos.tabqypos.customtext.CustomTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="28.00"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentEnd="true"
+                        android:padding="15dp"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/size_12"/>
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+            <ImageView
+                android:padding="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:id="@+id/fragment_refund_arrow_next"
+                android:src="@drawable/ic_right_arrow_rece"/>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/shape_background_white">
+
+                <com.tabyq.pos.tabqypos.customtext.CustomTextViewBold
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/fragment_refund_receipt"
+                    android:padding="15dp"
+                    android:id="@+id/fragment_refund_txt_refund"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/size_12"/>
+                <View
+                    android:layout_below="@+id/fragment_refund_txt_refund"
+                    android:layout_width="match_parent"
+                    android:layout_height=".5dp"
+                    android:background="@color/background"/>
+
+                <LinearLayout
+                    android:layout_alignParentBottom="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height=".5dp"
+                        android:background="@color/background"/>
+                    <RelativeLayout
+                        android:padding="15dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <com.tabyq.pos.tabqypos.customtext.CustomTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAllCaps="true"
+                            android:text="@string/fragment_refund_total"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="@dimen/size_12"/>
+                        <com.tabyq.pos.tabqypos.customtext.CustomTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="00.20"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentRight="true"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="@dimen/size_12"/>
+
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height=".5dp"
+                        android:background="@color/background"/>
+
+                    <com.tabyq.pos.tabqypos.customtext.CustomTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/fragment_single_receipts_txt_receipt"
+                        android:gravity="center"
+                        android:textAllCaps="true"
+                        android:padding="15dp"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/size_12"/>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+</LinearLayout>
