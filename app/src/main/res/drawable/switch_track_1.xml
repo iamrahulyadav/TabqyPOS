@@ -1,18 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:state_checked="true">
-        <shape android:shape="rectangle">
+    <!--<layer-list xmlns:android="http://schemas.android.com/apk/res/android" >-->
+    <!--<item android:drawable="@drawable/ic_tick_1"/>-->
+    <item android:state_checked="true" android:drawable="@drawable/layer_1">
+        <!--<shape android:shape="rectangle">
             <corners android:radius="20dp"/>
             <solid android:color="@color/bg_dark_green" />
             <size android:height="8dp" />
-        </shape>
+        </shape>-->
     </item>
+    <!--</layer-list>-->
 
-    <item>
+
+    <!--<layer-list xmlns:android="http://schemas.android.com/apk/res/android" >-->
+    <!--<item android:drawable="@drawable/ic_tick_1" />-->
+    <item android:drawable="@drawable/layer_2">
+<!--
         <shape android:shape="rectangle">
             <corners android:radius="20dp" />
             <solid android:color="@color/colorappPink" />
             <size android:height="8dp" />
         </shape>
+-->
     </item>
+
+    <!--</layer-list>-->
 </selector>
