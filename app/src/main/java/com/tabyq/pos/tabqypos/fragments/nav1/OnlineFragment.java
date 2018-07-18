@@ -74,6 +74,7 @@ AdapterOnlineNewOrders.AdapterOnlineNewOrderInterface{
 
     private AdapterOnlineTop adapterOnlineTop;
     private ArrayList<String> arr_top_names = new ArrayList<>();
+    private ArrayList<Integer> arr_top_img = new ArrayList<>();
     private ArrayList<String> arr_top_click_status = new ArrayList<>();
     private LinearLayout layout_top_left;
 
@@ -141,6 +142,15 @@ AdapterOnlineNewOrders.AdapterOnlineNewOrderInterface{
         arr_top_names.add("Foodpanda");
         arr_top_names.add("Hellofood");
 
+        arr_top_img.clear();
+        arr_top_img.add(R.drawable.tabqy);
+        arr_top_img.add(R.drawable.talabat);
+        arr_top_img.add(R.drawable.hunger);
+        arr_top_img.add(R.drawable.x);
+        arr_top_img.add(R.drawable.panda);
+        arr_top_img.add(R.drawable.hellofood);
+
+
         arr_top_click_status.clear();
         arr_top_click_status.add("0");
         arr_top_click_status.add("0");
@@ -156,7 +166,7 @@ AdapterOnlineNewOrders.AdapterOnlineNewOrderInterface{
 
         rv_top.setLayoutManager(manager2);
 
-        adapterOnlineTop = new AdapterOnlineTop(getContext(), arr_top_names, arr_top_click_status, this);
+        adapterOnlineTop = new AdapterOnlineTop(getContext(), arr_top_names, arr_top_click_status, arr_top_img,this);
         rv_top.setAdapter(adapterOnlineTop);
 
     }
