@@ -19,6 +19,7 @@ import android.widget.TextView;
 
 import com.tabyq.pos.tabqypos.R;
 import com.tabyq.pos.tabqypos.activities.MainActivity;
+import com.tabyq.pos.tabqypos.adapter.AdapterDialogOnlineDetails;
 import com.tabyq.pos.tabqypos.adapter.AdapterOnlineDelivery;
 import com.tabyq.pos.tabqypos.adapter.AdapterOnlineNewOrders;
 import com.tabyq.pos.tabqypos.adapter.AdapterOnlineTop;
@@ -32,11 +33,9 @@ import java.util.ArrayList;
 public class OnlineFragment extends Fragment implements View.OnClickListener, AdapterOnlineTop.Interface_AdapterOnlineTop,
 AdapterOnlineNewOrders.AdapterOnlineNewOrderInterface{
 
-
     public OnlineFragment() {
         // Required empty public constructor
     }
-
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -169,6 +168,7 @@ AdapterOnlineNewOrders.AdapterOnlineNewOrderInterface{
         adapterOnlineTop = new AdapterOnlineTop(getContext(), arr_top_names, arr_top_click_status, arr_top_img,this);
         rv_top.setAdapter(adapterOnlineTop);
 
+        showDetailDailog();
     }
 
     @Override
@@ -281,10 +281,13 @@ AdapterOnlineNewOrders.AdapterOnlineNewOrderInterface{
 
     @Override
     public void showdeatils(int pos) {
-        showDetailDailog();
+//        showDetailDailog();
+        dialog_details.show();
     }
 
     private Dialog dialog_details;
+    private RecyclerView rv_dialog;
+
     private void showDetailDailog(){
         dialog_details = new Dialog(getContext());
         dialog_details.setContentView(R.layout.dialog_online_details);
@@ -296,11 +299,17 @@ AdapterOnlineNewOrders.AdapterOnlineNewOrderInterface{
             }
         });
 
+        rv_dialog = dialog_details.findViewById(R.id.dialog_online_details_recycler);
+        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getActivity(),
+                LinearLayoutManager.VERTICAL, false);
+        rv_dialog.setLayoutManager(linearLayoutManager);
+
+        AdapterDialogOnlineDetails adapter = new AdapterDialogOnlineDetails(getContext());
+        rv_dialog.setAdapter(adapter);
+
 
         dialog_details.setCancelable(false);
         dialog_details.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
         dialog_details.getWindow().getAttributes().windowAnimations = R.style.DialogAnimation;
-        dialog_details.show();
-
     }
 }
