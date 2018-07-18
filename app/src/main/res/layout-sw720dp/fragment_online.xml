@@ -1,0 +1,590 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginTop="@dimen/nav_header_height"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        tools:context=".fragments.nav1.OnlineFragment"
+        android:orientation="vertical"
+        android:background="@color/background">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/size_5"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/size_5">
+
+                <com.tabyq.pos.tabqypos.customtext.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="August 01,2018"
+                    android:textSize="@dimen/size_14"
+                    android:textColor="@color/colorBlack"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerInParent="true"/>
+                <com.tabyq.pos.tabqypos.customtext.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="12:33:34 PM"
+                    android:textSize="18dp"
+                    android:textColor="@color/colorBlack"
+                    android:layout_alignParentRight="true"/>
+            </RelativeLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="15dp">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/fragment_online_top_layout_left"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/shape_background_white"
+                    android:padding="10dp"
+                    android:layout_marginLeft="5dp">
+
+                    <ImageView
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:src="@drawable/all"
+                        android:id="@+id/item_fragment_online_top_image"/>
+                    <com.tabyq.pos.tabqypos.customtext.CustomTextViewBold
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/item_fragment_online_top_text"
+                        android:text="All online order"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/size_10"
+                        android:gravity="center"
+                        android:layout_marginTop="10dp"/>
+
+                </LinearLayout>
+                <android.support.v7.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/fragment_online_top_recycler" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@color/colorWhite"
+            android:padding="@dimen/size_10">
+
+            <com.tabyq.pos.tabqypos.customtext.CustomTextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Life Time Order: 2567"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/size_12"
+                android:gravity="center"
+                android:layout_alignParentLeft="true" />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_alignParentRight="true"
+                android:gravity="center_vertical">
+
+                <com.tabyq.pos.tabqypos.customtext.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="Filter by"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/size_12"
+                    android:gravity="center"
+                    android:layout_marginRight="@dimen/size_10"
+                    android:layout_alignParentLeft="true"/>
+                <com.tabyq.pos.tabqypos.customtext.CustomTextView
+                    android:layout_width="80dp"
+                    android:layout_height="30dp"
+                    android:text="@string/cash"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/size_9"
+                    android:gravity="center"
+                    android:background="@drawable/shape_background_bg"
+                    android:layout_marginRight="@dimen/size_3"
+                    android:layout_alignParentLeft="true"/>
+                <com.tabyq.pos.tabqypos.customtext.CustomTextView
+                    android:layout_width="80dp"
+                    android:layout_height="30dp"
+                    android:text="@string/credit_card"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/size_9"
+                    android:gravity="center"
+                    android:background="@drawable/shape_background_bg"
+                    android:layout_marginRight="@dimen/size_3"
+                    android:layout_alignParentLeft="true"/>
+                <com.tabyq.pos.tabqypos.customtext.CustomTextView
+                    android:layout_width="80dp"
+                    android:layout_height="30dp"
+                    android:text="@string/date"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/size_9"
+                    android:gravity="center"
+                    android:background="@drawable/shape_background_bg"
+                    android:layout_marginRight="@dimen/size_3"
+                    android:layout_alignParentLeft="true"/>
+                <com.tabyq.pos.tabqypos.customtext.CustomTextView
+                    android:layout_width="80dp"
+                    android:layout_height="30dp"
+                    android:text="@string/month"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/size_9"
+                    android:gravity="center"
+                    android:background="@drawable/shape_background_bg"
+                    android:layout_marginRight="@dimen/size_3"
+                    android:layout_alignParentLeft="true"/>
+                <com.tabyq.pos.tabqypos.customtext.CustomTextView
+                    android:layout_width="80dp"
+                    android:layout_height="30dp"
+                    android:text="@string/year"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/size_9"
+                    android:gravity="center"
+                    android:background="@drawable/shape_background_bg"
+                    android:layout_alignParentLeft="true"/>
+
+            </LinearLayout>
+        </RelativeLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:padding="@dimen/size_5"
+            android:gravity="center_vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:id="@+id/fragment_online_online_status_one"
+                android:gravity="center_vertical"
+                android:background="@drawable/shape_border_pink"
+                android:orientation="horizontal"
+                android:layout_marginRight="35dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp">
+
+                <com.tabyq.pos.tabqypos.customtext.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/new_orders"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/size_10"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="10dp"/>
+                <com.tabyq.pos.tabqypos.customtext.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/size_8"
+                    android:background="@drawable/shape_background_pink"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:paddingTop="3dp"
+                    android:paddingBottom="3dp"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:id="@+id/fragment_online_online_status_two"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:layout_marginRight="35dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp">
+
+                <com.tabyq.pos.tabqypos.customtext.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/waiting_for_pick"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/size_10"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="10dp"/>
+                <com.tabyq.pos.tabqypos.customtext.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/size_8"
+                    android:background="@drawable/shape_background_light_green"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:paddingTop="3dp"
+                    android:paddingBottom="3dp"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:id="@+id/fragment_online_online_status_three"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:layout_marginRight="35dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp">
+
+                <com.tabyq.pos.tabqypos.customtext.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/delivery_in_progress"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/size_10"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="10dp"/>
+                <com.tabyq.pos.tabqypos.customtext.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/size_8"
+                    android:background="@drawable/shape_background_light_green"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:paddingTop="3dp"
+                    android:paddingBottom="3dp"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:id="@+id/fragment_online_online_status_four"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:layout_marginRight="35dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp">
+
+                <com.tabyq.pos.tabqypos.customtext.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/delivery"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/size_10"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="10dp"/>
+                <com.tabyq.pos.tabqypos.customtext.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/size_8"
+                    android:background="@drawable/shape_background_dark_green"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:paddingTop="3dp"
+                    android:paddingBottom="3dp"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/fragment_online_layout_select_driver"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/size_5"
+            android:paddingBottom="@dimen/size_10"
+            android:paddingTop="@dimen/size_10"
+            android:visibility="gone">
+
+            <com.tabyq.pos.tabqypos.customtext.CustomTextViewBold
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="SELECT DRIVER:"
+                android:textSize="@dimen/size_10"
+                android:textColor="@color/colorBlack"
+                android:layout_marginBottom="10dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.tabyq.pos.tabqypos.customtext.CustomTextViewBold
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Usman"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="10dp"
+                    android:background="@drawable/shape_background_white"
+                    android:padding="@dimen/size_10"
+                    android:drawableRight="@drawable/ic_down_arrow_2"
+                    android:drawablePadding="@dimen/size_60"/>
+
+                <com.tabyq.pos.tabqypos.customtext.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Show available Drivers"
+                    android:textSize="9sp"
+                    android:textColor="#007BB6"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/size_5"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/fragment_online_cv_list_title">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@color/colorWhite"
+                android:padding="@dimen/size_5"
+                android:orientation="horizontal"
+                android:weightSum="6.5">
+
+                <com.tabyq.pos.tabqypos.customtext.CustomTextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="@string/information"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/size_10"
+                    android:gravity="center_vertical"
+                    android:drawableLeft="@drawable/ic_user"
+                    android:drawablePadding="@dimen/size_5"/>
+                <com.tabyq.pos.tabqypos.customtext.CustomTextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="@string/order_number"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/size_10"
+                    android:gravity="center_vertical"
+                    android:drawableLeft="@drawable/ic_file"
+                    android:drawablePadding="@dimen/size_5"/>
+                <com.tabyq.pos.tabqypos.customtext.CustomTextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:id="@+id/fragment_online_cv_list_title_order_taken_at"
+                    android:layout_weight="1"
+                    android:text="@string/order_taken_at"
+                    android:textSize="@dimen/size_10"
+                    android:textColor="@color/colorBlack"
+                    android:gravity="center_vertical"
+                    android:drawableLeft="@drawable/ic_hourglass"
+                    android:drawablePadding="@dimen/size_5"/>
+                <com.tabyq.pos.tabqypos.customtext.CustomTextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="@string/elapsed_time"
+                    android:textSize="@dimen/size_10"
+                    android:textColor="@color/colorBlack"
+                    android:gravity="center_vertical"
+                    android:drawableLeft="@drawable/ic_hourglass"
+                    android:drawablePadding="@dimen/size_5"/>
+                <com.tabyq.pos.tabqypos.customtext.CustomTextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:id="@+id/fragment_online_cv_list_title_driver"
+                    android:text="@string/driver"
+                    android:textSize="@dimen/size_10"
+                    android:textColor="@color/colorBlack"
+                    android:gravity="center_vertical"
+                    android:drawableLeft="@drawable/ic_hourglass"
+                    android:drawablePadding="@dimen/size_5"
+                    android:visibility="gone"/>
+                <com.tabyq.pos.tabqypos.customtext.CustomTextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:textSize="@dimen/size_10"
+                    android:textColor="@color/colorBlack"
+                    android:text="@string/amount"
+                    android:gravity="center_vertical"
+                    android:drawableLeft="@drawable/ic_star"
+                    android:drawablePadding="@dimen/size_5"/>
+                <com.tabyq.pos.tabqypos.customtext.CustomTextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:id="@+id/fragment_online_cv_list_title_deliver_to"
+                    android:text="@string/deliver_to"
+                    android:textSize="@dimen/size_10"
+                    android:textColor="@color/colorBlack"
+                    android:gravity="center_vertical"
+                    android:drawableLeft="@drawable/ic_order_status_1"
+                    android:drawablePadding="@dimen/size_5"
+                    android:drawableStart="@drawable/ic_order_status_1" />
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.5"
+                    android:gravity="left|center_vertical">
+
+                    <android.support.v7.widget.SwitchCompat
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/fragment_online_cv_list_title_switch"
+                        app:track="@drawable/switch_track_1"
+                        android:thumb="@drawable/switch_thumb_1" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <android.support.v7.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/fragment_online_recycler_new_order"
+                android:scrollbars="none"
+                android:padding="@dimen/size_5"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/fragment_online_layout_delivery"
+            android:background="@color/background"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height=".3dp"
+                android:background="@color/colorGrey"
+                android:layout_marginBottom="15dp"/>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/size_10">
+                <com.tabyq.pos.tabqypos.customtext.CustomTextViewBold
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="All Drivers"
+                    android:textSize="@dimen/size_14"
+                    android:textColor="#007BB6"/>
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/colorGrey"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="7dp"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_down_arrow_1"
+                    android:layout_gravity="center_vertical"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/size_10">
+
+                <com.tabyq.pos.tabqypos.customtext.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Average delivery Time:"
+                    android:textSize="12sp"/>
+                <com.tabyq.pos.tabqypos.customtext.CustomTextViewBold
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" 1 minute"
+                    android:textSize="12sp"/>
+            </LinearLayout>
+            <com.tabyq.pos.tabqypos.customtext.CustomTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Total:240.00 SAR"
+                android:textSize="12sp"
+                android:paddingLeft="@dimen/size_10"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height=".3dp"
+                android:background="@color/colorGrey"
+                android:layout_marginTop="15dp"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size_50"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/size_10"
+                android:gravity="center_vertical"
+                android:weightSum="5">
+                <com.tabyq.pos.tabqypos.customtext.CustomTextViewBold
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="DRIVER NAME"
+                    android:textSize="12dp"
+                    android:textColor="#454545"/>
+                <com.tabyq.pos.tabqypos.customtext.CustomTextViewBold
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="TOTAL DELIVERED"
+                    android:textSize="12dp"
+                    android:textColor="#454545"/>
+                <com.tabyq.pos.tabqypos.customtext.CustomTextViewBold
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="TOTAL AMOUNT"
+                    android:textSize="12dp"
+                    android:textColor="#454545"/>
+                <com.tabyq.pos.tabqypos.customtext.CustomTextViewBold
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="AVERAGE DELIVERY TIME"
+                    android:textSize="12dp"
+                    android:textColor="#454545"/>
+
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height=".3dp"
+                android:background="@color/colorGrey" />
+            <android.support.v7.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/fragment_online_delivery_recycler"
+                android:scrollbars="none"
+                android:paddingTop="15dp"
+                android:paddingBottom="15dp"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</android.support.v4.widget.NestedScrollView>

@@ -58,8 +58,9 @@
                     android:layout_marginLeft="5dp">
 
                     <ImageView
-                        android:layout_width="100dp"
-                        android:layout_height="100dp"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:src="@drawable/all"
                         android:id="@+id/item_fragment_online_top_image"/>
                     <com.tabyq.pos.tabqypos.customtext.CustomTextViewBold
                         android:layout_width="match_parent"
@@ -423,7 +424,7 @@
                     android:textColor="@color/colorBlack"
                     android:text="@string/amount"
                     android:gravity="center_vertical"
-                    android:drawableLeft="@drawable/ic_order_status_1"
+                    android:drawableLeft="@drawable/ic_star"
                     android:drawablePadding="@dimen/size_5"/>
                 <com.tabyq.pos.tabqypos.customtext.CustomTextView
                     android:layout_width="0dp"
@@ -435,11 +436,12 @@
                     android:textColor="@color/colorBlack"
                     android:gravity="center_vertical"
                     android:drawableLeft="@drawable/ic_order_status_1"
-                    android:drawablePadding="@dimen/size_5"/>
+                    android:drawablePadding="@dimen/size_5"
+                    android:drawableStart="@drawable/ic_order_status_1" />
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_weight="0.5"
+                    android:layout_weight="0.6"
                     android:gravity="left|center_vertical">
 
                     <android.support.v7.widget.SwitchCompat

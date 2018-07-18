@@ -1,6 +1,7 @@
 package com.tabyq.pos.tabqypos.activities;
 
 import android.app.Dialog;
+import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
@@ -56,7 +57,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             order_status_layout;
     public static LinearLayout cv_main_right, cv_main_right_2;
     public static LinearLayout layout_top_middle;
-    private TextView tv_add_note, tv_add_discount;
+    private TextView tv_add_note, tv_add_discount,tv_clr;
 
     private void init(){
         tv_add_note = findViewById(R.id.main_middle_btn_add_note);
@@ -87,7 +88,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         getSupportFragmentManager().beginTransaction().replace(R.id.frame_main_bottom, new MainFragment()).commit();
 
     }
-
 
     private void setNavBacground(){
         dashboardLayout.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
@@ -128,6 +128,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 dialog_add_note.dismiss();
             }
         });
+
         dialog_add_note.setCancelable(false);
         dialog_add_note.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
         dialog_add_note.getWindow().getAttributes().windowAnimations = R.style.DialogAnimation;
@@ -164,6 +165,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         dialog_pin.setCancelable(true);
         dialog_pin.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
         dialog_pin.getWindow().getAttributes().windowAnimations = R.style.DialogAnimation;
+        tv_clr = dialog_pin.findViewById(R.id.dialog_pin_clear);
+
+        tv_clr.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog_pin.dismiss();
+                startActivity(new Intent(MainActivity.this, FeedbackActivity.class));
+            }
+        });
+
     }
 
     int flag = 1;
@@ -255,6 +266,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.nav_feedback:
                 dialog_pin.show();
+
                 break;
             case R.id.nav_settings:
                 new SupportingWidgets().callFragment(MainActivity.this, new SettingsFragment(),

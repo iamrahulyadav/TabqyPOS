@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/size_5"
+        android:paddingTop="@dimen/size_5"
+        android:paddingRight="@dimen/size_20"
+        android:paddingLeft="@dimen/size_20">
+
+        <com.tabyq.pos.tabqypos.customtext.CustomTextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="Mango Juice"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/size_10"
+            android:gravity="left"/>
+        <com.tabyq.pos.tabqypos.customtext.CustomTextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="1"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/size_10"
+            android:gravity="center"/>
+        <com.tabyq.pos.tabqypos.customtext.CustomTextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="25.00"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/size_10"
+            android:gravity="center"/>
+        <com.tabyq.pos.tabqypos.customtext.CustomTextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="25.00"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/size_10"
+            android:gravity="right"/>
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height=".3dp"
+        android:background="#ECF0F1" />
+
+</LinearLayout>

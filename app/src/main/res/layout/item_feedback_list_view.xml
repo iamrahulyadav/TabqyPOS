@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:src="@drawable/profile_new"/>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="12dp"
+                android:layout_gravity="right|bottom"
+                android:src="@drawable/ic_circle"/>
+
+        </FrameLayout>
+
+        <com.tabyq.pos.tabqypos.customtext.CustomTextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textSize="@dimen/size_12"
+            android:text="Stipe Miocic"
+            android:gravity="center"
+            android:textColor="@color/colorBlack"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_width="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <com.tabyq.pos.tabqypos.customtext.CustomTextView
+            android:layout_width="wrap_content"
+            android:padding="10dp"
+            android:layout_height="wrap_content"
+            android:text="@string/item_feedback_view_comment"
+            android:layout_gravity="center"
+            android:id="@+id/item_feedback_view_comment"
+            android:background="@drawable/btn_backgroundpink"
+            android:textColor="@color/colorWhite" />
+
+        <com.tabyq.pos.tabqypos.customtext.CustomTextView
+            android:layout_width="wrap_content"
+            android:padding="10dp"
+            android:layout_height="wrap_content"
+            android:text="03:43PM"
+            android:drawablePadding="5dp"
+            android:drawableBottom="@drawable/ic_smiling_green"
+            android:textColor="@color/colorBlack" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height=".5dp"
+        android:background="@color/colorLightGrey"/>
+</RelativeLayout>

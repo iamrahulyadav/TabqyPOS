@@ -8,6 +8,8 @@
     <color name="colorDarkOrange">#ce620c</color>
     <color name="colorBlack">#000</color>
     <color name="colorWhite">#fff</color>
+    <color name="colorPurple">#42004a</color>
+    <color name="colorRed">#ad0000</color>
     <color name="colorGrey">#FFC4C2C2</color>
     <color name="colorappPink">#93014C</color>
     <color name="colorLightGrey">#FFECE9E9</color>

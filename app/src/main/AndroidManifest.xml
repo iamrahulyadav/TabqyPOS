@@ -11,6 +11,7 @@
         android:theme="@style/AppTheme">
         <activity
             android:name=".activities.MainActivity"
+            android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -25,13 +26,20 @@
             android:windowSoftInputMode="stateHidden|adjustPan" />
         <activity
             android:name=".activities.SplashScreen"
-            android:label="@string/title_activity_splash_screen"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".activities.SearchActivity"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".activities.TransSucess"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
+            android:name=".activities.TransSucess"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activities.FeedbackActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".activities.ResponseFeedbackActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
     </application>
 
 </manifest>

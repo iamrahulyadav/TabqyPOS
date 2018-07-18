@@ -20,14 +20,16 @@ public class AdapterOnlineTop extends RecyclerView.Adapter<AdapterOnlineTop.MyVi
     private Context context;
     private ArrayList<String> arr_names = new ArrayList<>();
     private ArrayList<String> arr_status = new ArrayList<>();
+    private ArrayList<Integer> arr_top_img;
     private Interface_AdapterOnlineTop click;
 
     public AdapterOnlineTop(Context context, ArrayList<String> arr_names, ArrayList<String> arr_status,
-                            Interface_AdapterOnlineTop click){
+                            ArrayList<Integer> arr_top_img, Interface_AdapterOnlineTop click){
 
         this.context = context;
         this.arr_names = arr_names;
         this.arr_status = arr_status;
+        this.arr_top_img = arr_top_img;
         this.click = click;
      }
 
@@ -66,6 +68,7 @@ public class AdapterOnlineTop extends RecyclerView.Adapter<AdapterOnlineTop.MyVi
     public void onBindViewHolder(final MyViewHolder holder, final int position) {
 
         holder.tv.setText(arr_names.get(position));
+        holder.iv.setImageResource(arr_top_img.get(position));
         if(arr_status.get(position).equals("1")){
             holder.layout.setBackgroundDrawable(context.getResources().getDrawable(R.drawable.shape_background_white));
         } else {

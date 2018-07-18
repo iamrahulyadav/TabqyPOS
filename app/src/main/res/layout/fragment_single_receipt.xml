@@ -1,10 +1,337 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background"
+    android:layout_marginTop="@dimen/nav_header_height"
     tools:context=".fragments.nav1.CharityFragment">
 
-    <!-- TODO: Update blank fragment layout -->
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/background">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="10dp"
+            android:layout_gravity="center_vertical"
+            android:background="@color/background">
 
-</FrameLayout>
+            <ImageView
+                android:id="@+id/fragment_single_receipt_back"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:src="@drawable/left_arrow"/>
+            <com.tabyq.pos.tabqypos.customtext.CustomTextViewBold
+                android:layout_toRightOf="@+id/fragment_single_receipt_back"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="@string/fragment_receipts_txt_receipt"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/small_size"
+                android:gravity="center_vertical"
+                android:id="@+id/fragment_single_receipt"
+                android:paddingLeft="10dp"
+                android:paddingStart="10dp" />
+
+            <LinearLayout
+                android:layout_alignParentEnd="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_alignParentRight="true">
+                <com.tabyq.pos.tabqypos.customtext.CustomTextViewBold
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="@string/fragment_single_receipts_txt_receipt"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/small_size"
+                    android:id="@+id/fragment_single_refund"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:drawablePadding="5dp"
+                    android:drawableRight="@drawable/ic_refund"
+                    android:paddingStart="10dp"
+                    android:drawableEnd="@drawable/ic_refund" />
+
+                <ImageView
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="20dp"
+                    android:src="@drawable/ic_printer_black"
+                    android:layout_marginStart="20dp" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="@drawable/shape_background_white"
+            android:padding="10dp">
+
+            <RelativeLayout
+                android:padding="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_receipt_circle"
+                    android:id="@+id/fragment_single_receipt_icon"/>
+                <com.tabyq.pos.tabqypos.customtext.CustomTextViewBold
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="#1-083489"
+                    android:layout_toRightOf="@+id/fragment_single_receipt_icon"
+                    android:padding="10dp"
+                    android:textColor="@color/colorlightBlack"
+                    android:textSize="@dimen/size_12"
+                    android:layout_toEndOf="@+id/fragment_single_receipt_icon" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:orientation="horizontal">
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/colorLightGrey" />
+                    <ImageView
+                        android:layout_margin="5dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_receipt_black"
+                        android:id="@+id/fragment_single_receipt_"/>
+
+                    <LinearLayout
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <com.tabyq.pos.tabqypos.customtext.CustomTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/fragment_single_receipts_txt_total"/>
+                        <com.tabyq.pos.tabqypos.customtext.CustomTextViewBold
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="84.99"
+                            android:textColor="@color/colorBlack"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height=".5dp"
+                android:background="@color/background"/>
+
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <com.tabyq.pos.tabqypos.customtext.CustomTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Order : #1-432323"
+                    android:paddingLeft="10dp"
+                    android:paddingBottom="10dp"/>
+                <com.tabyq.pos.tabqypos.customtext.CustomTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Cash : Owner  "
+                    android:paddingLeft="10dp"
+                    android:paddingBottom="10dp"/>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height=".5dp"
+                android:background="@color/background"/>
+
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <com.tabyq.pos.tabqypos.customtext.CustomTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Bagel-Double cheese"
+                        android:paddingLeft="10dp"
+                        android:textColor="@color/colorlightBlack"
+                        android:paddingBottom="10dp"/>
+                    <com.tabyq.pos.tabqypos.customtext.CustomTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="25.00"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:paddingLeft="10dp"
+                        android:textColor="@color/colorBlack"
+                        android:paddingBottom="10dp"/>
+
+                </RelativeLayout>
+
+                <com.tabyq.pos.tabqypos.customtext.CustomTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="1 X 25.00 "
+                    android:paddingLeft="10dp"
+                    android:paddingBottom="10dp"/>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <com.tabyq.pos.tabqypos.customtext.CustomTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Blueberry"
+                        android:paddingLeft="10dp"
+                        android:textColor="@color/colorlightBlack"
+                        android:paddingBottom="10dp"/>
+                    <com.tabyq.pos.tabqypos.customtext.CustomTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="05.00"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:paddingLeft="10dp"
+                        android:textColor="@color/colorBlack"
+                        android:paddingBottom="10dp"/>
+
+                </RelativeLayout>
+
+                <com.tabyq.pos.tabqypos.customtext.CustomTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="1 X 5.00"
+                    android:paddingLeft="10dp"
+                    android:paddingBottom="10dp"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <com.tabyq.pos.tabqypos.customtext.CustomTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Hot Chocolate"
+                        android:paddingLeft="10dp"
+                        android:textColor="@color/colorlightBlack"
+                        android:paddingBottom="10dp"/>
+                    <com.tabyq.pos.tabqypos.customtext.CustomTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="35.00"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:paddingLeft="10dp"
+                        android:textColor="@color/colorBlack"
+                        android:paddingBottom="10dp"/>
+
+                </RelativeLayout>
+
+                <com.tabyq.pos.tabqypos.customtext.CustomTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="1 X 35.00"
+                    android:paddingLeft="10dp"
+                    android:paddingBottom="10dp"/>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height=".5dp"
+                android:background="@color/background"/>
+
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <com.tabyq.pos.tabqypos.customtext.CustomTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Subtotal"
+                        android:textColor="@color/colorBlack"
+                        android:paddingLeft="10dp"
+                        android:paddingBottom="10dp"/>
+                    <com.tabyq.pos.tabqypos.customtext.CustomTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="83.00"
+                        android:layout_alignParentEnd="true"
+                        android:textColor="@color/colorBlack"
+                        android:paddingLeft="10dp"
+                        android:paddingBottom="10dp"
+                        android:layout_alignParentRight="true"
+                        android:paddingStart="10dp" />
+
+                </RelativeLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <com.tabyq.pos.tabqypos.customtext.CustomTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Sales"
+                        android:layout_weight="1"
+                        android:paddingLeft="10dp"
+                        android:paddingBottom="10dp"/>
+                    <com.tabyq.pos.tabqypos.customtext.CustomTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="2%"
+                        android:paddingLeft="30dp"
+                        android:paddingBottom="30dp"/>
+                    <com.tabyq.pos.tabqypos.customtext.CustomTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="1.66"
+                        android:paddingLeft="30dp"
+                        android:paddingBottom="30dp"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height=".5dp"
+                android:paddingBottom="10dp"
+                android:background="@color/background"/>
+
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+</LinearLayout>
