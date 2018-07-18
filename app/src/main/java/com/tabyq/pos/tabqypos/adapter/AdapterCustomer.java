@@ -13,8 +13,8 @@ import com.tabyq.pos.tabqypos.R;
 public class AdapterCustomer extends RecyclerView.Adapter<AdapterCustomer.MyViewHolder> {
 
     private Context context;
-    public AdapterCustomer(Context context){
 
+    public AdapterCustomer(Context context){
         this.context = context;
     }
 
