@@ -156,5 +156,11 @@
     <string name="activity_feedback_res_rating">Rating </string>
     <string name="activity_response_feed_send">Send</string>
     <string name="activity_response_feed_type_a_message">Type a message</string>
+    
+    <!--fragment charity-->
+    <string name="fragment_charity_heading">Extra Feature for those Restaurant who \ndon\'t want to waste their Foods </string>
+    <string name="fragment_charity_watse">Don\'t \nwaste Food  </string>
+    <string name="fragment_charity_give">Give to \nCharity People </string>
+    <string name="fragment_charity_skip">Skip </string>
 
 </resources>

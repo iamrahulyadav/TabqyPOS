@@ -53,7 +53,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public static LinearLayout cv_main_right, cv_main_right_2;
     public static LinearLayout layout_top_middle;
     private TextView tv_add_note, tv_add_discount,tv_clr;
-    ;
 
     private void init(){
         tv_add_note = findViewById(R.id.main_middle_btn_add_note);
