@@ -144,6 +144,8 @@
     <string name="dialog_online_details_customer_loc">Location/Branch</string>
     <string name="dialog_online_details_customer_del_add">Delivery Address:</string>
     <string name="dialog_online_details_close">Close</string>
+    <string name="dialog_online_details_re_print">Re-print</string>
+    <string name="dialog_online_details_status_history">Status History</string>
 
     <!--activity  feedback-->
     <string name="activity_feedback_title">Feedbacks</string>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:state_checked="true">
+        <shape android:shape="rectangle">
+            <corners android:radius="20dp" />
+            <solid android:color="@color/colorappPink" />
+            <size android:height="8dp"/>
+        </shape>
+    </item>
+
+    <item android:drawable="@drawable/ic_cross_white_layer"
+        android:width="2dp"
+        android:height="2dp"
+        android:top="7dp"
+        android:bottom="7dp"
+        android:gravity="center_vertical"
+        android:left="28dp"
+        android:right="@dimen/size_5">
+
+    </item>
+
+</layer-list>

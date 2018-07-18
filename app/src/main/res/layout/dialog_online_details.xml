@@ -167,8 +167,8 @@
                 android:layout_height="match_parent"
                 android:layout_weight="5.3"
                 android:background="@drawable/shape_background_pop_up_white"
-                android:padding="20dp"
-                android:visibility="visible">
+                android:paddingTop="@dimen/size_20"
+                android:paddingBottom="@dimen/size_20">
 
 
                 <RelativeLayout
@@ -176,19 +176,14 @@
                     android:layout_height="match_parent">
 
                     <LinearLayout
-                        android:id="@+id/itemmainherader"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_below="@+id/deletetop"
+                        android:id="@+id/dialog_online_details_right_top"
                         android:background="@color/colorWhite"
-                        android:orientation="horizontal">
-
-                        <ImageView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:gravity="center"
-                            android:src="@drawable/ic_forward"
-                            android:visibility="invisible" />
+                        android:orientation="horizontal"
+                        android:layout_alignParentTop="true"
+                        android:paddingLeft="@dimen/size_20"
+                        android:paddingRight="@dimen/size_20">
 
                         <com.tabyq.pos.tabqypos.customtext.CustomTextView
                             android:layout_width="0dp"
@@ -196,17 +191,16 @@
                             android:textSize="@dimen/extra_small_size"
                             android:layout_weight="1"
                             android:textColor="@color/colorappPink"
-                            android:text="@string/fragment_crm_items_name" />
-
+                            android:text="@string/fragment_crm_items_name"
+                            android:gravity="left"/>
                         <com.tabyq.pos.tabqypos.customtext.CustomTextView
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:gravity="center"
                             android:textColor="@color/colorappPink"
                             android:textSize="@dimen/extra_small_size"
-                            android:layout_weight=".5"
+                            android:layout_weight="1"
                             android:text="@string/fragment_crm_qty" />
-
                         <com.tabyq.pos.tabqypos.customtext.CustomTextView
                             android:layout_width="0dp"
                             android:textColor="@color/colorappPink"
@@ -215,151 +209,166 @@
                             android:textSize="@dimen/extra_small_size"
                             android:layout_weight="1"
                             android:text="@string/fragment_crm_price" />
-
                         <com.tabyq.pos.tabqypos.customtext.CustomTextView
                             android:layout_width="0dp"
                             android:textColor="@color/colorappPink"
                             android:layout_height="wrap_content"
-                            android:gravity="center"
+                            android:gravity="right"
                             android:textSize="@dimen/extra_small_size"
                             android:layout_weight="1"
                             android:text="@string/fragment_crm_subtotal" />
 
                     </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:layout_below="@+id/dialog_online_details_right_top"
+                        android:layout_above="@+id/dialog_online_details_right_bottom"
+                        android:layout_marginTop="@dimen/size_10">
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height=".3dp"
+                            android:background="#ECF0F1"
+                            android:layout_gravity="top"/>
+                        <android.support.v7.widget.RecyclerView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:id="@+id/dialog_online_details_recycler" />
+
+                    </LinearLayout>
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:id="@+id/walkin_right_bottom"
+                        android:id="@+id/dialog_online_details_right_bottom"
                         android:orientation="vertical"
-                        android:background="@color/background_2"
                         android:layout_alignParentBottom="true">
 
                         <View
                             android:layout_width="match_parent"
                             android:layout_height=".3dp"
                             android:background="#ECF0F1" />
-                        <LinearLayout
+                        <RelativeLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:orientation="horizontal">
+                            android:orientation="horizontal"
+                            android:paddingLeft="@dimen/size_20"
+                            android:paddingRight="@dimen/size_20"
+                            android:paddingTop="@dimen/size_10"
+                            android:paddingBottom="@dimen/size_10">
 
                             <com.tabyq.pos.tabqypos.customtext.CustomTextView
-                                android:layout_width="0dp"
+                                android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center"
-                                android:layout_weight="1"
                                 android:gravity="start"
-                                android:padding="10dp"
                                 android:text="@string/fragment_charge_txtsubtotal"
                                 android:textColor="@color/colorDarkGrey"
-                                android:textSize="@dimen/extra_small_size" />
-
+                                android:textSize="@dimen/extra_small_size"
+                                android:layout_alignParentLeft="true"/>
                             <com.tabyq.pos.tabqypos.customtext.CustomTextView
                                 android:id="@+id/walkin_sub_total"
-                                android:layout_width="match_parent"
+                                android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_weight="1"
                                 android:gravity="right"
-                                android:padding="10dp"
-                                android:text="12.00"
+                                android:text="75.00"
+                                android:layout_alignParentRight="true"
                                 android:textColor="@color/colorDarkGrey"
                                 android:textSize="@dimen/extra_small_size" />
 
-                        </LinearLayout>
-                        <LinearLayout
+                        </RelativeLayout>
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height=".3dp"
+                            android:background="#ECF0F1" />
+                        <RelativeLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:orientation="horizontal"
-                            android:paddingLeft="10dp"
-                            android:paddingRight="10dp">
+                            android:paddingBottom="@dimen/size_10"
+                            android:paddingTop="@dimen/size_10"
+                            android:paddingRight="@dimen/size_20"
+                            android:paddingLeft="@dimen/size_20">
                             <com.tabyq.pos.tabqypos.customtext.CustomTextView
-                                android:layout_width="0dp"
-                                android:layout_weight="1"
+                                android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_gravity="center"
-                                android:gravity="left"
                                 android:textSize="@dimen/extra_small_size"
                                 android:text="@string/fragment_charge_txttax"
+                                android:layout_alignParentLeft="true"
                                 android:textColor="@color/colorDarkGrey" />
                             <com.tabyq.pos.tabqypos.customtext.CustomTextView
-                                android:layout_width="0dp"
-                                android:layout_weight="1"
+                                android:layout_width="wrap_content"
                                 android:textSize="@dimen/extra_small_size"
                                 android:layout_height="wrap_content"
-                                android:gravity="right"
                                 android:text="40.00"
+                                android:layout_alignParentRight="true"
                                 android:textColor="@color/colorDarkGrey" />
 
-                        </LinearLayout>
-                        <LinearLayout
+                        </RelativeLayout>
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height=".3dp"
+                            android:background="#ECF0F1" />
+                        <RelativeLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:orientation="horizontal"
-                            android:padding="5dp">
+                            android:paddingLeft="@dimen/size_20"
+                            android:paddingRight="@dimen/size_20"
+                            android:paddingTop="@dimen/size_10"
+                            android:paddingBottom="@dimen/size_10">
+
                             <com.tabyq.pos.tabqypos.customtext.CustomTextView
-                                android:layout_width="0dp"
-                                android:layout_weight="1"
+                                android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_gravity="center"
-                                android:gravity="left"
                                 android:textSize="@dimen/small_size"
-                                android:textStyle="bold"
                                 android:text="@string/fragment_charge_txttotal"
-                                android:textColor="@color/colorBlack" />
+                                android:textColor="@color/colorBlack"
+                                android:layout_alignParentLeft="true"/>
                             <com.tabyq.pos.tabqypos.customtext.CustomTextView
-                                android:layout_width="0dp"
-                                android:layout_weight="1"
+                                android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:id="@+id/walkin_total"
-                                android:gravity="right"
                                 android:textSize="@dimen/small_size"
-                                android:textStyle="bold"
-                                android:text="SAR 52.00"
+                                android:layout_alignParentRight="true"
+                                android:text="SAR 75.00"
                                 android:textColor="@color/colorBlack" />
 
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:padding="3dp"
-                            android:id="@+id/bottom_buttons"
+                        </RelativeLayout>
+                        <RelativeLayout
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content">
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="@dimen/size_20"
+                            android:paddingRight="@dimen/size_20">
 
                             <com.tabyq.pos.tabqypos.customtext.CustomTextView
-                                android:layout_width="0dp"
-                                android:layout_height="match_parent"
-                                android:layout_gravity="center"
-                                android:layout_weight="1"
-                                android:background="#BB0162"
-                                android:gravity="center"
-                                android:text="@string/save"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/dialog_online_details_re_print"
                                 android:textSize="@dimen/size_12"
-                                android:id="@+id/fragment_new_order_txtSave"
-                                android:textColor="#fff" />
-
+                                android:textColor="@color/colorWhite"
+                                android:paddingLeft="18sp"
+                                android:paddingRight="18sp"
+                                android:paddingBottom="7sp"
+                                android:paddingTop="7sp"
+                                android:background="@drawable/shape_background_pink"
+                                android:layout_alignParentLeft="true"/>
                             <com.tabyq.pos.tabqypos.customtext.CustomTextView
-                                android:layout_width="0dp"
-                                android:layout_height="match_parent"
-                                android:layout_gravity="center"
-                                android:layout_weight="1"
-                                android:background="#A60054"
-                                android:gravity="center"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/dialog_online_details_status_history"
                                 android:textSize="@dimen/size_12"
-                                android:id="@+id/fragment_new_order_txtCharge"
-                                android:text="@string/charge_btn"
-                                android:textColor="#fff" />
+                                android:textColor="@color/colorWhite"
+                                android:paddingLeft="18sp"
+                                android:paddingRight="18sp"
+                                android:paddingBottom="7sp"
+                                android:paddingTop="7sp"
+                                android:background="@drawable/shape_background_pink"
+                                android:layout_alignParentRight="true" />
 
-                        </LinearLayout>
+                        </RelativeLayout>
 
                     </LinearLayout>
-                    <android.support.v7.widget.RecyclerView
-                        android:id="@+id/dragged_items"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_below="@+id/itemmainherader"
-                        android:layout_above="@+id/walkin_right_bottom"
-                        android:background="@color/background_2"
-                        android:scrollbars="none"/>
 
                 </RelativeLayout>
 
