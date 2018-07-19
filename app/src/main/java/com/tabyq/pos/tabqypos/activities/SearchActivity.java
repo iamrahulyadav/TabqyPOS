@@ -30,6 +30,7 @@ public class SearchActivity extends AppBaseActivity implements CustomerSearchAda
         setContentView(R.layout.activity_search);
 
         init();
+
     }
 
     @SuppressLint("ClickableViewAccessibility")

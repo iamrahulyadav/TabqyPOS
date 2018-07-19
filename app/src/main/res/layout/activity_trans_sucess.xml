@@ -63,9 +63,10 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:layout_marginTop="20dp">
+
             <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
                 android:layout_gravity="center"
                 android:padding="10dp"
                 android:src="@drawable/ic_success"/>
@@ -74,17 +75,20 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:gravity="center">
-                <com.tabyq.pos.tabqypos.customtext.CustomTextView
+                android:gravity="center"
+                android:padding="20dp">
+                <com.tabyq.pos.tabqypos.customtext.CustomTextViewBold
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Total : 91.889"
                     android:padding="10dp"
+                    android:textSize="@dimen/small_size"
                     android:textColor="@color/colorBlack"/>
-                <com.tabyq.pos.tabqypos.customtext.CustomTextView
+                <com.tabyq.pos.tabqypos.customtext.CustomTextViewBold
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Cash : 91.889"
+                    android:textSize="@dimen/small_size"
                     android:padding="10dp"
                     android:textColor="@color/colorBlack"/>
             </LinearLayout>
@@ -92,17 +96,20 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
-                <com.tabyq.pos.tabqypos.customtext.CustomEditText
+                android:orientation="horizontal"
+                android:layout_marginLeft="60dp"
+                android:layout_marginRight="60dp">
+                <com.tabyq.pos.tabqypos.customtext.CustomEditText_trans
                     android:layout_width="0dp"
                     android:layout_weight="1"
-                    android:paddingLeft="3dp"
+                    android:padding="15dp"
                     android:layout_height="wrap_content"
-                    android:textSize="@dimen/size_10"
+                    android:textSize="@dimen/size_12"
                     android:drawablePadding="5dp"
                     android:drawableLeft="@drawable/ic_mail"
-                    android:hint="@string/activity_trans_enter_email"/>
-                <com.tabyq.pos.tabqypos.customtext.CustomTextView
+                    android:hint="@string/activity_trans_enter_email"
+                    android:drawableStart="@drawable/ic_mail" />
+                <com.tabyq.pos.tabqypos.customtext.CustomTextViewBold
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:text="@string/actvity_trans_send_receipt"
@@ -110,7 +117,7 @@
                     android:padding="5dp"
                     android:gravity="center"
                     android:textColor="@color/colorWhite"
-                    android:background="@drawable/btn_backgroundpink"/>
+                    android:background="@drawable/btn_backgroundpink1"/>
             </LinearLayout>
 
         </LinearLayout>
@@ -119,7 +126,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:gravity="bottom|center_horizontal">
-            <com.tabyq.pos.tabqypos.customtext.CustomTextView
+            <com.tabyq.pos.tabqypos.customtext.CustomTextViewBold
                 android:layout_width="wrap_content"
                 android:layout_height="45dp"
                 android:text="@string/actvity_trans_new_sale"

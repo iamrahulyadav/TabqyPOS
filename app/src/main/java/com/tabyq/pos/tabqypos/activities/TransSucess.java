@@ -8,6 +8,7 @@ import com.tabyq.pos.tabqypos.R;
 
 public class TransSucess extends AppCompatActivity {
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

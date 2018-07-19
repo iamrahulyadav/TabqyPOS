@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/shape_background_white"
+    android:layout_margin="20dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:paddingBottom="5dp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+            <LinearLayout
+                android:id="@+id/include_charity_top"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <com.tabyq.pos.tabqypos.customtext.CustomTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:text="@string/fragment_charity2_time_set"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <com.tabyq.pos.tabqypos.customtext.CustomTextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="@string/fragment_charity2_open_time"/>
+
+                    <com.tabyq.pos.tabqypos.customtext.CustomTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="@string/fragment_charity2_close_time"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_margin="10dp"
+                    android:padding="40dp"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/shape_background_grey">
+
+                    <LinearLayout
+                        android:gravity="center"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <com.tabyq.pos.tabqypos.customtext.CustomTextView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:gravity="center"
+                            android:layout_margin="3dp"
+                            android:textColor="@color/colorappPink"
+                            android:background="@drawable/shape_background_white"
+                            android:text="03"
+                            android:textSize="@dimen/size_12"
+                            android:padding="5dp"/>
+                        <com.tabyq.pos.tabqypos.customtext.CustomTextView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:gravity="center"
+                            android:textSize="@dimen/size_12"
+                            android:layout_margin="3dp"
+                            android:textColor="@color/colorappPink"
+                            android:background="@drawable/shape_background_white"
+                            android:text="03"
+                            android:padding="5dp"/>
+                        <com.tabyq.pos.tabqypos.customtext.CustomTextView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:gravity="center"
+                            android:textSize="@dimen/size_12"
+                            android:layout_margin="3dp"
+                            android:textColor="@color/colorappPink"
+                            android:background="@drawable/shape_background_white"
+                            android:text="PM"
+                            android:padding="5dp"/>
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:gravity="center"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <com.tabyq.pos.tabqypos.customtext.CustomTextView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:gravity="center"
+                            android:layout_margin="3dp"
+                            android:textColor="@color/colorappPink"
+                            android:background="@drawable/shape_background_white"
+                            android:text="03"
+                            android:textSize="@dimen/size_12"
+                            android:padding="5dp"/>
+                        <com.tabyq.pos.tabqypos.customtext.CustomTextView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:gravity="center"
+                            android:textSize="@dimen/size_12"
+                            android:layout_margin="3dp"
+                            android:textColor="@color/colorappPink"
+                            android:background="@drawable/shape_background_white"
+                            android:text="03"
+                            android:padding="5dp"/>
+                        <com.tabyq.pos.tabqypos.customtext.CustomTextView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:gravity="center"
+                            android:textSize="@dimen/size_12"
+                            android:layout_margin="3dp"
+                            android:textColor="@color/colorappPink"
+                            android:background="@drawable/shape_background_white"
+                            android:text="PM"
+                            android:padding="5dp"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <com.tabyq.pos.tabqypos.customtext.CustomTextView
+                android:layout_width="wrap_content"
+                android:layout_below="@+id/include_charity_top"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_centerInParent="true"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:textColor="@color/colorWhite"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:layout_marginTop="10dp"
+                android:layout_gravity="center|bottom"
+                android:background="@drawable/btn_backgroundpink"
+                android:text="@string/fragment_charity2_apply"/>
+
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <com.tabyq.pos.tabqypos.customtext.CustomTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="@string/fragment_charity2_alert"/>
+            <include layout="@layout/item_charity_person_view"/>
+            <include layout="@layout/item_charity_person_view"/>
+            <include layout="@layout/item_charity_person_view"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

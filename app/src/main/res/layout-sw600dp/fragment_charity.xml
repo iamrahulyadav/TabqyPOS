@@ -20,7 +20,6 @@
                 android:id="@+id/cardview_expandable"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:visibility="gone"
                 android:background="#F1F2F7" >
 
                 <RelativeLayout

@@ -158,11 +158,21 @@
     <string name="activity_feedback_res_rating">Rating </string>
     <string name="activity_response_feed_send">Send</string>
     <string name="activity_response_feed_type_a_message">Type a message</string>
-    
+
     <!--fragment charity-->
     <string name="fragment_charity_heading">Extra Feature for those Restaurant who \ndon\'t want to waste their Foods </string>
-    <string name="fragment_charity_watse">Don\'t \nwaste Food  </string>
+    <string name="fragment_charity_watse">Don\'t \nWaste Food  </string>
     <string name="fragment_charity_give">Give to \nCharity People </string>
     <string name="fragment_charity_skip">Skip </string>
+
+    <!--fragment charity2-->
+    <string name="fragment_charity2_heading">If the Button is \"ON\" Charity people will able to find the Restaurant </string>
+    <string name="fragment_charity2_heading_2">Charity food available.....!</string>
+    <string name="fragment_charity2_time_set">Please set time</string>
+    <string name="fragment_charity2_close_time">Closing time</string>
+    <string name="fragment_charity2_open_time">Opening time</string>
+    <string name="fragment_charity2_alert">Send Alert to Charity Person </string>
+    <string name="fragment_charity2_apply">Apply </string>
+    <string name="item_charity_person_invite">Invite</string>
 
 </resources>

@@ -15,6 +15,8 @@ import android.widget.TextView;
 
 import com.tabyq.pos.tabqypos.R;
 import com.tabyq.pos.tabqypos.activities.MainActivity;
+import com.tabyq.pos.tabqypos.fragments.Sub.SaveFragment;
+import com.tabyq.pos.tabqypos.utils.SupportingWidgets;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -39,6 +41,8 @@ public class CharityFragment extends Fragment {
         super.onActivityCreated(savedInstanceState);
 
         init();
+        setListener();
+
     }
 
     private void init(){
@@ -71,7 +75,8 @@ public class CharityFragment extends Fragment {
         txt_skip.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                new SupportingWidgets().callFragment(getActivity(), new Charity2Fragment(), getFragmentManager(),
+                        R.id.frame_main_bottom, Charity2Fragment.class.getName());
             }
         });
     }

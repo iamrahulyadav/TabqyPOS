@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:state_checked="true">
+        <shape android:shape="rectangle">
+            <corners android:radius="20dp"/>
+            <solid android:color="@color/bg_dark_green" />
+            <size android:height="10dp" />
+        </shape>
+    </item>
+
+    <item android:drawable="@drawable/ic_tick"
+        android:width="2dp"
+        android:height="2dp"
+        android:top="5dp"
+        android:bottom="5dp"
+        android:gravity="left|center_vertical"
+        android:left="@dimen/size_5"
+        android:right="35dp">
+
+    </item>
+
+</layer-list>

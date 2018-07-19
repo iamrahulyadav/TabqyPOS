@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_marginTop="@dimen/nav1_width"
+    tools:context=".fragments.nav1.Charity2Fragment">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cardview_expandable"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#F1F2F7" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:paddingLeft="10dp"
+            android:background="#F1F2F7">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal"
+                android:background="@color/background"
+                android:gravity="center_vertical">
+
+                <com.tabyq.pos.tabqypos.customtext.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:id="@+id/fragment_walkin_all_categories"
+                    android:textColor="@color/colorlightBlack"
+                    android:text="All Categories"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:padding="@dimen/size_5"
+                    android:drawableLeft="@drawable/ic_home"
+                    android:drawableRight="@drawable/ic_down_arrow"
+                    android:drawablePadding="@dimen/size_10"/>
+
+                <com.tabyq.pos.tabqypos.customtext.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorlightBlack"
+                    android:text="Hot Drinks"
+                    android:gravity="center"
+                    android:layout_marginLeft="5dp"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="5dp" />
+
+                <com.tabyq.pos.tabqypos.customtext.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorWhite"
+                    android:text="Pizza"
+                    android:gravity="center"
+                    android:background="@drawable/btn_backgroundpink"
+                    android:layout_marginLeft="10dp"
+                    android:layout_gravity="center"
+                    android:paddingLeft="8dp"
+                    android:paddingRight="8dp"
+                    android:paddingBottom="5dp"
+                    android:paddingTop="5dp"
+                    android:layout_marginStart="10dp" />
+                <com.tabyq.pos.tabqypos.customtext.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorWhite"
+                    android:text="Dessert"
+                    android:gravity="center"
+                    android:background="@drawable/btn_backgroundpink"
+                    android:layout_marginLeft="10dp"
+                    android:layout_gravity="center"
+                    android:paddingLeft="8dp"
+                    android:paddingRight="8dp"
+                    android:paddingBottom="5dp"
+                    android:paddingTop="5dp"
+                    android:layout_marginStart="10dp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="gone">
+                <ExpandableListView
+                    android:id="@+id/categories_list"
+                    android:layout_width="100dp"
+                    android:layout_height="40dp" />
+
+                <com.tabyq.pos.tabqypos.customtext.CustomTextView
+                    android:id="@+id/group_cat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/categories_list"
+                    android:text="Hot Drinks" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/group_cat"
+                    android:scrollbars="horizontal"
+                    android:visibility="gone" />
+            </LinearLayout>
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.tabyq.pos.tabqypos.customtext.CustomTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:gravity="center"
+                android:text="@string/fragment_charity2_heading"/>
+
+            <com.tabyq.pos.tabqypos.customtext.CustomTextViewBold
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:gravity="center"
+                android:textColor="@color/colorappPink"
+                android:textSize="@dimen/extra_large"
+                android:text="@string/fragment_charity2_heading_2"/>
+
+            <android.support.v7.widget.SwitchCompat
+                android:layout_width="wrap_content"
+                android:layout_gravity="center"
+                android:layout_height="30dp"
+                android:id="@+id/fragment_online_cv_list_title_switch"
+                app:track="@drawable/switch_track_2"
+                android:thumb="@drawable/switch_thumb_2"
+                app:switchMinWidth="55dp" />
+
+            <include layout="@layout/include_charity_time"
+                android:id="@+id/fragment_charity_2_time"
+                android:visibility="gone"/>
+
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+
+</LinearLayout>
