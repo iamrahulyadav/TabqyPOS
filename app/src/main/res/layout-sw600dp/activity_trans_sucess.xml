@@ -136,7 +136,8 @@
                 android:background="@drawable/btn_backgroundpink"
                 android:gravity="center"
                 android:paddingLeft="40dp"
-                android:paddingRight="40dp"/>
+                android:paddingRight="40dp"
+                android:onClick="trans_success_back"/>
 
         </LinearLayout>
     </LinearLayout>

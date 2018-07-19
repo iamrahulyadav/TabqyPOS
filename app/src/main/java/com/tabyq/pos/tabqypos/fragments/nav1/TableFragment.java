@@ -23,11 +23,9 @@ import java.util.ArrayList;
  */
 public class TableFragment extends Fragment implements AdapterTableMain.Interface_TableMain {
 
-
     public TableFragment() {
         // Required empty public constructor
     }
-
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -41,6 +39,7 @@ public class TableFragment extends Fragment implements AdapterTableMain.Interfac
         super.onActivityCreated(savedInstanceState);
 
         init();
+
     }
 
     private RecyclerView rv_table;
@@ -68,10 +67,9 @@ public class TableFragment extends Fragment implements AdapterTableMain.Interfac
     public void onResume() {
         super.onResume();
 
-        ((MainActivity) getActivity()).cv_main_right.setVisibility(View.GONE);
-        ((MainActivity) getActivity()).layout_top_middle.setVisibility(View.VISIBLE);
-
-        ((MainActivity) getActivity()).cv_main_right_2.setVisibility(View.GONE);
+        MainActivity.cv_main_right.setVisibility(View.GONE);
+        MainActivity.layout_top_middle.setVisibility(View.VISIBLE);
+        MainActivity.cv_main_right_2.setVisibility(View.GONE);
     }
 
     @Override

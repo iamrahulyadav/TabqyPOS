@@ -55,7 +55,6 @@ public class WalkinFragment extends Fragment implements MainItemListAdapter2.Lis
         // Required empty public constructor
     }
 
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -74,9 +73,9 @@ public class WalkinFragment extends Fragment implements MainItemListAdapter2.Lis
         getMyIntent();
     }
 
-    private LinearLayout layout_right_top_walkin, layout_right_top_crm;
-    private RecyclerView rv_main, rv_drag;
-    private CardView cv_left_bottom, cv_left_bottom_pay_by_cash;
+    public static LinearLayout layout_right_top_walkin, layout_right_top_crm;
+    public static RecyclerView rv_main, rv_drag;
+    public static CardView cv_left_bottom, cv_left_bottom_pay_by_cash;
     private MainItemListAdapter2 adapter;
     private List<TestData> testDataList = new ArrayList<>();
     private AdapterWalkinDraggedItems adapterWalkinDraggedItems;
@@ -85,16 +84,20 @@ public class WalkinFragment extends Fragment implements MainItemListAdapter2.Lis
     private TextView txtChrage, txt_save;
     private TextView tv_sub_total, tv_total;
     private ImageView img_delete, iv_menu;
-    private LinearLayout layout_right_bottom_button;
+    public static LinearLayout layout_right_bottom_button;
     private TextView tv_scan;
     private TextView tv_order_status_cancel;
 
     private RadioGroup radioGroup;
+    private RadioButton radioButton_pay_by_cash;
 
-    private TextView tv_pay_by_cash_done, tv_pay_by_cash_cancel;
+    public static TextView tv_pay_by_cash_done, tv_pay_by_cash_cancel;
     private TextView tv_category;
 
     private void init(){
+        radioButton_pay_by_cash = getView().findViewById(R.id.fragment_charge_RadioCash);
+        radioButton_pay_by_cash.setOnClickListener(this);
+
         tv_category = getView().findViewById(R.id.fragment_walkin_all_categories);
         tv_category.setOnClickListener(this);
         layout_right_bottom_button = getView().findViewById(R.id.bottom_buttons);
@@ -355,6 +358,9 @@ public class WalkinFragment extends Fragment implements MainItemListAdapter2.Lis
     private PopupWindow popupwindow_obj;
     private PopupWindow popupwindow_cateory;
 
+
+    public static int back_status = 0;
+
     @Override
     public void onClick(View v) {
         int id_ = v.getId();
@@ -369,6 +375,7 @@ public class WalkinFragment extends Fragment implements MainItemListAdapter2.Lis
             layout_right_bottom_button.setVisibility(View.GONE);
             rv_main.setVisibility(View.GONE);
             cv_left_bottom.setVisibility(View.VISIBLE);
+            back_status = 1;
 
         } else if(id_ == R.id.fragment_walkin_order_no_cancel){
             layout_right_top_walkin.setVisibility(View.VISIBLE);
@@ -376,12 +383,20 @@ public class WalkinFragment extends Fragment implements MainItemListAdapter2.Lis
             layout_right_bottom_button.setVisibility(View.VISIBLE);
             rv_main.setVisibility(View.VISIBLE);
             cv_left_bottom.setVisibility(View.GONE);
+            back_status = 0;
+
+        } else if(id_ == R.id.fragment_charge_RadioCash){
+
+            cv_left_bottom.setVisibility(View.GONE);
+            cv_left_bottom_pay_by_cash.setVisibility(View.VISIBLE);
+            back_status = 2;
 
         } else if(id_ == R.id.walkin_pay_by_cash_btn_done){
             startActivity(new Intent(getActivity(), TransSucess.class));
         } else if(id_ == R.id.walkin_pay_by_cash_btn_cancel){
             cv_left_bottom.setVisibility(View.VISIBLE);
             cv_left_bottom_pay_by_cash.setVisibility(View.GONE);
+            back_status = 1;
 
         } else if(id_ == R.id.fragment_new_order_txtSave){
             new SupportingWidgets().callFragment(getActivity(), new SaveFragment(), getFragmentManager(),
@@ -425,8 +440,9 @@ public class WalkinFragment extends Fragment implements MainItemListAdapter2.Lis
             int id = group.getCheckedRadioButtonId();
             RadioButton radioButton = radioGroup.findViewById(id);
             if (radioButton.getText().toString().trim().equals("Pay by Cash")){
-                cv_left_bottom.setVisibility(View.GONE);
+              /*  cv_left_bottom.setVisibility(View.GONE);
                 cv_left_bottom_pay_by_cash.setVisibility(View.VISIBLE);
+                back_status = 2;*/
             }
         }
     }

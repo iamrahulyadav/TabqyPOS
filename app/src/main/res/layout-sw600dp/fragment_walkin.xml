@@ -549,7 +549,7 @@
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="110dp"
+            android:layout_height="100dp"
             android:id="@+id/walkin_layout_right_top_crm"
             android:gravity="center_vertical"
             android:orientation="horizontal"
@@ -628,38 +628,38 @@
                 android:padding="15dp"
                 android:background="@color/background_2">
 
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerVertical="true"
-                android:layout_marginLeft="10dp"
-                android:id="@+id/fragment_new_order_delete"
-                android:src="@drawable/ic_delete_button"
-                android:layout_marginStart="10dp" />
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:id="@+id/fragment_new_order_delete"
+                    android:src="@drawable/ic_delete_button"
+                    android:layout_marginStart="10dp" />
 
-            <com.tabyq.pos.tabqypos.customtext.CustomTextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerInParent="true"
-                android:layout_centerVertical="true"
-                android:text="Items(2)" />
+                <com.tabyq.pos.tabqypos.customtext.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_centerVertical="true"
+                    android:text="Items(2)" />
 
-            <ImageView
-                android:id="@+id/imgdot_menu"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
-                android:layout_centerVertical="true"
-                android:src="@drawable/ic_dot"
-                android:layout_alignParentEnd="true" />
+                <ImageView
+                    android:id="@+id/imgdot_menu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_dot"
+                    android:layout_alignParentEnd="true" />
 
-        </RelativeLayout>
+            </RelativeLayout>
             <LinearLayout
                 android:id="@+id/itemmainherader"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/deletetop"
-                android:background="@color/colorWhite"
+                android:background="@color/background_3"
                 android:orientation="horizontal">
 
                 <ImageView
@@ -714,7 +714,7 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/walkin_right_bottom"
                 android:orientation="vertical"
-                android:background="@color/background_2"
+                android:background="@color/background_3"
                 android:layout_alignParentBottom="true">
 
                 <View
@@ -839,10 +839,11 @@
                 android:layout_height="match_parent"
                 android:layout_below="@+id/itemmainherader"
                 android:layout_above="@+id/walkin_right_bottom"
-                android:background="@color/background_2"
+                android:background="@color/background_3"
                 android:scrollbars="none"/>
 
         </RelativeLayout>
+
     </LinearLayout>
 
 </RelativeLayout>

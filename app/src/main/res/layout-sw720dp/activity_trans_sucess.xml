@@ -131,13 +131,13 @@
                 android:layout_height="45dp"
                 android:text="@string/actvity_trans_new_sale"
                 android:textSize="14sp"
-                android:id="@+id/actvity_trans_new_sale"
                 android:textColor="@color/colorWhite"
                 android:layout_gravity="bottom"
                 android:background="@drawable/btn_backgroundpink"
                 android:gravity="center"
                 android:paddingLeft="40dp"
-                android:paddingRight="40dp"/>
+                android:paddingRight="40dp"
+                android:onClick="trans_success_back"/>
 
         </LinearLayout>
     </LinearLayout>

@@ -16,6 +16,7 @@ import android.view.WindowManager;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.tabyq.pos.tabqypos.R;
 import com.tabyq.pos.tabqypos.fragments.nav1.MainFragment;
@@ -206,7 +207,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 Bundle bundle = new Bundle();
                 bundle.putString("nav_name", "Walkin");
                 fragment.setArguments(bundle);
-                getSupportFragmentManager().beginTransaction().replace(R.id.frame_main_bottom, fragment).commit();
+                getSupportFragmentManager().beginTransaction().replace(R.id.frame_main_bottom, fragment)
+                        .addToBackStack(new WalkinFragment().getClass().getName()).commit();
                 break;
 
             case R.id.crm_layout:
@@ -215,23 +217,28 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 Bundle bundle1 = new Bundle();
                 bundle1.putString("nav_name", "CRM");
                 fragment1.setArguments(bundle1);
-                getSupportFragmentManager().beginTransaction().replace(R.id.frame_main_bottom, fragment1).commit();
+                getSupportFragmentManager().beginTransaction().replace(R.id.frame_main_bottom, fragment1)
+                        .addToBackStack(new WalkinFragment().getClass().getName()).commit();
                 break;
             case R.id.table:
                 table_layout.setBackgroundColor(getResources().getColor(R.color.colorDark));
-                getSupportFragmentManager().beginTransaction().replace(R.id.frame_main_bottom, new TableFragment()).commit();
+                getSupportFragmentManager().beginTransaction().replace(R.id.frame_main_bottom, new TableFragment())
+                        .addToBackStack(new TableFragment().getClass().getName()).commit();
                 break;
             case R.id.online_layout:
                 online_layout.setBackgroundColor(getResources().getColor(R.color.colorDark));
-                getSupportFragmentManager().beginTransaction().replace(R.id.frame_main_bottom, new OnlineFragment()).commit();
+                getSupportFragmentManager().beginTransaction().replace(R.id.frame_main_bottom, new OnlineFragment())
+                        .addToBackStack(new OnlineFragment().getClass().getName()).commit();
                 break;
             case R.id.charity:
                 charity_layout.setBackgroundColor(getResources().getColor(R.color.colorDark));
-                getSupportFragmentManager().beginTransaction().replace(R.id.frame_main_bottom, new CharityFragment()).commit();
+                getSupportFragmentManager().beginTransaction().replace(R.id.frame_main_bottom, new CharityFragment())
+                        .addToBackStack(new CharityFragment().getClass().getName()).commit();
                 break;
             case R.id.order_status:
                 order_status_layout.setBackgroundColor(getResources().getColor(R.color.colorDark));
-                getSupportFragmentManager().beginTransaction().replace(R.id.frame_main_bottom, new OrderStatusFragment()).commit();
+                getSupportFragmentManager().beginTransaction().replace(R.id.frame_main_bottom, new OrderStatusFragment())
+                        .addToBackStack(new OrderStatusFragment().getClass().getName()).commit();
                 break;
             default:
                 break;
@@ -283,5 +290,47 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         flag = 1;
 
         return true;
+    }
+
+    @Override
+    public void onBackPressed() {
+//        super.onBackPressed();
+
+        int i = getSupportFragmentManager().getBackStackEntryCount();
+//        Toast.makeText(getApplicationContext(), i + "", Toast.LENGTH_SHORT).show();
+        if(i == 0){
+            finish();
+        } else if(i>0){
+            if(getSupportFragmentManager().getBackStackEntryAt(i-1).getName().equals(
+                    new WalkinFragment().getClass().getName()
+            )){
+//                Toast.makeText(getApplicationContext(), "found", Toast.LENGTH_SHORT).show();
+                if(WalkinFragment.back_status==0){
+//                   Toast.makeText(getApplicationContext(), 0 + "", Toast.LENGTH_SHORT).show();
+                    super.onBackPressed();
+                } else if(WalkinFragment.back_status == 1){
+//                    Toast.makeText(getApplicationContext(), 1 + "", Toast.LENGTH_SHORT).show();
+                    WalkinFragment.layout_right_top_walkin.setVisibility(View.VISIBLE);
+                    WalkinFragment.layout_right_top_crm.setVisibility(View.GONE);
+                    WalkinFragment.layout_right_bottom_button.setVisibility(View.VISIBLE);
+                    WalkinFragment.rv_main.setVisibility(View.VISIBLE);
+                    WalkinFragment.cv_left_bottom.setVisibility(View.GONE);
+                    WalkinFragment.back_status = 0;
+                } else if(WalkinFragment.back_status == 2){
+//                    Toast.makeText(getApplicationContext(), 2 + "", Toast.LENGTH_SHORT).show();
+                    WalkinFragment.cv_left_bottom.setVisibility(View.VISIBLE);
+                    WalkinFragment.cv_left_bottom_pay_by_cash.setVisibility(View.GONE);
+                    WalkinFragment.back_status = 1;
+                } else {
+
+                }
+
+
+            } else{
+                super.onBackPressed();
+//                Toast.makeText(getApplicationContext(), "no found", Toast.LENGTH_SHORT).show();
+            }
+        } else {
+        }
     }
 }
