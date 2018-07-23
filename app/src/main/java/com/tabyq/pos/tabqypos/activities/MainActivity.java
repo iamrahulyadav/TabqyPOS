@@ -81,9 +81,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         order_status_layout = findViewById(R.id.order_status);
 
         navigationView.setNavigationItemSelectedListener(this);
+
         addNoteDialog();
         addDiscoountDialog();
         createMyDailogPin();
+        createMyDailogCRM();
 
         dashboardLayout.setBackgroundColor(getResources().getColor(R.color.colorDark));
         getSupportFragmentManager().beginTransaction().replace(R.id.frame_main_bottom, new MainFragment()).commit();
@@ -111,7 +113,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
     }
 
-    private Dialog dialog_add_note, dialog_add_discount, dialog_pin;
+    private Dialog dialog_add_note, dialog_add_discount, dialog_pin, dialog_crm;
     private void addNoteDialog(){
         dialog_add_note = new Dialog(MainActivity.this);
         dialog_add_note.setContentView(R.layout.dialog_add_note);
@@ -178,6 +180,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     }
 
+    private void createMyDailogCRM(){
+        dialog_crm = new Dialog(MainActivity.this);
+        dialog_crm.setContentView(R.layout.dialog_crm_home);
+
+        dialog_crm.setCancelable(true);
+        dialog_crm.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+        dialog_crm.getWindow().getAttributes().windowAnimations = R.style.DialogAnimation;
+
+    }
+
     int flag = 1;
     public void menu_click(View view){
         if(flag == 1){
@@ -213,12 +225,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
             case R.id.crm_layout:
                 crm_layout.setBackgroundColor(getResources().getColor(R.color.colorDark));
+/*
                 WalkinFragment fragment1 = new WalkinFragment();
                 Bundle bundle1 = new Bundle();
                 bundle1.putString("nav_name", "CRM");
                 fragment1.setArguments(bundle1);
                 getSupportFragmentManager().beginTransaction().replace(R.id.frame_main_bottom, fragment1)
                         .addToBackStack(new WalkinFragment().getClass().getName()).commit();
+*/
+dialog_crm.show();
                 break;
             case R.id.table:
                 table_layout.setBackgroundColor(getResources().getColor(R.color.colorDark));

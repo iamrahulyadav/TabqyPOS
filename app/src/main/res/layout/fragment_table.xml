@@ -94,23 +94,6 @@
 
             </LinearLayout>
 
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="right|bottom">
-                <com.tabyq.pos.tabqypos.customtext.CustomTextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:drawableTop="@drawable/ic_take_way"
-                    android:textColor="@color/colorappPink"
-                    android:padding="2dp"
-                    android:textSize="@dimen/size_9"
-                    android:layout_alignParentRight="true"
-                    android:gravity="right|center_vertical"
-                    android:layout_marginLeft="3dp"
-                    android:text="@string/fragment_charge_txt_take_way"/>
-
-            </RelativeLayout>
 
         </LinearLayout>
         <RelativeLayout

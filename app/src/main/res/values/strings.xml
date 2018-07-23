@@ -48,8 +48,9 @@
     <string name="fragment_charge_txtApplypoint">Apply point</string>
     <string name="fragment_charge_txtApply">Apply</string>
     <string name="fragment_charge_txtTotalAmt">Total Amount</string>
-    <string name="fragment_charge_RadioCAsh">Pay by Cash </string>
-    <string name="fragment_charge_RadioCard">Pay by Card </string>
+    <string name="fragment_charge_RadioCAsh">Pay by Cash</string>
+    <string name="fragment_charge_RadioCard">Pay by Card</string>
+    <string name="fragment_charge_RadioCardBoth">Pay by Both</string>
     <string name="fragment_charge_btnCancel">Cancel </string>
     <string name="fragment_charge_txt_take_way">Take way </string>
 
@@ -174,5 +175,13 @@
     <string name="fragment_charity2_alert">Send Alert to Charity Person </string>
     <string name="fragment_charity2_apply">Apply </string>
     <string name="item_charity_person_invite">Invite</string>
+
+    <!--dialog crm home-->
+    <string name="dialog_crm_home_search_customer">Search Customer</string>
+    
+    <!--Walkin Fragment-->
+    <string name="are_you_sure_you_want_to_add_this_item">Are you sure you want to add this item?</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
 
 </resources>

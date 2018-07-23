@@ -91,6 +91,7 @@
                 android:layout_height="wrap_content"
                 android:text="Details"
                 android:textSize="@dimen/size_10"
+                android:id="@+id/item_online_new_order_sdetails"
                 android:textColor="@color/colorWhite"
                 android:gravity="center"
                 android:paddingRight="10dp"
@@ -165,25 +166,25 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:gravity="center_horizontal">
-            <com.tabyq.pos.tabqypos.customtext.CustomTextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="InProgress"
-                android:textColor="@color/colorWhite"
-                android:textSize="@dimen/size_12"
-                android:background="@drawable/shape_background_orange_1"
-                android:paddingLeft="25dp"
-                android:paddingRight="25dp"
-                android:paddingBottom="8dp"
-                android:paddingTop="8dp"
-                android:gravity="center"
-                android:layout_marginBottom="5dp"/>
-            <com.tabyq.pos.tabqypos.customtext.CustomTextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Mark as Delivered"
-                android:textColor="#007BB6"
-                android:textSize="@dimen/size_10"/>
+                <com.tabyq.pos.tabqypos.customtext.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="InProgress"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/size_12"
+                    android:background="@drawable/shape_background_orange_1"
+                    android:paddingLeft="25dp"
+                    android:paddingRight="25dp"
+                    android:paddingBottom="8dp"
+                    android:paddingTop="8dp"
+                    android:gravity="center"
+                    android:layout_marginBottom="5dp"/>
+                <com.tabyq.pos.tabqypos.customtext.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Mark as Delivered"
+                    android:textColor="#007BB6"
+                    android:textSize="@dimen/size_10"/>
             </LinearLayout>
         </LinearLayout>
 

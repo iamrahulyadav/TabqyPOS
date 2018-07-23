@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="500dp"
+    android:layout_height="300dp"
+    android:layout_gravity="center"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/shape_border_grey_pop_up">
+
+    <com.tabyq.pos.tabqypos.customtext.CustomTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:layout_marginTop="40dp"
+        android:textColor="@color/colorBlack"
+        android:textSize="@dimen/small_size"
+        android:gravity="center_horizontal"
+        android:text="@string/are_you_sure_you_want_to_add_this_item"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="horizontal"
+        android:layout_margin="10dp">
+
+            <com.tabyq.pos.tabqypos.customtext.CustomTextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:id="@+id/dialog_add_item_yes"
+                android:text="@string/yes"
+                android:padding="10dp"
+                android:gravity="center"
+                android:layout_margin="10dp"
+                android:textColor="@color/colorWhite"
+                android:background="@drawable/btn_backgroundpink"/>
+
+
+            <com.tabyq.pos.tabqypos.customtext.CustomTextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:id="@+id/dialog_add_item_no"
+                android:text="@string/no"
+                android:padding="10dp"
+                android:gravity="center"
+                android:layout_margin="10dp"
+                android:textColor="@color/colorWhite"
+                android:background="@drawable/btn_backgroundpink"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

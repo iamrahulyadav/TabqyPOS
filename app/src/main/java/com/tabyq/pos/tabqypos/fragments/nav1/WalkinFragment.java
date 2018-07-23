@@ -166,6 +166,8 @@ public class WalkinFragment extends Fragment implements MainItemListAdapter2.Lis
         rv_main.setAdapter(adapter);
 
         createDeleteDialog();
+        create_dialog_add_item();
+        create_dialog_pay_by_cash();
     }
 
     private Dialog dialog_delete;
@@ -281,6 +283,39 @@ public class WalkinFragment extends Fragment implements MainItemListAdapter2.Lis
         return popupWindow;
     }
 
+    private Dialog dialog_add_item;
+
+    private void create_dialog_add_item(){
+        dialog_add_item = new Dialog(getContext());
+        dialog_add_item.setContentView(R.layout.dialog_add_item);
+
+        dialog_add_item.setCancelable(true);
+        dialog_add_item.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+        dialog_add_item.getWindow().getAttributes().windowAnimations = R.style.DialogAnimation;
+
+        TextView tv_yes = dialog_add_item.findViewById(R.id.dialog_add_item_yes);
+        TextView tv_no = dialog_add_item.findViewById(R.id.dialog_add_item_no);
+        tv_yes.setOnClickListener(this);
+        tv_no.setOnClickListener(this);
+
+    }
+
+    private Dialog dialog_pay_by_cash;
+
+    private void create_dialog_pay_by_cash(){
+        dialog_pay_by_cash = new Dialog(getContext());
+        dialog_pay_by_cash.setContentView(R.layout.dialog_walkin_pay_by_cash);
+
+        dialog_pay_by_cash.setCancelable(false);
+        dialog_pay_by_cash.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+        dialog_pay_by_cash.getWindow().getAttributes().windowAnimations = R.style.DialogAnimation;
+
+        TextView tv_done = dialog_pay_by_cash.findViewById(R.id.dialog_walkin_pay_by_cash_done);
+        tv_done.setOnClickListener(this);
+
+    }
+
+
     @Override
     public boolean onDrag(View v, DragEvent event) {
         int action = event.getAction();
@@ -303,25 +338,21 @@ public class WalkinFragment extends Fragment implements MainItemListAdapter2.Lis
                 View view = (View) event.getLocalState();
                 Log.d("MyId", view.getId() + "");
 
-//                Toast.makeText(getContext(), "dropped", Toast.LENGTH_SHORT).show();
                 if(v.getId() == R.id.recycler_viewmain){
-//                    Toast.makeText(getContext(), "Main", Toast.LENGTH_SHORT).show();
                 } else if(v.getId() == R.id.dragged_items){
-//                    Toast.makeText(getContext(), "Re", Toast.LENGTH_SHORT).show();
-//                    testDataList.remove(dragged_item_position);
+
+                    dialog_add_item.show();
+/*
                     arr_size = arr_size + 1;
-//                    Toast.makeText(getContext(), arr_size + "Re", Toast.LENGTH_SHORT).show();
-
-
                     tv_sub_total.setText("$" + (arr_size * 12) + ".00");
                     tv_total.setText("SAR " + ((arr_size * 12) + 40) + ".00");
-
                     adapterWalkinDraggedItems = new AdapterWalkinDraggedItems(arr_size);
                     rv_drag.setAdapter(adapterWalkinDraggedItems);
-
-
-//                    adapter.notifyDataSetChanged();
                     adapterWalkinDraggedItems.notifyDataSetChanged();
+*/
+
+
+
                 } else {
                     Toast.makeText(getContext(), "out", Toast.LENGTH_SHORT).show();
                 }
@@ -390,6 +421,7 @@ public class WalkinFragment extends Fragment implements MainItemListAdapter2.Lis
             cv_left_bottom.setVisibility(View.GONE);
             cv_left_bottom_pay_by_cash.setVisibility(View.VISIBLE);
             back_status = 2;
+            dialog_pay_by_cash.show();
 
         } else if(id_ == R.id.walkin_pay_by_cash_btn_done){
             startActivity(new Intent(getActivity(), TransSucess.class));
@@ -430,7 +462,20 @@ public class WalkinFragment extends Fragment implements MainItemListAdapter2.Lis
             Toast.makeText(getContext(), "Dessert", Toast.LENGTH_SHORT).show();
         } else if(id_ == R.id.popup_walkin_categories_sarvory){
             Toast.makeText(getContext(), "Sarvory", Toast.LENGTH_SHORT).show();
-        } else {}
+        } else if(id_ == R.id.dialog_add_item_yes){
+            arr_size = arr_size + 1;
+            tv_sub_total.setText("$" + (arr_size * 12) + ".00");
+            tv_total.setText("SAR " + ((arr_size * 12) + 40) + ".00");
+            adapterWalkinDraggedItems = new AdapterWalkinDraggedItems(arr_size);
+            rv_drag.setAdapter(adapterWalkinDraggedItems);
+            adapterWalkinDraggedItems.notifyDataSetChanged();
+            dialog_add_item.dismiss();
+        } else if(id_ == R.id.dialog_add_item_no){
+            dialog_add_item.dismiss();
+        } else if(id_ == R.id.dialog_walkin_pay_by_cash_done){
+
+            dialog_pay_by_cash.dismiss();
+        }else{}
     }
 
     @Override

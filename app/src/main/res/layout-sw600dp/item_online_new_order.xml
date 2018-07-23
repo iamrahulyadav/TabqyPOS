@@ -71,6 +71,7 @@
                 android:gravity="center_vertical"
                 android:drawableRight="@drawable/ic_down_arrow_1"
                 android:drawablePadding="@dimen/size_10"/>
+
             <com.tabyq.pos.tabqypos.customtext.CustomTextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -78,6 +79,7 @@
                 android:textSize="@dimen/size_10"
                 android:gravity="center_vertical"
                 android:layout_marginTop="5dp"/>
+
             <com.tabyq.pos.tabqypos.customtext.CustomTextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -86,6 +88,7 @@
                 android:gravity="center_vertical"
                 android:layout_marginTop="3dp"
                 android:layout_marginBottom="3dp"/>
+
             <com.tabyq.pos.tabqypos.customtext.CustomTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -141,6 +144,7 @@
             android:layout_height="match_parent"
             android:id="@+id/item_online_new_order_layout_deliver_to"
             android:gravity="center">
+
             <com.tabyq.pos.tabqypos.customtext.CustomTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -155,6 +159,7 @@
                 android:gravity="center" />
 
         </LinearLayout>
+
         <LinearLayout
             android:layout_width="0dp"
             android:layout_weight="1"

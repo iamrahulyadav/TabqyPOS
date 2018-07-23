@@ -130,6 +130,7 @@
                         android:textColor="@color/colorBlack"
                         android:drawableEnd="@drawable/ic_smiling_green"
                         android:paddingEnd="10dp" />
+
                 </LinearLayout>
 
             </RelativeLayout>

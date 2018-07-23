@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="400sp"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:orientation="vertical"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:gravity="center"
+    android:padding="@dimen/size_20"
+    android:background="@drawable/shape_border_grey_pop_up">
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="120dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/walkin_pay_by_cash_right"
+            android:orientation="vertical"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="15dp">
+
+            <com.tabyq.pos.tabqypos.customtext.CustomTextViewBold
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:text="SAR240.00"
+                android:textSize="14sp"
+                android:textColor="@color/colorappPink"/>
+            <com.tabyq.pos.tabqypos.customtext.CustomTextViewBold
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:text="300.00"
+                android:textSize="14sp"
+                android:layout_gravity="end"
+                android:textColor="@color/colorappPink"/>
+            <com.tabyq.pos.tabqypos.customtext.CustomTextViewBold
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:text="60.00"
+                android:textSize="14sp"
+                android:layout_gravity="right"
+                android:textColor="@color/colorappPink"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_toLeftOf="@+id/walkin_pay_by_cash_right"
+            android:layout_marginRight="15dp"
+            android:gravity="right">
+
+            <com.tabyq.pos.tabqypos.customtext.CustomTextViewBold
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:text="Total Amount"
+                android:textSize="14sp"
+                android:textColor="@color/colorBlack"/>
+            <com.tabyq.pos.tabqypos.customtext.CustomTextView
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:text="Cash Received"
+                android:textSize="14sp"
+                android:textColor="@color/colorBlack"/>
+            <com.tabyq.pos.tabqypos.customtext.CustomTextView
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:text="Change Return"
+                android:textSize="14sp"
+                android:textColor="@color/colorBlack"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:gravity="end">
+
+        <com.tabyq.pos.tabqypos.customtext.CustomTextView
+            android:layout_width="90dp"
+            android:layout_height="35dp"
+            android:id="@+id/dialog_walkin_pay_by_cash_done"
+            android:gravity="center"
+            android:textSize="@dimen/extra_small_size"
+            android:textColor="@color/colorWhite"
+            android:text="Done"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/btn_backgroundpink"/>
+
+    </LinearLayout>
+
+</LinearLayout>
