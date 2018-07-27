@@ -21,6 +21,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.WindowManager;
+import android.widget.CheckBox;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.PopupWindow;
@@ -87,6 +88,7 @@ public class WalkinFragment extends Fragment implements MainItemListAdapter2.Lis
     public static LinearLayout layout_right_bottom_button;
     private TextView tv_scan;
     private TextView tv_order_status_cancel;
+    private CheckBox onlinecheCheckBox;
 
     private RadioGroup radioGroup;
     private RadioButton radioButton_pay_by_cash;
@@ -303,6 +305,7 @@ public class WalkinFragment extends Fragment implements MainItemListAdapter2.Lis
     private Dialog dialog_pay_by_cash;
 
     private void create_dialog_pay_by_cash(){
+
         dialog_pay_by_cash = new Dialog(getContext());
         dialog_pay_by_cash.setContentView(R.layout.dialog_walkin_pay_by_cash);
 
@@ -314,7 +317,6 @@ public class WalkinFragment extends Fragment implements MainItemListAdapter2.Lis
         tv_done.setOnClickListener(this);
 
     }
-
 
     @Override
     public boolean onDrag(View v, DragEvent event) {

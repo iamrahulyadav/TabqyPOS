@@ -190,6 +190,17 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     }
 
+    private void nav_crm_dialog(View view){
+        int id = view.getId();
+        if(id == R.id.dialog_crm_home_scan){
+
+        } else if(id == R.id.dialog_crm_home_add){
+
+        } else if(id == R.id.dialog_crm_home_search){
+
+        } else {}
+    }
+
     int flag = 1;
     public void menu_click(View view){
         if(flag == 1){

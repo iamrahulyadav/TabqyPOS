@@ -289,33 +289,50 @@
                     android:layout_marginBottom="5dp"
                     android:background="@color/colorLightGrey"/>
 
-                <RadioGroup
+                <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:id="@+id/walkin_order_no_radio_group"
-                    android:layout_margin="5dp"
-                    android:orientation="horizontal">
-                    <RadioButton
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:padding="10dp"
-                        android:layout_weight="1"
-                        android:textSize="@dimen/extra_small_size"
-                        android:buttonTint="@color/colorappPink"
-                        android:id="@+id/fragment_charge_RadioCash"
-                        android:textColor="@color/colorBlack"
-                        android:text="@string/fragment_charge_RadioCAsh"/>
-                    <RadioButton
-                        android:layout_weight="1"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:padding="10dp"
-                        android:textSize="@dimen/extra_small_size"
-                        android:backgroundTint="@color/colorappPink"
-                        android:textColor="@color/colorBlack"
-                        android:id="@+id/fragment_charge_RadioCard"
-                        android:text="@string/fragment_charge_RadioCard"/>
+                    android:paddingRight="@dimen/size_5">
 
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/walkin_order_no_radio_group"
+                        android:layout_margin="5dp"
+                        android:orientation="horizontal"
+                        android:layout_toLeftOf="@+id/fragment_walkin_order_no_cancel">
+                        <RadioButton
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp"
+                            android:layout_weight="1"
+                            android:textSize="@dimen/extra_small_size"
+                            android:buttonTint="@color/colorappPink"
+                            android:id="@+id/fragment_charge_RadioCash"
+                            android:textColor="@color/colorBlack"
+                            android:text="@string/fragment_charge_RadioCAsh"/>
+                        <RadioButton
+                            android:layout_weight="1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp"
+                            android:textSize="@dimen/extra_small_size"
+                            android:backgroundTint="@color/colorappPink"
+                            android:textColor="@color/colorBlack"
+                            android:id="@+id/fragment_charge_RadioCard"
+                            android:text="@string/fragment_charge_RadioCard"/>
+                        <RadioButton
+                            android:layout_weight="1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp"
+                            android:textSize="@dimen/extra_small_size"
+                            android:backgroundTint="@color/colorappPink"
+                            android:textColor="@color/colorBlack"
+                            android:id="@+id/fragment_charge_RadioCardBoth"
+                            android:text="@string/fragment_charge_RadioCard"/>
+
+                    </RadioGroup>
                     <com.tabyq.pos.tabqypos.customtext.CustomTextView
                         android:layout_width="90dp"
                         android:layout_height="35dp"
@@ -325,8 +342,10 @@
                         android:textColor="@color/colorWhite"
                         android:padding="5dp"
                         android:textSize="@dimen/extra_small_size"
-                        android:gravity="center"/>
-                </RadioGroup>
+                        android:gravity="center"
+                        android:layout_alignParentRight="true"/>
+
+                </RelativeLayout>
 
             </LinearLayout>
 
@@ -419,6 +438,7 @@
                             android:textColor="@color/colorBlack"/>
 
                     </LinearLayout>
+
                 </RelativeLayout>
                 <View
                     android:layout_width="match_parent"
@@ -449,7 +469,9 @@
                         android:padding="5dp"
                         android:textSize="@dimen/extra_small_size"
                         android:gravity="center"
-                        android:layout_marginRight="10dp"/>
+                        android:layout_marginRight="10dp"
+                        android:layout_toStartOf="@+id/walkin_pay_by_cash_btn_done"
+                        android:layout_marginEnd="10dp" />
 
                 </RelativeLayout>
             </LinearLayout>
@@ -469,82 +491,89 @@
             android:layout_width="match_parent"
             android:layout_height="100dp"
             android:id="@+id/walkin_layout_right_top_walkin"
-            android:orientation="horizontal"
+            android:orientation="vertical"
             android:background="@color/colorWhite"
-            android:paddingBottom="10dp"
-            android:paddingTop="10dp"
-            android:visibility="gone"
-            android:gravity="center">
+            android:visibility="visible">
 
             <com.tabyq.pos.tabqypos.customtext.CustomTextView
                 android:id="@+id/text_customer"
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:paddingLeft="5dp"
-                android:paddingRight="3dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/status_bar_customer"
                 android:textSize="@dimen/size_10"
                 android:textColor="@color/color_lightgreytext"
-                android:paddingStart="5dp"
-                android:paddingEnd="3dp" />
+                android:gravity="center"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                android:gravity="center" >
 
-            <com.tabyq.pos.tabqypos.customtext.CustomTextViewBold
-                android:id="@+id/img_scan"
-                android:layout_width="0dp"
-                android:layout_weight=".7"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
-                android:text="@string/status_bar_scan"
-                android:textAllCaps="true"
-                android:textSize="@dimen/size_10"
-                android:textColor="@color/colorBlack"
-                android:gravity="center"
-                android:contentDescription="@string/nav_header_desc"
-                android:drawablePadding="@dimen/size_10"
-                android:drawableTop="@drawable/ic_qr_code" />
-            <View
-                android:layout_width="1dp"
-                android:layout_height="@dimen/size_60"
-                android:background="@color/colorGrey"/>
+                <CheckBox
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".8"
+                    android:text="Online Order"
+                    android:textSize="@dimen/size_10"
+                    android:textColor="@color/colorBlack"
+                    android:textStyle="bold"/>
+                <com.tabyq.pos.tabqypos.customtext.CustomTextViewBold
+                    android:id="@+id/img_scan"
+                    android:layout_width="0dp"
+                    android:layout_weight=".7"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:text="@string/status_bar_scan"
+                    android:textAllCaps="true"
+                    android:textSize="@dimen/size_10"
+                    android:textColor="@color/colorBlack"
+                    android:gravity="center"
+                    android:contentDescription="@string/nav_header_desc"
+                    android:drawablePadding="@dimen/size_10"
+                    android:drawableTop="@drawable/ic_qr_code" />
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="@dimen/size_60"
+                    android:background="@color/colorGrey"/>
+                <com.tabyq.pos.tabqypos.customtext.CustomTextViewBold
+                    android:id="@+id/img_search"
+                    android:layout_width="0dp"
+                    android:layout_weight=".7"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:text="@string/status_bar_search"
+                    android:textAllCaps="true"
+                    android:textSize="@dimen/size_10"
+                    android:textColor="@color/colorBlack"
+                    android:gravity="center"
+                    android:drawablePadding="@dimen/size_10"
+                    android:contentDescription="@string/nav_header_desc"
+                    android:drawableTop="@drawable/ic_magnifying_glass" />
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="@dimen/size_60"
+                    android:background="@color/colorGrey"/>
+                <com.tabyq.pos.tabqypos.customtext.CustomTextViewBold
+                    android:id="@+id/img_adduser"
+                    android:layout_width="0dp"
+                    android:layout_weight=".7"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:text="@string/status_bar_add"
+                    android:textAllCaps="true"
+                    android:textSize="@dimen/size_10"
+                    android:textColor="@color/colorBlack"
+                    android:gravity="center"
+                    android:drawablePadding="@dimen/size_10"
+                    android:contentDescription="@string/nav_header_desc"
+                    android:drawableTop="@drawable/ic_add_user" />
 
-            <com.tabyq.pos.tabqypos.customtext.CustomTextViewBold
-                android:id="@+id/img_search"
-                android:layout_width="0dp"
-                android:layout_weight=".7"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
-                android:text="@string/status_bar_search"
-                android:textAllCaps="true"
-                android:textSize="@dimen/size_10"
-                android:textColor="@color/colorBlack"
-                android:gravity="center"
-                android:drawablePadding="@dimen/size_10"
-                android:contentDescription="@string/nav_header_desc"
-                android:drawableTop="@drawable/ic_magnifying_glass" />
-
-            <View
-                android:layout_width="1dp"
-                android:layout_height="@dimen/size_60"
-                android:background="@color/colorGrey"/>
-
-            <com.tabyq.pos.tabqypos.customtext.CustomTextViewBold
-                android:id="@+id/img_adduser"
-                android:layout_width="0dp"
-                android:layout_weight=".7"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
-                android:text="@string/status_bar_add"
-                android:textAllCaps="true"
-                android:textSize="@dimen/size_10"
-                android:textColor="@color/colorBlack"
-                android:gravity="center"
-                android:drawablePadding="@dimen/size_10"
-                android:contentDescription="@string/nav_header_desc"
-                android:drawableTop="@drawable/ic_add_user" />
+            </LinearLayout>
 
         </LinearLayout>
         <LinearLayout
@@ -628,32 +657,32 @@
                 android:padding="15dp"
                 android:background="@color/background_2">
 
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerVertical="true"
-                android:layout_marginLeft="10dp"
-                android:id="@+id/fragment_new_order_delete"
-                android:src="@drawable/ic_delete_button"
-                android:layout_marginStart="10dp" />
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:id="@+id/fragment_new_order_delete"
+                    android:src="@drawable/ic_delete_button"
+                    android:layout_marginStart="10dp" />
 
-            <com.tabyq.pos.tabqypos.customtext.CustomTextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerInParent="true"
-                android:layout_centerVertical="true"
-                android:text="Items(2)" />
+                <com.tabyq.pos.tabqypos.customtext.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_centerVertical="true"
+                    android:text="Items(2)" />
 
-            <ImageView
-                android:id="@+id/imgdot_menu"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
-                android:layout_centerVertical="true"
-                android:src="@drawable/ic_dot"
-                android:layout_alignParentEnd="true" />
+                <ImageView
+                    android:id="@+id/imgdot_menu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_dot"
+                    android:layout_alignParentEnd="true" />
 
-        </RelativeLayout>
+            </RelativeLayout>
             <LinearLayout
                 android:id="@+id/itemmainherader"
                 android:layout_width="match_parent"

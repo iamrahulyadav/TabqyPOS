@@ -28,10 +28,12 @@
                 android:text="SAR240.00"
                 android:textSize="14sp"
                 android:textColor="@color/colorappPink"/>
-            <com.tabyq.pos.tabqypos.customtext.CustomTextViewBold
+            <EditText
+
                 android:layout_width="wrap_content"
                 android:layout_height="40dp"
                 android:text="300.00"
+                android:inputType="number"
                 android:textSize="14sp"
                 android:layout_gravity="end"
                 android:textColor="@color/colorappPink"/>
