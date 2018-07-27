@@ -488,10 +488,15 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="100dp"
+            android:orientation="vertical"
+            android:background="@color/colorWhite">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
             android:id="@+id/walkin_layout_right_top_walkin"
             android:orientation="vertical"
             android:background="@color/colorWhite"
-            android:visibility="visible">
+            android:visibility="gone">
 
             <com.tabyq.pos.tabqypos.customtext.CustomTextView
                 android:id="@+id/text_customer"
@@ -584,7 +589,8 @@
             android:paddingLeft="10dp"
             android:background="@color/background_3"
             android:paddingRight="10dp"
-            android:paddingTop="10dp">
+            android:paddingTop="10dp"
+            android:visibility="gone">
             <ImageView
                 android:id="@+id/include_charge_cust_profile"
                 android:layout_width="wrap_content"
@@ -642,7 +648,7 @@
             </RelativeLayout>
 
         </LinearLayout>
-
+        </LinearLayout>
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">

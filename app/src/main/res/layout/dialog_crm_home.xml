@@ -33,8 +33,7 @@
                 android:gravity="center"
                 android:layout_margin="10dp"
                 android:textColor="@color/colorWhite"
-                android:background="@drawable/btn_backgroundpink"
-                android:onClick="nav_crm_dialog"/>
+                android:background="@drawable/btn_backgroundpink"/>
 
             <com.tabyq.pos.tabqypos.customtext.CustomTextView
                 android:layout_width="0dp"
@@ -46,8 +45,7 @@
                 android:gravity="center"
                 android:layout_margin="10dp"
                 android:textColor="@color/colorWhite"
-                android:background="@drawable/btn_backgroundpink"
-                android:onClick="nav_crm_dialog"/>
+                android:background="@drawable/btn_backgroundpink"/>
             <com.tabyq.pos.tabqypos.customtext.CustomTextView
                 android:layout_width="0dp"
                 android:layout_weight="1"
@@ -58,8 +56,7 @@
                 android:gravity="center"
                 android:layout_margin="10dp"
                 android:textColor="@color/colorWhite"
-                android:background="@drawable/btn_backgroundpink"
-                android:onClick="nav_crm_dialog"/>
+                android:background="@drawable/btn_backgroundpink"/>
 
     </LinearLayout>
 

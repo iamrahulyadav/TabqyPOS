@@ -42,6 +42,7 @@ import com.tabyq.pos.tabqypos.fragments.Sub.ScanFragment;
 import com.tabyq.pos.tabqypos.model.TestData;
 import com.tabyq.pos.tabqypos.utils.ItemOffsetDecoration;
 import com.tabyq.pos.tabqypos.utils.SupportingWidgets;
+import com.tabyq.pos.tabqypos.utils.SwipeHelper;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -50,7 +51,6 @@ import java.util.List;
  * A simple {@link Fragment} subclass.
  */
 public class WalkinFragment extends Fragment implements MainItemListAdapter2.Listener, MainItemListAdapter2.Interface_MainItemListAdapter2, View.OnDragListener, View.OnClickListener, RadioGroup.OnCheckedChangeListener {
-
 
     public WalkinFragment() {
         // Required empty public constructor
@@ -167,9 +167,58 @@ public class WalkinFragment extends Fragment implements MainItemListAdapter2.Lis
         adapter = new MainItemListAdapter2(getActivity(), testDataList,this, this);
         rv_main.setAdapter(adapter);
 
+
+        SwipeHelper swipeHelper = new SwipeHelper(getContext(), rv_drag) {
+            @Override
+            public void instantiateUnderlayButton(RecyclerView.ViewHolder viewHolder, List<UnderlayButton> underlayButtons) {
+                underlayButtons.add(new SwipeHelper.UnderlayButton(
+                        "",
+                        R.drawable.ic_delete_button_white,
+                        Color.parseColor("#93014c"),
+                        new SwipeHelper.UnderlayButtonClickListener() {
+                            @Override
+                            public void onClick(int pos) {
+                                // TODO: onDelete
+                            }
+                        }
+                ));
+
+/*
+                underlayButtons.add(new SwipeHelper.UnderlayButton(
+                        "Transfer",
+                        0,
+                        Color.parseColor("#FF9502"),
+                        new SwipeHelper.UnderlayButtonClickListener() {
+                            @Override
+                            public void onClick(int pos) {
+                                // TODO: OnTransfer
+                            }
+                        }
+                ));
+                underlayButtons.add(new SwipeHelper.UnderlayButton(
+                        "Unshare",
+                        0,
+                        Color.parseColor("#C7C7CB"),
+                        new SwipeHelper.UnderlayButtonClickListener() {
+                            @Override
+                            public void onClick(int pos) {
+                                // TODO: OnUnshare
+                            }
+                        }
+                ));
+*/
+            }
+        };
+
+
+
+
+
+
         createDeleteDialog();
         create_dialog_add_item();
         create_dialog_pay_by_cash();
+        createMyDailogCRM();
     }
 
     private Dialog dialog_delete;
@@ -205,7 +254,7 @@ public class WalkinFragment extends Fragment implements MainItemListAdapter2.Lis
             layout_right_top_crm.setVisibility(View.GONE);
         } else{
             layout_right_top_walkin.setVisibility(View.GONE);
-            layout_right_top_crm.setVisibility(View.VISIBLE);
+            layout_right_top_crm.setVisibility(View.GONE);
         }
     }
 
@@ -217,6 +266,14 @@ public class WalkinFragment extends Fragment implements MainItemListAdapter2.Lis
         ((MainActivity)getActivity()).layout_top_middle.setVisibility(View.VISIBLE);
 
         ((MainActivity) getActivity()).cv_main_right_2.setVisibility(View.GONE);
+
+        if(dialog_crm_status == 0){
+            dialog_crm.show();
+            layout_right_top_crm.setVisibility(View.GONE);
+        } else {
+            dialog_crm.dismiss();
+            layout_right_top_crm.setVisibility(View.VISIBLE);
+        }
     }
 
     public PopupWindow showMyPopup() {
@@ -318,6 +375,23 @@ public class WalkinFragment extends Fragment implements MainItemListAdapter2.Lis
 
     }
 
+    private Dialog dialog_crm;
+    private void createMyDailogCRM(){
+        dialog_crm = new Dialog(getContext());
+        dialog_crm.setContentView(R.layout.dialog_crm_home);
+
+        dialog_crm.setCancelable(false);
+        dialog_crm.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+        dialog_crm.getWindow().getAttributes().windowAnimations = R.style.DialogAnimation;
+
+        TextView tv_add = dialog_crm.findViewById(R.id.dialog_crm_home_add);
+        TextView tv_search = dialog_crm.findViewById(R.id.dialog_crm_home_search);
+        TextView tv_scan = dialog_crm.findViewById(R.id.dialog_crm_home_scan);
+        tv_add.setOnClickListener(this);
+        tv_search.setOnClickListener(this);
+        tv_scan.setOnClickListener(this);
+    }
+
     @Override
     public boolean onDrag(View v, DragEvent event) {
         int action = event.getAction();
@@ -393,15 +467,16 @@ public class WalkinFragment extends Fragment implements MainItemListAdapter2.Lis
 
 
     public static int back_status = 0;
+    private int dialog_crm_status = 0;
 
     @Override
     public void onClick(View v) {
         int id_ = v.getId();
         if(id_ == R.id.img_search){
-            startActivity(new Intent(getActivity(), SearchActivity.class));
+//            startActivity(new Intent(getActivity(), SearchActivity.class));
         } else if(id_ == R.id.img_adduser){
-            new SupportingWidgets().callFragment(getActivity(), new AddUserFragment(), getFragmentManager(),
-                    R.id.frame_main_bottom, WalkinFragment.class.getName());
+//            new SupportingWidgets().callFragment(getActivity(), new AddUserFragment(), getFragmentManager(),
+//                    R.id.frame_main_bottom, WalkinFragment.class.getName());
         } else if(id_ == R.id.fragment_new_order_txtCharge){
             layout_right_top_walkin.setVisibility(View.GONE);
             layout_right_top_crm.setVisibility(View.VISIBLE);
@@ -440,8 +515,8 @@ public class WalkinFragment extends Fragment implements MainItemListAdapter2.Lis
 
             dialog_delete.show();
         } else if(id_ == R.id.img_scan){
-            new SupportingWidgets().callFragment(getActivity(), new ScanFragment(), getFragmentManager(),
-                    R.id.frame_main_bottom, ScanFragment.class.getName());
+//            new SupportingWidgets().callFragment(getActivity(), new ScanFragment(), getFragmentManager(),
+//                    R.id.frame_main_bottom, ScanFragment.class.getName());
         } else if(id_ == R.id.imgdot_menu){
             popupwindow_obj = showMyPopup();
             popupwindow_obj.showAsDropDown(iv_menu, 10, 20); // where u want show on view click event popupwindow.showAsDropDown(view, x, y);
@@ -477,7 +552,24 @@ public class WalkinFragment extends Fragment implements MainItemListAdapter2.Lis
         } else if(id_ == R.id.dialog_walkin_pay_by_cash_done){
 
             dialog_pay_by_cash.dismiss();
-        }else{}
+        }else if(id_ == R.id.dialog_crm_home_scan){
+            dialog_crm.dismiss();
+            dialog_crm_status = 1;
+            new SupportingWidgets().callFragment(getActivity(), new ScanFragment(), getFragmentManager(),
+                    R.id.frame_main_bottom, ScanFragment.class.getName());
+        } else if(id_ == R.id.dialog_crm_home_add){
+            dialog_crm.dismiss();
+            dialog_crm_status = 1;
+            new SupportingWidgets().callFragment(getActivity(), new AddUserFragment(), getFragmentManager(),
+                    R.id.frame_main_bottom, WalkinFragment.class.getName());
+
+        } else if(id_ == R.id.dialog_crm_home_search){
+            dialog_crm.dismiss();
+            dialog_crm_status = 1;
+            startActivity(new Intent(getActivity(), SearchActivity.class));
+        } else {
+
+        }
     }
 
     @Override

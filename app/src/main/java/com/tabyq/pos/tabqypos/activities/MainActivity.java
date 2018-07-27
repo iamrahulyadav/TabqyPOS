@@ -236,15 +236,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
             case R.id.crm_layout:
                 crm_layout.setBackgroundColor(getResources().getColor(R.color.colorDark));
-/*
                 WalkinFragment fragment1 = new WalkinFragment();
                 Bundle bundle1 = new Bundle();
                 bundle1.putString("nav_name", "CRM");
                 fragment1.setArguments(bundle1);
                 getSupportFragmentManager().beginTransaction().replace(R.id.frame_main_bottom, fragment1)
                         .addToBackStack(new WalkinFragment().getClass().getName()).commit();
-*/
-                dialog_crm.show();
+//                dialog_crm.show();
                 break;
 
             case R.id.table:

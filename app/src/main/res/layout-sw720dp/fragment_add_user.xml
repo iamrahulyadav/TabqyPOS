@@ -520,6 +520,7 @@
                     <com.tabyq.pos.tabqypos.customtext.CustomTextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:id="@+id/add_user_btn_cancel"
                         android:text="Cancel"
                         android:gravity="center"
                         android:paddingTop="@dimen/size_8"
@@ -531,6 +532,7 @@
                     <com.tabyq.pos.tabqypos.customtext.CustomTextView
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
+                        android:id="@+id/add_user_btn_save"
                         android:textColor="@color/colorWhite"
                         android:text="Save"
                         android:gravity="center"

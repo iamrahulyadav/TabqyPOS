@@ -65,7 +65,8 @@
             android:textSize="@dimen/large_size"
             android:padding="10dp"
             android:id="@+id/activity_search_btnsearch"
-            android:layout_marginEnd="20dp" />
+            android:layout_marginEnd="20dp"
+            android:onClick="crm_search" />
 
     </LinearLayout>
 

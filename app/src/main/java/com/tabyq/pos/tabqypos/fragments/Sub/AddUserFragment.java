@@ -15,7 +15,7 @@ import com.tabyq.pos.tabqypos.activities.MainActivity;
 /**
  * created by rakhi 07/27/2018
  */
-public class AddUserFragment extends Fragment {
+public class AddUserFragment extends Fragment implements View.OnClickListener {
     private TextView txt_customer, txt_add, txt_add_note,txt_add_discount;
     private View view;
 
@@ -35,7 +35,14 @@ public class AddUserFragment extends Fragment {
 
     }
 
+    private TextView tv_cancel, tv_save;
     private void init(View view){
+
+        tv_cancel = view.findViewById(R.id.add_user_btn_cancel);
+        tv_save = view.findViewById(R.id.add_user_btn_save);
+        tv_cancel.setOnClickListener(this);
+        tv_save.setOnClickListener(this);
+
         txt_customer = view.findViewById(R.id.text_customer);
         txt_add = view.findViewById(R.id.img_adduser);
 //        txt_add_note = view.findViewById(R.id.add_note);
@@ -54,5 +61,16 @@ public class AddUserFragment extends Fragment {
         ((MainActivity)getActivity()).layout_top_middle.setVisibility(View.GONE);
 
         ((MainActivity) getActivity()).cv_main_right_2.setVisibility(View.GONE);
+    }
+
+    @Override
+    public void onClick(View v) {
+
+        int id = v.getId();
+        if(id == R.id.add_user_btn_cancel){
+            getFragmentManager().popBackStackImmediate();
+        } else if(id == R.id.add_user_btn_save){
+            getFragmentManager().popBackStackImmediate();
+        } else {}
     }
 }

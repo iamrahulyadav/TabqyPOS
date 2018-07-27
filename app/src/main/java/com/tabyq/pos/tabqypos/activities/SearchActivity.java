@@ -33,6 +33,7 @@ public class SearchActivity extends AppBaseActivity implements CustomerSearchAda
 
     }
 
+
     @SuppressLint("ClickableViewAccessibility")
     private void init(){
         searchRecycler = findViewById(R.id.activity_search_recycler);
@@ -90,6 +91,10 @@ public class SearchActivity extends AppBaseActivity implements CustomerSearchAda
         CustomerSearchAdapter customerSearchAdapter = new
                 CustomerSearchAdapter(getApplicationContext(),this);
         searchRecycler.setAdapter(customerSearchAdapter);
+    }
+
+    public void crm_search(View view){
+        finish();
     }
 
     @Override
