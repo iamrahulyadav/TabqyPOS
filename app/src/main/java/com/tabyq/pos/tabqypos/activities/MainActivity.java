@@ -231,7 +231,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 bundle.putString("nav_name", "Walkin");
                 fragment.setArguments(bundle);
                 getSupportFragmentManager().beginTransaction().replace(R.id.frame_main_bottom, fragment)
-                        .addToBackStack(new WalkinFragment().getClass().getName()).commit();
+                        .addToBackStack(WalkinFragment.class.getName()).commit();
                 break;
 
             case R.id.crm_layout:
@@ -244,30 +244,36 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 getSupportFragmentManager().beginTransaction().replace(R.id.frame_main_bottom, fragment1)
                         .addToBackStack(new WalkinFragment().getClass().getName()).commit();
 */
-dialog_crm.show();
+                dialog_crm.show();
                 break;
+
             case R.id.table:
                 table_layout.setBackgroundColor(getResources().getColor(R.color.colorDark));
                 getSupportFragmentManager().beginTransaction().replace(R.id.frame_main_bottom, new TableFragment())
-                        .addToBackStack(new TableFragment().getClass().getName()).commit();
+                        .addToBackStack(TableFragment.class.getName()).commit();
                 break;
+
             case R.id.online_layout:
                 online_layout.setBackgroundColor(getResources().getColor(R.color.colorDark));
                 getSupportFragmentManager().beginTransaction().replace(R.id.frame_main_bottom, new OnlineFragment())
-                        .addToBackStack(new OnlineFragment().getClass().getName()).commit();
+                        .addToBackStack(OnlineFragment.class.getName()).commit();
                 break;
+
             case R.id.charity:
                 charity_layout.setBackgroundColor(getResources().getColor(R.color.colorDark));
                 getSupportFragmentManager().beginTransaction().replace(R.id.frame_main_bottom, new CharityFragment())
-                        .addToBackStack(new CharityFragment().getClass().getName()).commit();
+                        .addToBackStack(CharityFragment.class.getName()).commit();
                 break;
+
             case R.id.order_status:
                 order_status_layout.setBackgroundColor(getResources().getColor(R.color.colorDark));
                 getSupportFragmentManager().beginTransaction().replace(R.id.frame_main_bottom, new OrderStatusFragment())
-                        .addToBackStack(new OrderStatusFragment().getClass().getName()).commit();
+                        .addToBackStack(OrderStatusFragment.class.getName()).commit();
                 break;
+
             default:
                 break;
+
         }
     }
 
