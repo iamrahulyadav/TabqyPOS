@@ -7,6 +7,7 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.util.DisplayMetrics;
 import android.view.inputmethod.InputMethodManager;
+import android.widget.Toast;
 
 public class SupportingWidgets {
     public static AlertDialog alertDialog;
@@ -20,6 +21,14 @@ public class SupportingWidgets {
         activity.getFragmentManager().beginTransaction().replace(container, fragment)
     }
 */
+   private static Toast t;
+    public static void showToast(Context context, String msg){
+        if(t != null)
+            t.cancel();
+        t = Toast.makeText(context, msg, Toast.LENGTH_SHORT);
+        t.show();
+    }
+
     public void callFragment(Activity activity, Fragment fragment, FragmentManager manager, int container, String tag){
 
         manager.beginTransaction().replace(container, fragment).addToBackStack(tag).commit();

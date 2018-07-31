@@ -1,12 +1,20 @@
 package com.tabyq.pos.tabqypos.adapter;
 
 import android.annotation.SuppressLint;
+import android.app.Activity;
+import android.content.Context;
+import android.graphics.Color;
+import android.graphics.Point;
+import android.graphics.drawable.ColorDrawable;
 import android.support.v7.widget.RecyclerView;
+import android.view.Display;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.PopupWindow;
 import android.widget.TextView;
 
 
@@ -16,11 +24,15 @@ import java.util.ArrayList;
 
 public class AdapterTableMain extends RecyclerView.Adapter<AdapterTableMain.MyViewHolder> {
 
+    private Context context;
+    private Activity activity;
     private Interface_TableMain click;
     private ArrayList<String> arr = new ArrayList<>();
 
-    public AdapterTableMain(ArrayList<String> arr, Interface_TableMain click){
+    public AdapterTableMain(Context context, Activity activity, ArrayList<String> arr, Interface_TableMain click){
 
+        this.context = context;
+        this.activity = activity;
         this.arr = arr;
         this.click = click;
     }
@@ -56,21 +68,49 @@ public class AdapterTableMain extends RecyclerView.Adapter<AdapterTableMain.MyVi
         return new MyViewHolder(itemView);
     }
 
+
     @SuppressLint("SetTextI18n")
     @Override
     public void onBindViewHolder(final MyViewHolder holder, final int position) {
 
         holder.tv.setText((position + 1) + "");
         if (arr.get(position).equals("0")) {
-            holder.iv.setImageResource(R.drawable.ic_table_main);
+//            holder.iv.setImageResource(R.drawable.ic_table_main);
         } else {
-            holder.iv.setImageResource(R.drawable.ic_tray);
+            PopupWindow popupwindow_obj;
+            popupwindow_obj = showMyPopup();
+            popupwindow_obj.showAsDropDown(holder.itemView, 30, -30); // where u want show on view click event popupwindow.showAsDropDown(view, x, y);
+//            holder.iv.setImageResource(R.drawable.ic_tray);
         }
+
+
     }
 
     @Override
     public int getItemCount() {
         return 30;
+    }
+
+    public PopupWindow showMyPopup() {
+        final PopupWindow popupWindow = new PopupWindow();
+
+        // inflate your layout or dynamically add view
+        LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+
+        View view = inflater.inflate(R.layout.popup_table_main_code, null);
+
+        Display display = activity.getWindowManager().getDefaultDisplay();
+        Point size = new Point();
+        display.getSize(size);
+        int width = size.x;
+        int height = size.y;
+
+        popupWindow.setFocusable(true);
+        popupWindow.setWidth(200);
+        popupWindow.setHeight(200);
+        popupWindow.setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+        popupWindow.setContentView(view);
+        return popupWindow;
     }
 
     public interface Interface_TableMain{
