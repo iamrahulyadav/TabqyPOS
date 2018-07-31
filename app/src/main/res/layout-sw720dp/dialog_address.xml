@@ -48,7 +48,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:hint="Type Area Name"
-                        android:textSize="@dimen/size_12"
+                        android:textSize="@dimen/size_10"
                         android:padding="5dp"
                         android:layout_margin="3dp"/>
                 </LinearLayout>
@@ -157,7 +157,8 @@
                     android:id="@+id/dialog_address_add"
                     android:layout_marginLeft="10dp"
                     android:textColor="@color/colorlightBlack"
-                    android:text="@string/dialog_add_note_add"/>
+                    android:text="@string/dialog_add_note_add"
+                    android:layout_marginStart="10dp" />
 
             </LinearLayout>
         </LinearLayout>

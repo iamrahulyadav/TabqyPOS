@@ -113,6 +113,7 @@
             </RelativeLayout>
 
         </android.support.v7.widget.CardView>
+
         <android.support.v7.widget.RecyclerView
             android:id="@+id/recycler_viewmain"
             android:layout_width="match_parent"
@@ -367,7 +368,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
                     android:id="@+id/walkin_left_pay_by_cash_title"
-                    android:text="Pay by cash"
+                    android:text="@string/dialog_pay_by_cash"
                     android:textColor="@color/colorBlack"
                     android:textSize="@dimen/size_20"
                     android:background="@color/colorWhite"
@@ -399,6 +400,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="40dp"
                             android:text="180.00"
+                            android:id="@+id/fragment_walkin_cash_amt"
                             android:textSize="14sp"
                             android:layout_gravity="end"
                             android:textColor="@color/colorappPink"/>
@@ -423,21 +425,21 @@
                             android:layout_width="wrap_content"
                             android:layout_height="40dp"
                             android:id="@+id/walkin_pay_by_cash_left_text_1"
-                            android:text="Total Amount"
+                            android:text="@string/dialog_cash_total_amount"
                             android:textSize="14sp"
                             android:textColor="@color/colorBlack"/>
                         <com.tabyq.pos.tabqypos.customtext.CustomTextView
                             android:layout_width="wrap_content"
                             android:layout_height="40dp"
                             android:id="@+id/walkin_pay_by_cash_left_text_2"
-                            android:text="Cash Received"
+                            android:text="@string/dialog_cash_cash_received"
                             android:textSize="14sp"
                             android:textColor="@color/colorBlack"/>
                         <com.tabyq.pos.tabqypos.customtext.CustomTextView
                             android:layout_width="wrap_content"
                             android:layout_height="40dp"
                             android:id="@+id/walkin_pay_by_cash_left_text_3"
-                            android:text="Change Return"
+                            android:text="@string/dialog_cash_tender_return"
                             android:textSize="14sp"
                             android:textColor="@color/colorBlack"/>
 
@@ -459,7 +461,7 @@
                         android:gravity="center"
                         android:textSize="@dimen/extra_small_size"
                         android:textColor="@color/colorWhite"
-                        android:text="Done"
+                        android:text="@string/fragment_walkin_done"
                         android:layout_alignParentRight="true"
                         android:background="@drawable/btn_backgroundpink"/>
                     <com.tabyq.pos.tabqypos.customtext.CustomTextView
@@ -494,6 +496,7 @@
             android:layout_height="100dp"
             android:orientation="vertical"
             android:background="@color/colorWhite">
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
@@ -517,15 +520,7 @@
                     android:paddingBottom="10dp"
                     android:paddingTop="10dp"
                     android:gravity="center" >
-                    <!--
-                                    <CheckBox
-                                        android:layout_width="0dp"
-                                        android:layout_height="wrap_content"
-                                        android:layout_weight=".8"
-                                        android:text="Online Order"
-                                        android:textSize="@dimen/size_10"
-                                        android:textColor="@color/colorBlack"
-                                        android:textStyle="bold" />-->
+
                     <com.tabyq.pos.tabqypos.customtext.CustomTextViewBold
                         android:layout_width="0dp"
                         android:layout_weight=".7"
@@ -541,6 +536,47 @@
                         android:contentDescription="@string/nav_header_desc"
                         android:drawablePadding="@dimen/size_10"
                         android:drawableTop="@drawable/ic_online_order" />
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:visibility="gone"
+                        android:layout_weight=".7"
+                        android:id="@+id/fragment_walkin_order_online_layout">
+                        <ImageView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/x"
+                            android:id="@+id/fragment_walkin_order_online_img"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_gravity="center">
+                            <com.tabyq.pos.tabqypos.customtext.CustomTextViewBold
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Zamato"
+                                android:padding="10dp"
+                                android:textColor="@color/colorBlack"
+                                android:id="@+id/fragment_walkin_order_online_order"/>
+                            <com.tabyq.pos.tabqypos.customtext.CustomTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="#6590790"
+                                android:paddingLeft="10dp"
+                                android:textColor="@color/colorBlack"
+                                android:id="@+id/fragment_walkin_order_online_order_id"/>
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+
+
                     <com.tabyq.pos.tabqypos.customtext.CustomTextViewBold
                         android:id="@+id/img_scan"
                         android:layout_width="0dp"

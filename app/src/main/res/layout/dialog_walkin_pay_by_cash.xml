@@ -45,30 +45,31 @@
                 android:textColor="@color/colorappPink"/>
 
         </LinearLayout>
+
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"
             android:layout_toLeftOf="@+id/walkin_pay_by_cash_right"
             android:layout_marginRight="15dp"
-            android:gravity="right">
+            android:gravity="left">
 
             <com.tabyq.pos.tabqypos.customtext.CustomTextViewBold
                 android:layout_width="wrap_content"
                 android:layout_height="40dp"
-                android:text="Total Amount"
+                android:text="@string/dialog_cash_total_amount"
                 android:textSize="14sp"
                 android:textColor="@color/colorBlack"/>
             <com.tabyq.pos.tabqypos.customtext.CustomTextView
                 android:layout_width="wrap_content"
                 android:layout_height="40dp"
-                android:text="Cash Received"
+                android:text="@string/dialog_cash_cash_received"
                 android:textSize="14sp"
                 android:textColor="@color/colorBlack"/>
             <com.tabyq.pos.tabqypos.customtext.CustomTextView
                 android:layout_width="wrap_content"
                 android:layout_height="40dp"
-                android:text="Change Return"
+                android:text="@string/dialog_cash_tender_return"
                 android:textSize="14sp"
                 android:textColor="@color/colorBlack"/>
 

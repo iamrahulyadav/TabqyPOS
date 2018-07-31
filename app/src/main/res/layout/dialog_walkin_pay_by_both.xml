@@ -12,7 +12,7 @@
 
     <RelativeLayout
         android:layout_width="wrap_content"
-        android:layout_height="120dp">
+        android:layout_height="210dp">
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -43,20 +43,36 @@
                 android:textSize="14sp"
                 android:layout_gravity="right"
                 android:textColor="@color/colorappPink"/>
+            <Spinner
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:gravity="right"
+                android:layout_gravity="end"
+                android:id="@+id/dialog_walkin_spinner_pay_both_card_type"
+                android:textColor="@color/colorappPink"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:inputType="number"
+                android:text=""
+                android:textSize="14sp"
+                android:layout_gravity="end"
+                android:textColor="@color/colorappPink"/>
 
         </LinearLayout>
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"
             android:layout_toLeftOf="@+id/walkin_pay_by_card_right"
             android:layout_marginRight="15dp"
-            android:gravity="right">
+            android:gravity="left">
 
             <com.tabyq.pos.tabqypos.customtext.CustomTextViewBold
                 android:layout_width="wrap_content"
                 android:layout_height="40dp"
-                android:text="Total Amount"
+                android:text="@string/fragment_charge_txtTotalAmt"
                 android:textSize="14sp"
                 android:textColor="@color/colorBlack"/>
             <com.tabyq.pos.tabqypos.customtext.CustomTextView
@@ -69,6 +85,19 @@
                 android:layout_width="wrap_content"
                 android:layout_height="40dp"
                 android:text="Card Amount"
+                android:textSize="14sp"
+                android:textColor="@color/colorBlack"/>
+            <com.tabyq.pos.tabqypos.customtext.CustomTextView
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:text="@string/dialog_walkin_pay_card_type"
+                android:textSize="14sp"
+                android:textColor="@color/colorBlack"/>
+
+            <com.tabyq.pos.tabqypos.customtext.CustomTextView
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:text="@string/dialog_walkin_pay_transaction_no"
                 android:textSize="14sp"
                 android:textColor="@color/colorBlack"/>
 

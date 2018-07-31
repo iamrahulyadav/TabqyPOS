@@ -18,7 +18,8 @@
             android:layout_weight="1"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:gravity="center">
+            android:gravity="center"
+            android:id="@+id/talabat">
 
             <ImageView
                 android:layout_width="70dp"
@@ -39,7 +40,8 @@
             android:layout_weight="1"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:gravity="center">
+            android:gravity="center"
+            android:id="@+id/zamato">
 
             <ImageView
                 android:layout_width="70dp"
@@ -60,7 +62,8 @@
             android:layout_weight="1"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:gravity="center">
+            android:gravity="center"
+            android:id="@+id/foodpanda">
 
             <ImageView
                 android:layout_width="70dp"
@@ -95,6 +98,7 @@
             android:layout_height="wrap_content"
             android:background="@android:color/transparent"
             android:paddingLeft="15dp"
+            android:id="@+id/dialog_walkin_home_edt_order_no"
             android:singleLine="true"/>
 
     </LinearLayout>

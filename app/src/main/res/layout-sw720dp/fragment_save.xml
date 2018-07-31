@@ -7,12 +7,175 @@
     android:orientation="vertical"
     tools:context=".fragments.SaveFragment">
 
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_toLeftOf="@+id/fragment_save_top_right"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_alignParentRight="true"
+            android:id="@+id/fragment_save_top_right"
+            android:layout_width="300dp"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:orientation="vertical"
+                android:background="@color/colorWhite">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:id="@+id/save_layout_right_top"
+                    android:orientation="vertical"
+                    android:background="@color/colorWhite"
+                    android:visibility="visible">
+
+                    <com.tabyq.pos.tabqypos.customtext.CustomTextView
+                        android:id="@+id/text_customer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/status_bar_customer"
+                        android:textSize="@dimen/size_10"
+                        android:textColor="@color/color_lightgreytext"
+                        android:gravity="center"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:paddingBottom="10dp"
+                        android:paddingTop="10dp"
+                        android:gravity="center" >
+
+                        <com.tabyq.pos.tabqypos.customtext.CustomTextViewBold
+                            android:layout_width="0dp"
+                            android:layout_weight=".7"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/fragment_save_online_order"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:text="@string/status_bar_online_order"
+                            android:textAllCaps="true"
+                            android:textSize="@dimen/size_10"
+                            android:textColor="@color/colorBlack"
+                            android:gravity="top|center_horizontal"
+                            android:contentDescription="@string/nav_header_desc"
+                            android:drawablePadding="@dimen/size_10"
+                            android:drawableTop="@drawable/ic_online_order" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal"
+                            android:visibility="gone"
+                            android:layout_weight=".7"
+                            android:id="@+id/fragment_walkin_order_online_layout">
+                            <ImageView
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:layout_gravity="center"
+                                android:src="@drawable/x"
+                                android:id="@+id/fragment_walkin_order_online_img"/>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:layout_gravity="center">
+                                <com.tabyq.pos.tabqypos.customtext.CustomTextViewBold
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Zamato"
+                                    android:padding="10dp"
+                                    android:textColor="@color/colorBlack"
+                                    android:id="@+id/fragment_walkin_order_online_order"/>
+                                <com.tabyq.pos.tabqypos.customtext.CustomTextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="#6590790"
+                                    android:paddingLeft="10dp"
+                                    android:textColor="@color/colorBlack"
+                                    android:id="@+id/fragment_walkin_order_online_order_id"/>
+
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <com.tabyq.pos.tabqypos.customtext.CustomTextViewBold
+                            android:id="@+id/img_scan"
+                            android:layout_width="0dp"
+                            android:layout_weight=".7"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:text="@string/status_bar_scan"
+                            android:textAllCaps="true"
+                            android:textSize="@dimen/size_10"
+                            android:textColor="@color/colorBlack"
+                            android:gravity="top|center_horizontal"
+                            android:contentDescription="@string/nav_header_desc"
+                            android:drawablePadding="@dimen/size_10"
+                            android:drawableTop="@drawable/ic_qr_code" />
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="@dimen/size_60"
+                            android:background="@color/colorGrey"/>
+                        <com.tabyq.pos.tabqypos.customtext.CustomTextViewBold
+                            android:id="@+id/img_search"
+                            android:layout_width="0dp"
+                            android:layout_weight=".7"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:text="@string/status_bar_search"
+                            android:textAllCaps="true"
+                            android:textSize="@dimen/size_10"
+                            android:textColor="@color/colorBlack"
+                            android:gravity="top|center_horizontal"
+                            android:drawablePadding="@dimen/size_10"
+                            android:contentDescription="@string/nav_header_desc"
+                            android:drawableTop="@drawable/ic_magnifying_glass" />
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="@dimen/size_60"
+                            android:background="@color/colorGrey"/>
+                        <com.tabyq.pos.tabqypos.customtext.CustomTextViewBold
+                            android:id="@+id/img_adduser"
+                            android:layout_width="0dp"
+                            android:layout_weight=".7"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:text="@string/status_bar_add"
+                            android:textAllCaps="true"
+                            android:textSize="@dimen/size_10"
+                            android:textColor="@color/colorBlack"
+                            android:gravity="top|center_horizontal"
+                            android:drawablePadding="@dimen/size_10"
+                            android:contentDescription="@string/nav_header_desc"
+                            android:drawableTop="@drawable/ic_add_user" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+    </RelativeLayout>
+
 
     <android.support.v4.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:fillViewport="true"
-        android:layout_marginTop="@dimen/nav_header_height">
+        android:visibility="visible">
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -116,37 +279,37 @@
                             android:orientation="vertical"
                             android:layout_margin="3dp"
                             android:background="@drawable/bg_light_grey">
-                           <LinearLayout
-                               android:layout_width="wrap_content"
-                               android:layout_height="wrap_content"
-                               android:orientation="horizontal"
-                               android:padding="6dp"
-                               android:layout_gravity="right">
-                               <android.support.v7.widget.CardView
-                                   android:layout_margin="5dp"
-                                   app:cardCornerRadius="3dp"
-                                   android:layout_gravity="right"
-                                   android:layout_width="wrap_content"
-                                   android:layout_height="wrap_content">
-                                   <ImageView
-                                       android:padding="3dp"
-                                       android:layout_width="wrap_content"
-                                       android:layout_height="wrap_content"
-                                       android:src="@drawable/ic_loc"/>
-                               </android.support.v7.widget.CardView>
-                               <android.support.v7.widget.CardView
-                                   android:layout_margin="5dp"
-                                   app:cardCornerRadius="3dp"
-                                   android:layout_gravity="right"
-                                   android:layout_width="wrap_content"
-                                   android:layout_height="wrap_content">
-                                   <ImageView
-                                       android:padding="3dp"
-                                       android:layout_width="wrap_content"
-                                       android:layout_height="wrap_content"
-                                       android:src="@drawable/ic_edit_pink"/>
-                               </android.support.v7.widget.CardView>
-                           </LinearLayout>
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:padding="6dp"
+                                android:layout_gravity="right">
+                                <android.support.v7.widget.CardView
+                                    android:layout_margin="5dp"
+                                    app:cardCornerRadius="3dp"
+                                    android:layout_gravity="right"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content">
+                                    <ImageView
+                                        android:padding="3dp"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:src="@drawable/ic_loc"/>
+                                </android.support.v7.widget.CardView>
+                                <android.support.v7.widget.CardView
+                                    android:layout_margin="5dp"
+                                    app:cardCornerRadius="3dp"
+                                    android:layout_gravity="right"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content">
+                                    <ImageView
+                                        android:padding="3dp"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:src="@drawable/ic_edit_pink"/>
+                                </android.support.v7.widget.CardView>
+                            </LinearLayout>
 
                             <com.tabyq.pos.tabqypos.customtext.CustomTextView
                                 android:layout_width="match_parent"
@@ -211,11 +374,10 @@
                 </android.support.v7.widget.CardView>
 
                 <android.support.v7.widget.CardView
-                    android:layout_width="0dp"
+                    android:layout_width="300dp"
                     android:layout_margin="5dp"
                     app:cardCornerRadius="3dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1">
+                    android:layout_height="match_parent">
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -231,12 +393,6 @@
                             android:id="@+id/fragment_save_customer_insight"/>
 
                         <include layout="@layout/item_pager_save" />
-                        <!--
-                                                    <android.support.v4.view.ViewPager
-                                                        android:layout_width="match_parent"
-                                                        android:layout_height="130dp"/>
-                        -->
-
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -533,4 +689,6 @@
         </LinearLayout>
 
     </android.support.v4.widget.NestedScrollView>
+
+
 </LinearLayout>

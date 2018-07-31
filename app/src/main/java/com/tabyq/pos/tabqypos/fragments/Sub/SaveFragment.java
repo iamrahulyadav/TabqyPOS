@@ -15,6 +15,7 @@ import android.text.style.ForegroundColorSpan;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
@@ -23,14 +24,18 @@ import com.tabyq.pos.tabqypos.activities.MainActivity;
 import com.tabyq.pos.tabqypos.adapter.SavePastOrderAdapter;
 import com.tabyq.pos.tabqypos.utils.SupportingWidgets;
 
+import static com.tabyq.pos.tabqypos.fragments.nav1.WalkinFragment.online_order;
+
 
 public class SaveFragment extends Fragment implements SavePastOrderAdapter.SearchItemClick, View.OnClickListener{
 
     private View view;
-    private TextView txt_add_note, txt_add_discount, txt_not, txt_add_user, txt_add_address, txt_del_add;
+    private TextView txt_add_note, txt_add_discount, txt_not, txt_add_user, txt_add_address, txt_del_add,
+            tv_scan, tv_search;
 //    private RelativeLayout nav_menu;
     private RecyclerView recyclerView;
     private TextView tv_place_new_order;
+    private LinearLayout layout_online_order, layout_save_top_right;
 
 
     @Override
@@ -55,29 +60,22 @@ public class SaveFragment extends Fragment implements SavePastOrderAdapter.Searc
     }
 
     private void init(View view){
-//        txt_add_discount = view.findViewById(R.id.add_discount);
-//        txt_add_note = view.findViewById(R.id.add_note);
-//        txt_add_discount.setVisibility(View.GONE);
-//        txt_add_note.setVisibility(View.GONE);
         txt_not = view.findViewById(R.id.fragment_save_not_name);
         recyclerView = view.findViewById(R.id.fragment_save_recycler);
-//        nav_menu = (RelativeLayout) view.findViewById(R.id.nav_menu);
         txt_add_user = view.findViewById(R.id.img_adduser);
         txt_add_address = view.findViewById(R.id.fragment_save_txt_add_address);
         txt_del_add = view.findViewById(R.id.fragment_save_txt_delete_address);
-//        txt_del_add = view.findViewById(R.id.fragment_save_txt_delete_address);
 
         tv_place_new_order = view.findViewById(R.id.fragment_save_place_new_order);
+        layout_online_order = view.findViewById(R.id.fragment_walkin_order_online_layout);
+        layout_save_top_right = view.findViewById(R.id.save_layout_right_top);
+
+
+        tv_scan = view.findViewById(R.id.img_scan);
+        tv_search = view.findViewById(R.id.img_search);
+
         tv_place_new_order.setOnClickListener(this);
 
-/*
-        nav_menu.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-//                ((MainDashBoardActivity) getActivity()).showHideNavView();
-            }
-        });
-*/
 
         String s = "Not John? Create new Customer";
         Spannable wordtoSpan = new SpannableString(s);
@@ -100,15 +98,6 @@ public class SaveFragment extends Fragment implements SavePastOrderAdapter.Searc
 //        txt_add_user.setOnClickListener(this);
         txt_del_add.setOnClickListener(this);
         txt_add_address.setOnClickListener(this);
-/*
-        txt_add_user.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                new SupportingWidgets().callFragment(getActivity(), new AddUserFragment(), getFragmentManager(),
-                        R.id.frame_main_bottom, SaveFragment.class.getName());
-            }
-        });
-*/
     }
 
     @Override
@@ -116,6 +105,24 @@ public class SaveFragment extends Fragment implements SavePastOrderAdapter.Searc
         super.onResume();
 
         ((MainActivity) getActivity()).cv_main_right_2.setVisibility(View.VISIBLE);
+
+        if(online_order == 0){
+
+            tv_scan.setVisibility(View.VISIBLE);
+            tv_search.setVisibility(View.VISIBLE);
+            txt_add_user.setVisibility(View.VISIBLE);
+            layout_online_order.setVisibility(View.GONE);
+            layout_save_top_right.setVisibility(View.VISIBLE);
+        } else {
+
+            tv_scan.setVisibility(View.GONE);
+            tv_search.setVisibility(View.GONE);
+            txt_add_user.setVisibility(View.GONE);
+            layout_online_order.setVisibility(View.VISIBLE);
+            layout_save_top_right.setVisibility(View.VISIBLE);
+        //    online_order = 0;
+        }
+
     }
 
     private void setAdapter(){
@@ -164,7 +171,6 @@ public class SaveFragment extends Fragment implements SavePastOrderAdapter.Searc
                 dialog_add_address.dismiss();
             }
         });
-        dialog_add_address.setCancelable(false);
         dialog_add_address.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
         dialog_add_address.getWindow().getAttributes().windowAnimations = R.style.DialogAnimation;
 //        dialog_add_address.show();

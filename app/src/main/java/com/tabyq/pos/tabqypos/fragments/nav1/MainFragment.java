@@ -55,14 +55,16 @@ public class MainFragment extends Fragment implements View.OnClickListener {
     public void onClick(View v) {
 
         if(v.getId() == R.id.main_btn_new_order){
-            ((MainActivity)getActivity()).dashboardLayout.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
-            ((MainActivity)getActivity()).walkin_layoutLayout.setBackgroundColor(getResources().getColor(R.color.colorDark));
 
+            MainActivity.walkin_layoutLayout.setBackgroundColor(getResources().getColor(R.color.colorDark));
+            MainActivity.dashboardLayout.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
             WalkinFragment fragment = new WalkinFragment();
             Bundle bundle = new Bundle();
             bundle.putString("nav_name", "Walkin");
             fragment.setArguments(bundle);
-            getFragmentManager().beginTransaction().replace(R.id.frame_main_bottom, fragment).commit();
+            assert getFragmentManager() != null;
+            getFragmentManager().beginTransaction().replace(R.id.frame_main_bottom, fragment)
+                    .addToBackStack(WalkinFragment.class.getName()).commit();
         }
     }
 }

@@ -22,42 +22,42 @@
             android:layout_alignParentRight="true"
             android:layout_marginRight="15dp">
 
-            <EditText
+            <Spinner
                 android:layout_width="wrap_content"
                 android:layout_height="40dp"
-                android:inputType="number"
-                android:text=""
-                android:textSize="14sp"
+                android:gravity="right"
                 android:layout_gravity="end"
+                android:id="@+id/dialog_walkin_spinner_card_type"
                 android:textColor="@color/colorappPink"/>
             <EditText
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:inputType="number"
                 android:text=""
+                android:maxLines="1"
                 android:textSize="14sp"
                 android:layout_gravity="end"
                 android:textColor="@color/colorappPink"/>
 
         </LinearLayout>
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"
             android:layout_toLeftOf="@+id/walkin_pay_by_card_right"
             android:layout_marginRight="15dp"
-            android:gravity="right">
+            android:gravity="left">
 
             <com.tabyq.pos.tabqypos.customtext.CustomTextView
                 android:layout_width="wrap_content"
                 android:layout_height="40dp"
-                android:text="Card Type"
+                android:text="@string/dialog_walkin_pay_card_type"
                 android:textSize="14sp"
                 android:textColor="@color/colorBlack"/>
             <com.tabyq.pos.tabqypos.customtext.CustomTextView
                 android:layout_width="wrap_content"
                 android:layout_height="40dp"
-                android:text="Transaction No."
+                android:text="@string/dialog_walkin_pay_transaction_no"
                 android:textSize="14sp"
                 android:textColor="@color/colorBlack"/>
 

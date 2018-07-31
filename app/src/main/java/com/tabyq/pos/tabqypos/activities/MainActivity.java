@@ -241,17 +241,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                         .putExtra("from", "CRM");
                 startActivityForResult(i, 01);
 
-/*
-                crm_layout.setBackgroundColor(getResources().getColor(R.color.colorDark));
-                WalkinFragment fragment1 = new WalkinFragment();
-                Bundle bundle1 = new Bundle();
-                bundle1.putString("nav_name", "CRM");
-                fragment1.setArguments(bundle1);
-                getSupportFragmentManager().beginTransaction().replace(R.id.frame_main_bottom, fragment1)
-                        .addToBackStack(new WalkinFragment().getClass().getName()).commit();
-*/
-
-
 //                dialog_crm.show();
                 break;
 
@@ -373,7 +362,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 //                   Toast.makeText(getApplicationContext(), 0 + "", Toast.LENGTH_SHORT).show();
                     super.onBackPressed();
                 } else if(WalkinFragment.back_status == 1){
-//                    Toast.makeText(getApplicationContext(), 1 + "", Toast.LENGTH_SHORT).show();
                     WalkinFragment.layout_right_top_walkin.setVisibility(View.VISIBLE);
                     WalkinFragment.layout_right_top_crm.setVisibility(View.GONE);
                     WalkinFragment.layout_right_bottom_button.setVisibility(View.VISIBLE);

@@ -185,4 +185,14 @@
     <string name="yes">Yes</string>
     <string name="no">No</string>
 
+    <!--dialog walkin pay by cash-->
+    <string name="dialog_cash_tender_return">Tender Return</string>
+    <string name="dialog_cash_cash_received">Cash Received</string>
+    <string name="dialog_cash_total_amount">Total Amount</string>
+
+    <!--dialog pay by card-->
+    <string name="dialog_walkin_pay_card_type">Card Type</string>
+    <string name="dialog_walkin_pay_transaction_no">Transaction No.</string>
+    <string name="fragment_walkin_done">Done</string>
+
 </resources>
