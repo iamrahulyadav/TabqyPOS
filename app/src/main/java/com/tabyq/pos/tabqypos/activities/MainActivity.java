@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
+import android.media.Image;
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
 import android.support.v7.app.AppCompatActivity;
@@ -13,10 +14,10 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.tabyq.pos.tabqypos.R;
 import com.tabyq.pos.tabqypos.fragments.nav1.MainFragment;
@@ -60,7 +61,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public static LinearLayout layout_top_middle;
     private TextView tv_add_note, tv_add_discount,tv_clr;
 
+
+    private ImageView iv_search;
     private void init(){
+        iv_search = findViewById(R.id.img_search_item);
+        iv_search.setOnClickListener(this);
+
         tv_add_note = findViewById(R.id.main_middle_btn_add_note);
         tv_add_discount = findViewById(R.id.main_middle_btn_add_discount);
         tv_add_note.setOnClickListener(this);
@@ -104,7 +110,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public void onClick(View v) {
-        if(v.getId() == R.id.main_middle_btn_add_note){
+        if(v.getId() == R.id.img_search_item){
+            startActivity(new Intent(MainActivity.this, SearchActivity.class));
+        } else if(v.getId() == R.id.main_middle_btn_add_note){
             dialog_add_note.show();
         } else if(v.getId() == R.id.main_middle_btn_add_discount){
             dialog_add_discount.show();
@@ -182,7 +190,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private void createMyDailogCRM(){
         dialog_crm = new Dialog(MainActivity.this);
-        dialog_crm.setContentView(R.layout.dialog_crm_home);
+        dialog_crm.setContentView(R.layout.dialog_walkin_home);
 
         dialog_crm.setCancelable(true);
         dialog_crm.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
@@ -192,13 +200,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private void nav_crm_dialog(View view){
         int id = view.getId();
-        if(id == R.id.dialog_crm_home_scan){
-
-        } else if(id == R.id.dialog_crm_home_add){
-
-        } else if(id == R.id.dialog_crm_home_search){
-
-        } else {}
     }
 
     int flag = 1;
@@ -235,6 +236,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
 
             case R.id.crm_layout:
+
+                Intent i = new Intent(MainActivity.this, SearchActivity.class)
+                        .putExtra("from", "CRM");
+                startActivityForResult(i, 01);
+
+/*
                 crm_layout.setBackgroundColor(getResources().getColor(R.color.colorDark));
                 WalkinFragment fragment1 = new WalkinFragment();
                 Bundle bundle1 = new Bundle();
@@ -242,6 +249,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 fragment1.setArguments(bundle1);
                 getSupportFragmentManager().beginTransaction().replace(R.id.frame_main_bottom, fragment1)
                         .addToBackStack(new WalkinFragment().getClass().getName()).commit();
+*/
+
+
 //                dialog_crm.show();
                 break;
 
@@ -271,6 +281,30 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
             default:
                 break;
+
+        }
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if(data != null){
+            super.onActivityResult(requestCode, resultCode, data);
+            if(requestCode == 01){
+                if(resultCode == 999){
+                    crm_layout.setBackgroundColor(getResources().getColor(R.color.colorDark));
+                    WalkinFragment fragment1 = new WalkinFragment();
+                    Bundle bundle1 = new Bundle();
+                    bundle1.putString("nav_name", "CRM");
+                    fragment1.setArguments(bundle1);
+                    getSupportFragmentManager().beginTransaction().replace(R.id.frame_main_bottom, fragment1)
+                            .addToBackStack(new WalkinFragment().getClass().getName()).commit();
+                } else{
+
+                }
+            } else{
+
+            }
+        } else{
 
         }
     }

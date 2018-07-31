@@ -86,8 +86,9 @@ public class WalkinFragment extends Fragment implements MainItemListAdapter2.Lis
     private TextView tv_sub_total, tv_total;
     private ImageView img_delete, iv_menu;
     public static LinearLayout layout_right_bottom_button;
-    private TextView tv_scan;
-    private TextView tv_order_status_cancel;
+    private TextView tv_scan, tv_online_order;
+    private TextView tv_order_status_cancel, tv_pay_by_cash_title
+            , tv_pay_by_cash_text_2, tv_pay_by_cash_text_3;
     private CheckBox onlinecheCheckBox;
 
     private RadioGroup radioGroup;
@@ -96,7 +97,11 @@ public class WalkinFragment extends Fragment implements MainItemListAdapter2.Lis
     public static TextView tv_pay_by_cash_done, tv_pay_by_cash_cancel;
     private TextView tv_category;
 
-    private void init(){
+    private void init() {
+        tv_pay_by_cash_title = getView().findViewById(R.id.walkin_left_pay_by_cash_title);
+        tv_pay_by_cash_text_2 = getView().findViewById(R.id.walkin_pay_by_cash_left_text_2);
+        tv_pay_by_cash_text_3 = getView().findViewById(R.id.walkin_pay_by_cash_left_text_3);
+
         radioButton_pay_by_cash = getView().findViewById(R.id.fragment_charge_RadioCash);
         radioButton_pay_by_cash.setOnClickListener(this);
 
@@ -111,6 +116,8 @@ public class WalkinFragment extends Fragment implements MainItemListAdapter2.Lis
         txtChrage = getView().findViewById(R.id.fragment_new_order_txtCharge);
         txt_save = getView().findViewById(R.id.fragment_new_order_txtSave);
 
+        tv_online_order = getView().findViewById(R.id.fragment_walkin_online_order);
+        tv_online_order.setOnClickListener(this);
         img_search = getView().findViewById(R.id.img_search);
         img_delete = getView().findViewById(R.id.fragment_new_order_delete);
         tv_scan = getView().findViewById(R.id.img_scan);
@@ -218,7 +225,9 @@ public class WalkinFragment extends Fragment implements MainItemListAdapter2.Lis
         createDeleteDialog();
         create_dialog_add_item();
         create_dialog_pay_by_cash();
-        createMyDailogCRM();
+        create_dialog_pay_by_card();
+        create_dialog_pay_by_both();
+        createMyDailogWalkin();
     }
 
     private Dialog dialog_delete;
@@ -254,7 +263,7 @@ public class WalkinFragment extends Fragment implements MainItemListAdapter2.Lis
             layout_right_top_crm.setVisibility(View.GONE);
         } else{
             layout_right_top_walkin.setVisibility(View.GONE);
-            layout_right_top_crm.setVisibility(View.GONE);
+            layout_right_top_crm.setVisibility(View.VISIBLE);
         }
     }
 
@@ -267,13 +276,15 @@ public class WalkinFragment extends Fragment implements MainItemListAdapter2.Lis
 
         ((MainActivity) getActivity()).cv_main_right_2.setVisibility(View.GONE);
 
+/*
         if(dialog_crm_status == 0){
-            dialog_crm.show();
+            dialog_walkin.show();
             layout_right_top_crm.setVisibility(View.GONE);
         } else {
-            dialog_crm.dismiss();
+            dialog_walkin.dismiss();
             layout_right_top_crm.setVisibility(View.VISIBLE);
         }
+*/
     }
 
     public PopupWindow showMyPopup() {
@@ -359,7 +370,7 @@ public class WalkinFragment extends Fragment implements MainItemListAdapter2.Lis
 
     }
 
-    private Dialog dialog_pay_by_cash;
+    private Dialog dialog_pay_by_cash, dialog_pay_by_card, dialog_pay_by_both;
 
     private void create_dialog_pay_by_cash(){
 
@@ -374,22 +385,45 @@ public class WalkinFragment extends Fragment implements MainItemListAdapter2.Lis
         tv_done.setOnClickListener(this);
 
     }
+    private void create_dialog_pay_by_card(){
 
-    private Dialog dialog_crm;
-    private void createMyDailogCRM(){
-        dialog_crm = new Dialog(getContext());
-        dialog_crm.setContentView(R.layout.dialog_crm_home);
+        dialog_pay_by_card = new Dialog(getContext());
+        dialog_pay_by_card.setContentView(R.layout.dialog_walkin_pay_by_card);
 
-        dialog_crm.setCancelable(false);
-        dialog_crm.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
-        dialog_crm.getWindow().getAttributes().windowAnimations = R.style.DialogAnimation;
+        dialog_pay_by_card.setCancelable(true);
+        dialog_pay_by_card.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+        dialog_pay_by_card.getWindow().getAttributes().windowAnimations = R.style.DialogAnimation;
 
-        TextView tv_add = dialog_crm.findViewById(R.id.dialog_crm_home_add);
-        TextView tv_search = dialog_crm.findViewById(R.id.dialog_crm_home_search);
-        TextView tv_scan = dialog_crm.findViewById(R.id.dialog_crm_home_scan);
-        tv_add.setOnClickListener(this);
-        tv_search.setOnClickListener(this);
-        tv_scan.setOnClickListener(this);
+        TextView tv_done = dialog_pay_by_card.findViewById(R.id.dialog_walkin_pay_by_card_done);
+        tv_done.setOnClickListener(this);
+
+    }
+    private void create_dialog_pay_by_both(){
+
+        dialog_pay_by_both = new Dialog(getContext());
+        dialog_pay_by_both.setContentView(R.layout.dialog_walkin_pay_by_both);
+
+        dialog_pay_by_both.setCancelable(true);
+        dialog_pay_by_both.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+        dialog_pay_by_both.getWindow().getAttributes().windowAnimations = R.style.DialogAnimation;
+
+        TextView tv_done = dialog_pay_by_both.findViewById(R.id.dialog_walkin_pay_by_both_done);
+        tv_done.setOnClickListener(this);
+
+    }
+
+    private Dialog dialog_walkin;
+    private void createMyDailogWalkin(){
+        dialog_walkin = new Dialog(getContext());
+        dialog_walkin.setContentView(R.layout.dialog_walkin_home);
+
+        dialog_walkin.setCancelable(true);
+        dialog_walkin.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+        dialog_walkin.getWindow().getAttributes().windowAnimations = R.style.DialogAnimation;
+
+        TextView tv = dialog_walkin.findViewById(R.id.dialog_walkin_home_submit);
+        tv.setOnClickListener(this);
+
     }
 
     @Override
@@ -473,10 +507,10 @@ public class WalkinFragment extends Fragment implements MainItemListAdapter2.Lis
     public void onClick(View v) {
         int id_ = v.getId();
         if(id_ == R.id.img_search){
-//            startActivity(new Intent(getActivity(), SearchActivity.class));
+            startActivity(new Intent(getActivity(), SearchActivity.class));
         } else if(id_ == R.id.img_adduser){
-//            new SupportingWidgets().callFragment(getActivity(), new AddUserFragment(), getFragmentManager(),
-//                    R.id.frame_main_bottom, WalkinFragment.class.getName());
+            new SupportingWidgets().callFragment(getActivity(), new AddUserFragment(), getFragmentManager(),
+                    R.id.frame_main_bottom, WalkinFragment.class.getName());
         } else if(id_ == R.id.fragment_new_order_txtCharge){
             layout_right_top_walkin.setVisibility(View.GONE);
             layout_right_top_crm.setVisibility(View.VISIBLE);
@@ -493,12 +527,16 @@ public class WalkinFragment extends Fragment implements MainItemListAdapter2.Lis
             cv_left_bottom.setVisibility(View.GONE);
             back_status = 0;
 
+
         } else if(id_ == R.id.fragment_charge_RadioCash){
 
             cv_left_bottom.setVisibility(View.GONE);
             cv_left_bottom_pay_by_cash.setVisibility(View.VISIBLE);
             back_status = 2;
             dialog_pay_by_cash.show();
+            tv_pay_by_cash_title.setText("Pay by Cash");
+            tv_pay_by_cash_text_2.setText("Cash Received");
+            tv_pay_by_cash_text_3.setText("Change Return");
 
         } else if(id_ == R.id.walkin_pay_by_cash_btn_done){
             startActivity(new Intent(getActivity(), TransSucess.class));
@@ -515,8 +553,11 @@ public class WalkinFragment extends Fragment implements MainItemListAdapter2.Lis
 
             dialog_delete.show();
         } else if(id_ == R.id.img_scan){
-//            new SupportingWidgets().callFragment(getActivity(), new ScanFragment(), getFragmentManager(),
-//                    R.id.frame_main_bottom, ScanFragment.class.getName());
+            new SupportingWidgets().callFragment(getActivity(), new ScanFragment(), getFragmentManager(),
+                    R.id.frame_main_bottom, ScanFragment.class.getName());
+        } else if(id_ == R.id.fragment_walkin_online_order){
+            dialog_walkin.show();
+
         } else if(id_ == R.id.imgdot_menu){
             popupwindow_obj = showMyPopup();
             popupwindow_obj.showAsDropDown(iv_menu, 10, 20); // where u want show on view click event popupwindow.showAsDropDown(view, x, y);
@@ -550,23 +591,14 @@ public class WalkinFragment extends Fragment implements MainItemListAdapter2.Lis
         } else if(id_ == R.id.dialog_add_item_no){
             dialog_add_item.dismiss();
         } else if(id_ == R.id.dialog_walkin_pay_by_cash_done){
-
             dialog_pay_by_cash.dismiss();
-        }else if(id_ == R.id.dialog_crm_home_scan){
-            dialog_crm.dismiss();
-            dialog_crm_status = 1;
-            new SupportingWidgets().callFragment(getActivity(), new ScanFragment(), getFragmentManager(),
-                    R.id.frame_main_bottom, ScanFragment.class.getName());
-        } else if(id_ == R.id.dialog_crm_home_add){
-            dialog_crm.dismiss();
-            dialog_crm_status = 1;
-            new SupportingWidgets().callFragment(getActivity(), new AddUserFragment(), getFragmentManager(),
-                    R.id.frame_main_bottom, WalkinFragment.class.getName());
-
-        } else if(id_ == R.id.dialog_crm_home_search){
-            dialog_crm.dismiss();
-            dialog_crm_status = 1;
-            startActivity(new Intent(getActivity(), SearchActivity.class));
+        } else if(id_ == R.id.dialog_walkin_pay_by_card_done){
+            dialog_pay_by_card.dismiss();
+        } else if(id_ == R.id.dialog_walkin_pay_by_both_done){
+            dialog_pay_by_both.dismiss();
+        } else if(id_ == R.id.dialog_walkin_home_submit){
+            dialog_walkin.dismiss();
+//            dialog_crm_status = 1;
         } else {
 
         }
@@ -582,6 +614,25 @@ public class WalkinFragment extends Fragment implements MainItemListAdapter2.Lis
               /*  cv_left_bottom.setVisibility(View.GONE);
                 cv_left_bottom_pay_by_cash.setVisibility(View.VISIBLE);
                 back_status = 2;*/
+            } else if (radioButton.getText().toString().trim().equals("Pay by Card")){
+                cv_left_bottom.setVisibility(View.GONE);
+                cv_left_bottom_pay_by_cash.setVisibility(View.VISIBLE);
+                back_status = 2;
+                dialog_pay_by_card.show();
+                tv_pay_by_cash_title.setText("Pay by Card");
+                tv_pay_by_cash_text_2.setText("Cash Amount");
+                tv_pay_by_cash_text_3.setText("Card Amount");
+            } else if(radioButton.getText().toString().trim().equals("Pay by Both")){
+                cv_left_bottom.setVisibility(View.GONE);
+                cv_left_bottom_pay_by_cash.setVisibility(View.VISIBLE);
+                back_status = 2;
+                dialog_pay_by_both.show();
+                tv_pay_by_cash_title.setText("Pay by Both");
+                tv_pay_by_cash_text_2.setText("Cash Amount");
+                tv_pay_by_cash_text_3.setText("Card Amount");
+                tv_pay_by_cash_done.setText("Process");
+            } else {
+
             }
         }
     }

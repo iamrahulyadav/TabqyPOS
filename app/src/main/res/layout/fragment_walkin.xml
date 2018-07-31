@@ -330,7 +330,7 @@
                             android:backgroundTint="@color/colorappPink"
                             android:textColor="@color/colorBlack"
                             android:id="@+id/fragment_charge_RadioCardBoth"
-                            android:text="@string/fragment_charge_RadioCard"/>
+                            android:text="@string/fragment_charge_RadioCardBoth"/>
 
                     </RadioGroup>
                     <com.tabyq.pos.tabqypos.customtext.CustomTextView
@@ -366,6 +366,7 @@
                 <com.tabyq.pos.tabqypos.customtext.CustomTextViewBold
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
+                    android:id="@+id/walkin_left_pay_by_cash_title"
                     android:text="Pay by cash"
                     android:textColor="@color/colorBlack"
                     android:textSize="@dimen/size_20"
@@ -397,7 +398,7 @@
                         <com.tabyq.pos.tabqypos.customtext.CustomTextViewBold
                             android:layout_width="wrap_content"
                             android:layout_height="40dp"
-                            android:text="300.00"
+                            android:text="180.00"
                             android:textSize="14sp"
                             android:layout_gravity="end"
                             android:textColor="@color/colorappPink"/>
@@ -421,18 +422,21 @@
                         <com.tabyq.pos.tabqypos.customtext.CustomTextViewBold
                             android:layout_width="wrap_content"
                             android:layout_height="40dp"
+                            android:id="@+id/walkin_pay_by_cash_left_text_1"
                             android:text="Total Amount"
                             android:textSize="14sp"
                             android:textColor="@color/colorBlack"/>
                         <com.tabyq.pos.tabqypos.customtext.CustomTextView
                             android:layout_width="wrap_content"
                             android:layout_height="40dp"
+                            android:id="@+id/walkin_pay_by_cash_left_text_2"
                             android:text="Cash Received"
                             android:textSize="14sp"
                             android:textColor="@color/colorBlack"/>
                         <com.tabyq.pos.tabqypos.customtext.CustomTextView
                             android:layout_width="wrap_content"
                             android:layout_height="40dp"
+                            android:id="@+id/walkin_pay_by_cash_left_text_3"
                             android:text="Change Return"
                             android:textSize="14sp"
                             android:textColor="@color/colorBlack"/>
@@ -513,15 +517,30 @@
                     android:paddingBottom="10dp"
                     android:paddingTop="10dp"
                     android:gravity="center" >
-
-                    <CheckBox
+                    <!--
+                                    <CheckBox
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight=".8"
+                                        android:text="Online Order"
+                                        android:textSize="@dimen/size_10"
+                                        android:textColor="@color/colorBlack"
+                                        android:textStyle="bold" />-->
+                    <com.tabyq.pos.tabqypos.customtext.CustomTextViewBold
                         android:layout_width="0dp"
+                        android:layout_weight=".7"
                         android:layout_height="wrap_content"
-                        android:layout_weight=".8"
-                        android:text="Online Order"
+                        android:id="@+id/fragment_walkin_online_order"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:text="@string/status_bar_online_order"
+                        android:textAllCaps="true"
                         android:textSize="@dimen/size_10"
                         android:textColor="@color/colorBlack"
-                        android:textStyle="bold"/>
+                        android:gravity="top|center_horizontal"
+                        android:contentDescription="@string/nav_header_desc"
+                        android:drawablePadding="@dimen/size_10"
+                        android:drawableTop="@drawable/ic_online_order" />
                     <com.tabyq.pos.tabqypos.customtext.CustomTextViewBold
                         android:id="@+id/img_scan"
                         android:layout_width="0dp"
@@ -533,7 +552,7 @@
                         android:textAllCaps="true"
                         android:textSize="@dimen/size_10"
                         android:textColor="@color/colorBlack"
-                        android:gravity="center"
+                        android:gravity="top|center_horizontal"
                         android:contentDescription="@string/nav_header_desc"
                         android:drawablePadding="@dimen/size_10"
                         android:drawableTop="@drawable/ic_qr_code" />
@@ -552,7 +571,7 @@
                         android:textAllCaps="true"
                         android:textSize="@dimen/size_10"
                         android:textColor="@color/colorBlack"
-                        android:gravity="center"
+                        android:gravity="top|center_horizontal"
                         android:drawablePadding="@dimen/size_10"
                         android:contentDescription="@string/nav_header_desc"
                         android:drawableTop="@drawable/ic_magnifying_glass" />
@@ -571,7 +590,7 @@
                         android:textAllCaps="true"
                         android:textSize="@dimen/size_10"
                         android:textColor="@color/colorBlack"
-                        android:gravity="center"
+                        android:gravity="top|center_horizontal"
                         android:drawablePadding="@dimen/size_10"
                         android:contentDescription="@string/nav_header_desc"
                         android:drawableTop="@drawable/ic_add_user" />

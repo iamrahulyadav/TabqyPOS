@@ -1,6 +1,7 @@
 package com.tabyq.pos.tabqypos.activities;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -10,13 +11,14 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.view.Window;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.tabyq.pos.tabqypos.R;
 import com.tabyq.pos.tabqypos.adapter.CustomerSearchAdapter;
 import com.tabyq.pos.tabqypos.utils.AppBaseActivity;
 
 
-public class SearchActivity extends AppBaseActivity implements CustomerSearchAdapter.SearchItemClick{
+public class SearchActivity extends AppBaseActivity implements CustomerSearchAdapter.SearchItemClick, View.OnClickListener {
 
     private EditText edt_search;
     private RecyclerView searchRecycler;
@@ -38,6 +40,7 @@ public class SearchActivity extends AppBaseActivity implements CustomerSearchAda
     private void init(){
         searchRecycler = findViewById(R.id.activity_search_recycler);
         edt_search = findViewById(R.id.activity_search_edt);
+        edt_search.setOnClickListener(this);
 
         edt_search.addTextChangedListener(new TextWatcher() {
             @Override
@@ -94,11 +97,21 @@ public class SearchActivity extends AppBaseActivity implements CustomerSearchAda
     }
 
     public void crm_search(View view){
+        Intent i = new Intent();
+        i.putExtra("from", "Search");
+        setResult(999, i);
         finish();
     }
 
     @Override
     public void getSelected(int position) {
-        finish();
+//        finish();
+    }
+
+    @Override
+    public void onClick(View v) {
+
+        int id = v.getId();
+
     }
 }

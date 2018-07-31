@@ -98,6 +98,7 @@
 
     <!-- status bar -->
     <string name="status_bar_customer">Customer</string>
+    <string name="status_bar_online_order">Online Order</string>
     <string name="status_bar_scan">Scan</string>
     <string name="status_bar_search">Search</string>
     <string name="status_bar_add">Add</string>
