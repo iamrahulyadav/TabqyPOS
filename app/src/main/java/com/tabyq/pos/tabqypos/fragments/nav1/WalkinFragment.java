@@ -377,6 +377,7 @@ public class WalkinFragment extends Fragment implements MainItemListAdapter2.Lis
 
     private Dialog dialog_pay_by_cash, dialog_pay_by_card, dialog_pay_by_both;
     private Spinner pay_card_Spinner, pay_both_cardSpinner;
+    private EditText edtPayCash;
 
     private void create_dialog_pay_by_cash(){
 
@@ -386,11 +387,14 @@ public class WalkinFragment extends Fragment implements MainItemListAdapter2.Lis
         dialog_pay_by_cash.setCancelable(false);
         dialog_pay_by_cash.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
         dialog_pay_by_cash.getWindow().getAttributes().windowAnimations = R.style.DialogAnimation;
+        edtPayCash = dialog_pay_by_cash.findViewById(R.id.dialog_walkin_pay_by_cash_edt_cash);
 
         TextView tv_done = dialog_pay_by_cash.findViewById(R.id.dialog_walkin_pay_by_cash_done);
         tv_done.setOnClickListener(this);
 
     }
+
+
     private void create_dialog_pay_by_card(){
 
         dialog_pay_by_card = new Dialog(getContext());
@@ -409,6 +413,8 @@ public class WalkinFragment extends Fragment implements MainItemListAdapter2.Lis
         tv_done.setOnClickListener(this);
 
     }
+
+
     private void create_dialog_pay_by_both(){
 
         dialog_pay_by_both = new Dialog(getContext());

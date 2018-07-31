@@ -33,6 +33,7 @@
                 android:layout_height="40dp"
                 android:text="60.00"
                 android:inputType="number"
+                android:id="@+id/dialog_walkin_pay_by_cash_edt_cash"
                 android:textSize="14sp"
                 android:layout_gravity="end"
                 android:textColor="@color/colorappPink"/>

@@ -6,6 +6,7 @@ import android.content.Context;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.util.DisplayMetrics;
+import android.view.inputmethod.InputMethodManager;
 
 public class SupportingWidgets {
     public static AlertDialog alertDialog;
@@ -30,4 +31,10 @@ public class SupportingWidgets {
         int noOfColumns = (int) (dpWidth / 180);
         return noOfColumns;
     }
+
+    public static void hideSoftKeyboard(Activity activity) {
+        InputMethodManager inputMethodManager = (InputMethodManager)activity.getSystemService(Activity.INPUT_METHOD_SERVICE);
+        inputMethodManager.hideSoftInputFromWindow(activity.getCurrentFocus().getWindowToken(), 0);
+    }
+
 }
