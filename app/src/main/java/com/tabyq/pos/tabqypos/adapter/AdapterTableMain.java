@@ -83,7 +83,6 @@ public class AdapterTableMain extends RecyclerView.Adapter<AdapterTableMain.MyVi
 //            holder.iv.setImageResource(R.drawable.ic_tray);
         }
 
-
     }
 
     @Override

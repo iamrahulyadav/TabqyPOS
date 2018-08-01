@@ -29,6 +29,7 @@ import java.util.ArrayList;
  */
 public class TableFragment extends Fragment implements AdapterTableMain.Interface_TableMain, View.OnClickListener, RadioGroup.OnCheckedChangeListener {
 
+
     public TableFragment() {
         // Required empty public constructor
     }
@@ -71,6 +72,7 @@ public class TableFragment extends Fragment implements AdapterTableMain.Interfac
     }
 
     private Dialog dialog_table, dialog_code;
+
     private void createDialogTable() {
         dialog_table = new Dialog(getContext());
         dialog_table.setContentView(R.layout.dialog_table);
@@ -112,8 +114,6 @@ public class TableFragment extends Fragment implements AdapterTableMain.Interfac
 
                 clicked_position = position;
                 dialog_table.show();
-
-
 //                arr.set(position, "1");
             } else {
                 arr.set(position, "0");
