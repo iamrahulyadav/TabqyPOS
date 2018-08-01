@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="100dp"
+    android:layout_height="200dp"
+    android:background="@drawable/box">
+
+    <com.tabyq.pos.tabqypos.customtext.CustomTextView
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:id="@+id/popup_table_main_code_title"
+        android:text="Code"
+        android:textSize="@dimen/size_12"
+        android:textColor="@color/colorappPink"
+        android:gravity="center_vertical"
+        android:drawableRight="@drawable/ic_cross_black"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginTop="35dp"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height=".3dp"
+        android:id="@+id/popup_table_main_code_view"
+        android:background="#ECF0F1"
+        android:layout_marginLeft="45dp"
+        android:layout_marginRight="30dp"
+        android:layout_below="@+id/popup_table_main_code_title"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/popup_table_main_code_view"
+        android:layout_above="@+id/popup_table_main_code_bottom"
+        android:layout_marginLeft="45dp"
+        android:layout_marginRight="30dp" 
+        android:orientation="vertical">
+        
+        <com.tabyq.pos.tabqypos.customtext.CustomTextViewBold
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="2363454"
+            android:textSize="@dimen/size_14"
+            android:textColor="@color/colorappPink"
+            android:layout_marginLeft="35dp"
+            android:layout_marginTop="20dp"/>
+
+        <com.tabyq.pos.tabqypos.customtext.CustomTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Code Regenerate"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/size_12"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="15dp"
+            android:layout_marginBottom="@dimen/size_10"/>
+
+    </RelativeLayout>
+    <com.tabyq.pos.tabqypos.customtext.CustomTextView
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:id="@+id/popup_table_main_code_bottom"
+        android:layout_gravity="center"
+        android:background="#BB0162"
+        android:gravity="center"
+        android:text="@string/txtOk"
+        android:textSize="@dimen/small_size"
+        android:textColor="#fff"
+        android:layout_marginLeft="45dp"
+        android:layout_marginRight="30dp"
+        android:layout_alignParentBottom="true"/>
+
+</RelativeLayout>

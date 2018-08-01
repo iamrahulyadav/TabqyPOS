@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="300dp"
+    android:layout_height="wrap_content"
+    android:background="@drawable/shape_background_pop_up_white"
+    android:padding="@dimen/size_20">
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/dialog_table_radio_group"
+        android:orientation="vertical"
+        android:layout_gravity="center">
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/dialog_table_radio_button_code"
+            android:text="@string/code"
+            android:textSize="@dimen/small_size"
+            android:buttonTint="@color/colorappPink"/>
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/dialog_table_radio_button_reservation"
+            android:text="@string/reservation"
+            android:textSize="@dimen/small_size"
+            android:buttonTint="@color/colorappPink"
+            android:layout_marginTop="@dimen/size_10"/>
+    </RadioGroup>
+
+    <com.tabyq.pos.tabqypos.customtext.CustomTextView
+        android:layout_width="90dp"
+        android:layout_height="35dp"
+        android:id="@+id/dialog_table_btn"
+        android:gravity="center"
+        android:textSize="@dimen/extra_small_size"
+        android:textColor="@color/colorWhite"
+        android:text="@string/done"
+        android:layout_gravity="center"
+        android:background="@drawable/btn_backgroundpink"
+        android:layout_marginTop="@dimen/size_20"/>
+
+</LinearLayout>

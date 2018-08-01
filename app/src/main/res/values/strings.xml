@@ -195,4 +195,9 @@
     <string name="dialog_walkin_pay_transaction_no">Transaction No.</string>
     <string name="fragment_walkin_done">Done</string>
 
+    <!--TableFragment-->
+    <string name="code">Code</string>
+    <string name="reservation">Reservation</string>
+    <string name="done">Done</string>
+
 </resources>
