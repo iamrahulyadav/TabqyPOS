@@ -163,7 +163,7 @@ public class TableFragment extends Fragment implements AdapterTableMain.Interfac
                 .get(Calendar.YEAR), myCalendar.get(Calendar.MONTH),
                 myCalendar.get(Calendar.DAY_OF_MONTH)).show();
     }
-
+///a
     private void createTimeDialog(){
         Calendar mcurrentTime = Calendar.getInstance();
         int hour = mcurrentTime.get(Calendar.HOUR_OF_DAY);
