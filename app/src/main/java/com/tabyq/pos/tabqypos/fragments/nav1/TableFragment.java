@@ -1,7 +1,9 @@
 package com.tabyq.pos.tabqypos.fragments.nav1;
 
 
+import android.app.DatePickerDialog;
 import android.app.Dialog;
+import android.app.TimePickerDialog;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
@@ -12,9 +14,12 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.DatePicker;
+import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
+import android.widget.TimePicker;
 
 import com.tabyq.pos.tabqypos.R;
 import com.tabyq.pos.tabqypos.activities.MainActivity;
@@ -22,7 +27,10 @@ import com.tabyq.pos.tabqypos.adapter.AdapterTableMain;
 import com.tabyq.pos.tabqypos.utils.ItemOffsetDecoration;
 import com.tabyq.pos.tabqypos.utils.SupportingWidgets;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Locale;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -47,6 +55,8 @@ public class TableFragment extends Fragment implements AdapterTableMain.Interfac
 
         init();
         createDialogTable();
+        createDialogReservation();
+        createMyDateDatePicker();
 //        createDialogCode();
     }
 
@@ -71,7 +81,7 @@ public class TableFragment extends Fragment implements AdapterTableMain.Interfac
 
     }
 
-    private Dialog dialog_table, dialog_code;
+    private Dialog dialog_table, dialog_reservation, dialog_code;
 
     private void createDialogTable() {
         dialog_table = new Dialog(getContext());
@@ -84,6 +94,91 @@ public class TableFragment extends Fragment implements AdapterTableMain.Interfac
         tv.setOnClickListener(this);
         RadioGroup radioGroup = dialog_table.findViewById(R.id.dialog_table_radio_group);
         radioGroup.setOnCheckedChangeListener(this);
+    }
+    private void createDialogReservation() {
+        dialog_reservation = new Dialog(getContext());
+        dialog_reservation.setContentView(R.layout.dialog_table_reservation);
+        dialog_reservation.setCancelable(true);
+        dialog_reservation.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+        dialog_reservation.getWindow().getAttributes().windowAnimations = R.style.DialogAnimation;
+
+        TextView tv_approved = dialog_reservation.findViewById(R.id.dialog_table_reservation_approved);
+        TextView tv_decline = dialog_reservation.findViewById(R.id.dialog_table_reservation_decline);
+        tv_approved.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog_reservation.dismiss();
+            }
+        });
+        tv_decline.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog_reservation.dismiss();
+            }
+        });
+
+        ImageView iv_date = dialog_reservation.findViewById(R.id.dialog_table_reservation_calender_image);
+        ImageView iv_time = dialog_reservation.findViewById(R.id.dialog_table_reservation_clock_image);
+        iv_date.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                createDateDialog();
+
+            }
+        });
+        iv_time.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                createTimeDialog();
+
+            }
+        });
+
+        dialog_reservation_tv_date = dialog_reservation.findViewById(R.id.dialog_table_reservation_date);
+        dialog_reservation_tv_time = dialog_reservation.findViewById(R.id.dialog_table_reservation_time);
+    }
+
+    private Calendar myCalendar = Calendar.getInstance();
+    private DatePickerDialog.OnDateSetListener date;
+    private TextView dialog_reservation_tv_date, dialog_reservation_tv_time;
+
+    private void createMyDateDatePicker(){
+        date = new DatePickerDialog.OnDateSetListener() {
+            @Override
+            public void onDateSet(DatePicker view, int year, int monthOfYear,
+                                  int dayOfMonth) {
+                // TODO Auto-generated method stub
+                myCalendar.set(Calendar.YEAR, year);
+                myCalendar.set(Calendar.MONTH, monthOfYear);
+                myCalendar.set(Calendar.DAY_OF_MONTH, dayOfMonth);
+//                updateLabel();
+                String myFormat = "dd/MM/yy"; //In which you need put here
+                SimpleDateFormat sdf = new SimpleDateFormat(myFormat, Locale.US);
+                dialog_reservation_tv_date.setText(sdf.format(myCalendar.getTime()));
+            }
+        };
+    }
+    private void createDateDialog(){
+        new DatePickerDialog(getContext(), date, myCalendar
+                .get(Calendar.YEAR), myCalendar.get(Calendar.MONTH),
+                myCalendar.get(Calendar.DAY_OF_MONTH)).show();
+    }
+
+    private void createTimeDialog(){
+        Calendar mcurrentTime = Calendar.getInstance();
+        int hour = mcurrentTime.get(Calendar.HOUR_OF_DAY);
+        int minute = mcurrentTime.get(Calendar.MINUTE);
+        TimePickerDialog mTimePicker;
+        mTimePicker = new TimePickerDialog(getContext(),
+                new TimePickerDialog.OnTimeSetListener() {
+                    @Override
+                    public void onTimeSet(TimePicker timePicker, int selectedHour, int selectedMinute) {
+//                    eReminderTime.setText( selectedHour + ":" + selectedMinute);
+                        dialog_reservation_tv_time.setText(selectedHour + " : " + selectedMinute);
+                    }
+                }, hour, minute, true);//Yes 24 hour time
+        mTimePicker.setTitle("Select Time");
+        mTimePicker.show();
     }
 /*
     private void createDialogCode() {
@@ -110,6 +205,9 @@ public class TableFragment extends Fragment implements AdapterTableMain.Interfac
     public void method_Table_Main(int position) {
 
         if (position >= 0) {
+            for(int i=0; i<arr.size(); i++) {
+                arr.set(i, "0");
+            }
             if (arr.get(position).equals("0")) {
 
                 clicked_position = position;
@@ -119,8 +217,9 @@ public class TableFragment extends Fragment implements AdapterTableMain.Interfac
                 arr.set(position, "0");
                 adapter.notifyDataSetChanged();
             }
-//            adapter.notifyDataSetChanged();
-        }
+//          adapter.notifyDataSetChanged();
+
+            }
     }
 
     @Override
@@ -139,7 +238,8 @@ public class TableFragment extends Fragment implements AdapterTableMain.Interfac
 //                SupportingWidgets.showToast(getContext(), "Code");
             } else if (selected_option.equals("Reservation")){
                 dialog_table.dismiss();
-                SupportingWidgets.showToast(getContext(), "Reservation");
+                dialog_reservation.show();
+//                SupportingWidgets.showToast(getContext(), "Reservation");
             } else {}
         } else {}
     }

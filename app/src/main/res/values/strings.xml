@@ -199,5 +199,14 @@
     <string name="code">Code</string>
     <string name="reservation">Reservation</string>
     <string name="done">Done</string>
+    <!--<string name="date">Date</string>-->
+    <string name="date_forrmat">yyyy/mm/dd</string>
+    <string name="time">Time</string>
+    <string name="time_format">HH : MM</string>
+    <string name="no_of_guest">No of Guest</string>
+    <string name="with_food">With food</string>
+    <string name="without_food">Without food</string>
+    <string name="approved">Approved</string>
+    <string name="decline">Decline</string>
 
 </resources>

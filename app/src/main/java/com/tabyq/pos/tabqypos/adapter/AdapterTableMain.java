@@ -109,6 +109,14 @@ public class AdapterTableMain extends RecyclerView.Adapter<AdapterTableMain.MyVi
         popupWindow.setHeight(200);
         popupWindow.setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
         popupWindow.setContentView(view);
+        TextView tv_cross = view.findViewById(R.id.popup_table_main_code_title);
+        TextView tv_ok = view.findViewById(R.id.popup_table_main_code_bottom);
+        tv_ok.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                popupWindow.dismiss();
+            }
+        });
         return popupWindow;
     }
 
