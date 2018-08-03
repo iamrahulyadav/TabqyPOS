@@ -186,7 +186,7 @@
     <string name="no">No</string>
 
     <!--dialog walkin pay by cash-->
-    <string name="dialog_cash_tender_return">Tender Return</string>
+    <string name="dialog_cash_tender_return">Tender Change</string>
     <string name="dialog_cash_cash_received">Cash Received</string>
     <string name="dialog_cash_total_amount">Total Amount</string>
 
@@ -199,5 +199,6 @@
     <string name="code">Code</string>
     <string name="reservation">Reservation</string>
     <string name="done">Done</string>
+    <string name="dialog_walkin_pay_by_cash_done">Done</string>
 
 </resources>

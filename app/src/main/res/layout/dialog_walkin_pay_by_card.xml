@@ -1,18 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="400sp"
-    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
     android:layout_gravity="center"
     android:orientation="vertical"
     xmlns:tools="http://schemas.android.com/tools"
     android:gravity="center"
     android:padding="@dimen/size_20"
+    android:layout_margin="10dp"
     android:background="@drawable/shape_border_grey_pop_up">
 
 
     <RelativeLayout
         android:layout_width="wrap_content"
-        android:layout_height="120dp">
+        android:layout_height="match_parent">
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -20,12 +21,16 @@
             android:id="@+id/walkin_pay_by_card_right"
             android:orientation="vertical"
             android:layout_alignParentRight="true"
-            android:layout_marginRight="15dp">
+            android:layout_marginRight="15dp"
+            android:focusableInTouchMode="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="15dp">
 
+            <requestFocus/>
             <Spinner
                 android:layout_width="wrap_content"
                 android:layout_height="40dp"
-                android:gravity="right"
+                android:gravity="end"
                 android:layout_gravity="end"
                 android:id="@+id/dialog_walkin_spinner_card_type"
                 android:textColor="@color/colorappPink"/>
@@ -46,7 +51,9 @@
             android:orientation="vertical"
             android:layout_toLeftOf="@+id/walkin_pay_by_card_right"
             android:layout_marginRight="15dp"
-            android:gravity="left">
+            android:gravity="start"
+            android:layout_marginEnd="15dp"
+            android:layout_toStartOf="@+id/walkin_pay_by_card_right">
 
             <com.tabyq.pos.tabqypos.customtext.CustomTextView
                 android:layout_width="wrap_content"
@@ -62,24 +69,21 @@
                 android:textColor="@color/colorBlack"/>
 
         </LinearLayout>
-
-    </RelativeLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:gravity="end">
-
         <com.tabyq.pos.tabqypos.customtext.CustomTextView
+            android:layout_alignParentBottom="true"
             android:layout_width="90dp"
             android:layout_height="35dp"
             android:id="@+id/dialog_walkin_pay_by_card_done"
             android:gravity="center"
             android:textSize="@dimen/extra_small_size"
             android:textColor="@color/colorWhite"
-            android:text="Done"
+            android:text="@string/done"
             android:layout_alignParentRight="true"
-            android:background="@drawable/btn_backgroundpink"/>
+            android:background="@drawable/btn_backgroundpink"
+            android:layout_alignParentEnd="true" />
 
-    </LinearLayout>
+    </RelativeLayout>
+
+
 
 </LinearLayout>
